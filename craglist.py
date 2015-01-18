@@ -1,7 +1,22 @@
 import urllib2
 import re
-import time  
-   
+import time
+import xml.etree.ElementTree as ET
+
+tree = ET.parse('country_data.xml')
+root = tree.getroot()
+
+
+# zetcode.com/db/mysqlpython/
+#import xml.etree.ElementTree as etree
+# or for a faster C implementation
+
+
+#tree = etree.parse('input.xml')
+#elem = tree.find('//tag-Name') # finds the first occurrence of element tag-Name
+#elem.text = 'newName'
+#tree.write('output.xml')
+
 model=list()
 price=list()
 carlink=list()
@@ -10,7 +25,14 @@ timePost=list()
 today=True
 num=0
 #print time.strftime('%Y-%m-%d %A %X %Z',time.localtime(time.time()))
-mystrTime=time.strftime('%Y-%m-%d',time.localtime(time.time()))
+mystrTime=time.strftime('%Y-%m-%d %X',time.localtime(time.time()))
+
+for user in root.findall('user'):
+    temp=user.find('lastvisitTime')
+    lastvisitTime=temp.text
+    print temp.text
+    temp.text=mystrTime
+    print user.find('lastvisitTime').text
 
 while today:
     if num==0:
@@ -76,23 +98,24 @@ while today:
     for i in range(len(Terms8)):
         timeCur=re.search(r'<time\s*datetime="(.+?)" title="(.+?)">(.+?)</time> <a href="(.+?)"\s*data-id="(\w+)"\s*class="(\w+)">(.+?)</a>\s*</span>\s*<span\s*class="l2">\s*<span\s*?class="price">&#x0024;(\w+?)</span>',Terms8[i])
         if timeCur:
+            print lastvisitTime
+            print timeCur.group(1)
+            if timeCur.group(1)<=lastvisitTime:
+                today=False
+                break
             if (('altima' in timeCur.group(7).lower()) or ('volkswagen' in timeCur.group(7).lower()) or ('camry' in timeCur.group(7).lower()) or ('accord' in timeCur.group(7).lower())) and (int(timeCur.group(8))>6000):
-                if mystrTime in timeCur.group(1):
-                    timePost.append(timeCur.group(3))
-                    price.append(timeCur.group(8))
-                    carlink.append(timeCur.group(4))
-                    abstractInformation.append(timeCur.group(7))
-                    print timeCur.group(1)
-                    print timeCur.group(2)
-                    print timeCur.group(3)
-                    print timeCur.group(4)
-                    print timeCur.group(5)
-                    print timeCur.group(6)
-                    print timeCur.group(7)
-                    print timeCur.group(8)
-                else:
-                    today=False
-                    
+                timePost.append(timeCur.group(3))
+                price.append(timeCur.group(8))
+                carlink.append(timeCur.group(4))
+                abstractInformation.append(timeCur.group(7))
+                print timeCur.group(1)
+                print timeCur.group(2)
+                print timeCur.group(3)
+                print timeCur.group(4)
+                print timeCur.group(5)
+                print timeCur.group(6)
+                print timeCur.group(7)
+                print timeCur.group(8)    
         print '------------------------------'
     print num    
     num=num+100
@@ -123,7 +146,7 @@ msg = MIMEMultipart()
 msg['Subject'] = subject 
 msg.attach(msgText) 
 
-filepath = unicode('Scan.jpeg','utf8') 
+filepath = unicode('Liang.jpg','utf8') 
 ctype, encoding = mimetypes.guess_type(filepath) 
 if ctype is None or encoding is not None: 
     ctype = "application/octet-stream" 
