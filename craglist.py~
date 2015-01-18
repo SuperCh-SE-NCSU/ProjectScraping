@@ -131,7 +131,7 @@ from email.mime.multipart import MIMEMultipart
 import os, mimetypes 
 
 username = 'dragonfly90mad@gmail.com' # ÓûﾧÃû 
-password = '********' # ÃÜÂë 
+password = '63912641019' # ÃÜÂë 
 
 sender = 'dragonfly90mad@gmail.com' # ﾷﾢﾼþÈËÓÊÏä 
 receiver = 'ldong6@ncsu.edu' # ÊռþÈËÓÊÏä 
