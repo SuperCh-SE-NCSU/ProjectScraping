@@ -33,7 +33,7 @@ for user in root.findall('user'):
     print temp.text
     temp.text=mystrTime
     print user.find('lastvisitTime').text
-
+tree.write('country_data.xml');
 while today:
     if num==0:
         tempstr='http://raleigh.craigslist.org/search/cto//'
@@ -131,7 +131,8 @@ from email.mime.multipart import MIMEMultipart
 import os, mimetypes 
 
 username = 'dragonfly90mad@gmail.com' # ÓûﾧÃû 
-password = '********' # ÃÜÂë 
+
+password = '******'# ÃÜÂë 
 
 sender = 'dragonfly90mad@gmail.com' # ﾷﾢﾼþÈËÓÊÏä 
 receiver = 'ldong6@ncsu.edu' # ÊռþÈËÓÊÏä 
