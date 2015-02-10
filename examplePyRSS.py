@@ -2,10 +2,9 @@ import datetime
 import PyRSS2Gen
 
 rss = PyRSS2Gen.RSS2(
-    title = "Andrew's PyRSS2Gen feed",
+    title = "Car Info",
     link = "http://www.dalkescientific.com/Python/PyRSS2Gen.html",
-    description = "The latest news about PyRSS2Gen, a "
-                  "Python library for generating RSS2 feeds",
+    description = "the result of crawler",
 
     lastBuildDate = datetime.datetime.now(),
 
@@ -30,4 +29,4 @@ rss = PyRSS2Gen.RSS2(
          pubDate = datetime.datetime(2003, 9, 6, 21, 49)),
     ])
 
-rss.write_xml(open("pyrss2gen.xml", "w"))
+rss.write_xml(open("car_info.xml", "w"))
