@@ -146,7 +146,7 @@ msg = MIMEMultipart()
 msg['Subject'] = subject 
 msg.attach(msgText) 
 
-filepath = unicode('Liang.jpg','utf8') 
+filepath = unicode('NCSU.png','utf8') 
 ctype, encoding = mimetypes.guess_type(filepath) 
 if ctype is None or encoding is not None: 
     ctype = "application/octet-stream" 
