@@ -4,7 +4,7 @@ scrapy craglist and kbb to get the information you need
 
 Phases:
 
-  1.  crawl craglist to get model and other information and send the information to users's email（there is a demo now)
+  1.  Crawl craglist to get model and other information and send the information to users's emails（there is a demo now)
 
   2.  Post to get the price from kbb (to do)
 
@@ -14,7 +14,7 @@ Phases:
 
   5.  Rewrite 1,2,3 in scrapy (to do)
   
-  6.  Automacially generate XML file using PyRSSGen for RSS subscription (doing)
+  6.  Automatically generate XML file using PyRSSGen for RSS subscription (doing)
   
   7.  Get data from dynamic website (done)
 
