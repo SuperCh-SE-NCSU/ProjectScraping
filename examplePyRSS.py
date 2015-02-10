@@ -1,11 +1,14 @@
 import datetime
 import PyRSS2Gen
+import xml.etree.ElementTree as ET
+import time
 
 rss = PyRSS2Gen.RSS2(
     title = "Car Info",
     link = "http://www.dalkescientific.com/Python/PyRSS2Gen.html",
     description = "the result of crawler",
-
+    
+    mystrTime=time.strftime('%Y-%m-%d %X',time.localtime(time.time()))
     lastBuildDate = datetime.datetime.now(),
 
     items = [
