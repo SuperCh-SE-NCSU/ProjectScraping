@@ -15,8 +15,6 @@ Phases:
   5.  Rewrite 1,2,3 in scrapy (to do)
   
   6.  Automacially generate XML file using PyRSSGen for RSS subscription (doing)
-  
-  7.  Get data from dynamic website (done)
 
-  8.  Complete the whole system and compare the two strategies (to do)
+  6.  Complete the whole system and compare the two strategies (to do)
 
