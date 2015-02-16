@@ -6,17 +6,6 @@ import xml.etree.ElementTree as ET
 tree = ET.parse('country_data.xml')
 root = tree.getroot()
 
-
-# zetcode.com/db/mysqlpython/
-#import xml.etree.ElementTree as etree
-# or for a faster C implementation
-
-
-#tree = etree.parse('input.xml')
-#elem = tree.find('//tag-Name') # finds the first occurrence of element tag-Name
-#elem.text = 'newName'
-#tree.write('output.xml')
-
 model=list()
 price=list()
 carlink=list()
@@ -30,9 +19,9 @@ mystrTime=time.strftime('%Y-%m-%d %X',time.localtime(time.time()))
 for user in root.findall('user'):
     temp=user.find('lastvisitTime')
     lastvisitTime=temp.text
-    print temp.text
+    #print temp.text
     temp.text=mystrTime
-    print user.find('lastvisitTime').text
+    #print user.find('lastvisitTime').text
 
 while today:
     if num==0:
@@ -42,68 +31,19 @@ while today:
     
     response = urllib2.urlopen(tempstr)
     html = response.read()
-#print html
-#<span class="price">crifan</span>
-#0 
-#print html
-
-#m = re.match(r'hello', 'hello world!')
-#print m.group()
-
-#foundH1user = re.findall('<span\s+?class="price">(?P<price>.+?)</span>',html)
-#   <p class="row" data-pid=" ... </p>
-#print foundH1user
-
-#1 line
-#Terms=re.findall(r'<p\s*class="row"\s*data-pid="\w+">',html)
-#print type(Terms)
-#for i in range(len(Terms)):
-#    print Terms[i]
-
-#2 line
-#Terms2=re.findall(r'<a href="/\w+/\w+\.html"\s*class="i"\s*data-id="\w+\:\w+">',html)
-#for i in range(len(Terms2)):
-#    print Terms2[i]
-
-#3 line
-#Terms3=re.findall('<span\s+?class="price">(?P<price>.+?)</span>',html)
-#for i in range(len(Terms3)):
-#    print Terms3[i]
-
-#misunderstanding 
-#Terms4=re.findall('<span\s+?class="price">(?P<price>.+?)</span></a>',html)
-#for i in range(len(Terms3)):
-#    print Terms3[i]
-
-#Terms4=re.findall('<span class="txt"> <span class="star"></span> <span class="pl">',html)
-#print len(Terms4)
-
-#Terms5=re.findall(r'<time\s*datetime="\w+-\w+-\w+\s*\w+\:\w+" title="\w+ \w+ \w+ \w+\:\w+\:\w+ \w+ \(\w+ \w+ \w+\)">\w+ \w+</time>',html)
-
-#for i in range(len(Terms5)):
-#    print Terms5[i]
-#print len(Terms5)    
-
-#Terms6=re.findall(r'<a href="/\w+/\w+.html"\s*data-id="\w+"\s*class="\w+">.+?</a>\s*</span>\s*<span\s*class="l2">',html)
-#for i in range(len(Terms6)):
-#    print Terms6[i]
-#print len(Terms6)
-# some special characters?
-#Terms7=re.findall(r'<span class="pnr"> <small> (.+?)</small>',html)
-#print len(Terms7)
-#for i in range(len(Terms7)):
-#    print Terms7[i]
 
     Terms8=re.findall(r'<span class="txt"> <span class="star"></span> <span class="pl"> <time\s*datetime=".+?" title=".+?">.+?</time> <a href=".+?"\s*data-id="\w+"\s*class="\w+">.+?</a>\s*</span>\s*<span\s*class="l2"> .+?</p>',html)
+    if not Terms8:
+        break
     for i in range(len(Terms8)):
         timeCur=re.search(r'<time\s*datetime="(.+?)" title="(.+?)">(.+?)</time> <a href="(.+?)"\s*data-id="(\w+)"\s*class="(\w+)">(.+?)</a>\s*</span>\s*<span\s*class="l2">\s*<span\s*?class="price">&#x0024;(\w+?)</span>',Terms8[i])
         if timeCur:
-            print lastvisitTime
-            print timeCur.group(1)
+            #print lastvisitTime
+            #print timeCur.group(1)
             if timeCur.group(1)<=lastvisitTime:
                 today=False
                 break
-            if (('altima' in timeCur.group(7).lower()) or ('volkswagen' in timeCur.group(7).lower()) or ('camry' in timeCur.group(7).lower()) or ('accord' in timeCur.group(7).lower())) and (int(timeCur.group(8))>6000):
+            if (('corolla' in timeCur.group(7).lower()) and (int(timeCur.group(8))>6000)):
                 timePost.append(timeCur.group(3))
                 price.append(timeCur.group(8))
                 carlink.append(timeCur.group(4))
@@ -116,9 +56,10 @@ while today:
                 print timeCur.group(6)
                 print timeCur.group(7)
                 print timeCur.group(8)    
-        print '------------------------------'
+        
     print num    
     num=num+100
+    print '------------------------------'
 
 #coding: utf-8 
 import smtplib 
@@ -134,7 +75,7 @@ username = 'dragonfly90mad@gmail.com' # ÓûﾧÃû
 password = '********' # ÃÜÂë 
 
 sender = 'dragonfly90mad@gmail.com' # ﾷﾢﾼþÈËÓÊÏä 
-receiver = 'ldong6@ncsu.edu' # ÊռþÈËÓÊÏä 
+receiver = 'zhu6@ncsu.edu' # ÊռþÈËÓÊÏä 
 subject = 'python email test'
 mail_content='<html>'
 for i in range(len(timePost)):
