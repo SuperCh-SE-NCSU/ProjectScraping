@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>click demo</title>
+  <script language="javascript">
+    function writeToFile(){
+		var line1='},'
+		var line2='{'
+		var line3='"username": "' + document.getElementById("username").value + '",'
+		var line4='"email": "' + document.getElementById("email").value + '",'
+		var line5='"car_maker": "' + document.getElementById("car_maker").value + '",'
+		var line6='"car_model": "' + document.getElementById("car_model").value + '",'
+		var line7='"year": "' + document.getElementById("year").value + '"'
+
+        var fso = new ActiveXObject("Scripting.FileSystemObject");
+        var fh = fso.OpenTextFile(".\subscribe.txt",8,true);
+        fh.WriteLine(line1);
+		fh.WriteLine(line2);
+		fh.WriteLine(line3);
+		fh.WriteLine(line4);
+		fh.WriteLine(line5);
+		fh.WriteLine(line6);
+		fh.WriteLine(line7);
+
+        fh.Close(); 
+    };
+</script>
+</head>
+<body>
+Username:<input type="text" id="username"><br/>
+Email:<input type="text" id="email"><br/>
+Car Maker:<input type="text" id="car_maker"><br/>
+Car Model:<input type="text" id="car_model"><br/>
+Year:<input type="text" id="year"><br/>
+<button type="button" onclick="writeToFile()" >Subscribe</button>
+
+ 
+</body>
+</html>

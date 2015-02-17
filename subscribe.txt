@@ -1,0 +1,21 @@
+[
+{
+"username": "winbobob",
+"email": "zhu6@ncsu.edu",
+"car_maker": "Toyota",
+"car_model": "Corolla",
+"year": "2008"
+},
+{
+"username": "john",
+"email": "john@ncsu.edu",
+"car_maker": "Toyota",
+"car_model": "Corolla",
+"year": "2015"
+},
+{
+"username": "Jack",
+"email": "Jack@ncsu.edu",
+"car_maker": "Hongqi",
+"car_model": "Hongqi1",
+"year": "2012"
