@@ -4,17 +4,21 @@
   <meta charset="utf-8">
   <title>click demo</title>
   <script language="javascript">
+	//work on IE browser only!
+	//recommend JavaScript to become a separate file
     function writeToFile(){
-		var line1='},'
+		var line1='['
 		var line2='{'
 		var line3='"username": "' + document.getElementById("username").value + '",'
 		var line4='"email": "' + document.getElementById("email").value + '",'
 		var line5='"car_maker": "' + document.getElementById("car_maker").value + '",'
 		var line6='"car_model": "' + document.getElementById("car_model").value + '",'
 		var line7='"year": "' + document.getElementById("year").value + '"'
-
+		var line8='}'
+		var line9=']'
+		
         var fso = new ActiveXObject("Scripting.FileSystemObject");
-        var fh = fso.OpenTextFile(".\subscribe.txt",8,true);
+        var fh = fso.CreateTextFile(".\\subscribe.txt",8,true);
         fh.WriteLine(line1);
 		fh.WriteLine(line2);
 		fh.WriteLine(line3);
@@ -22,7 +26,8 @@
 		fh.WriteLine(line5);
 		fh.WriteLine(line6);
 		fh.WriteLine(line7);
-
+		fh.WriteLine(line8);
+		fh.WriteLine(line9);
         fh.Close(); 
     };
 </script>
