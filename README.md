@@ -1,5 +1,8 @@
 
 
+intall lpthw.web 
+sudo pip install lpthw.web
+
 scrapy craglist and kbb to get the information you need
 
 Phases:
