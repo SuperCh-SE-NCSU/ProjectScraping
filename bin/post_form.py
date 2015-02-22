@@ -4,7 +4,7 @@ import time
 import os
 
 urls = (
-  '/', 'Index'
+  '/subscribe', 'Index'
 )
 
 app = web.application(urls, globals())

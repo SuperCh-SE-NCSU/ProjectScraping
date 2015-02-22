@@ -1,6 +1,6 @@
 <h1>Fill Out This Form</h1>
 
-<form action="/subscribe" method="POST">
+<form action="/hello" method="POST">
     User Name:<input type="text" name="username">
     <br/>
     Car Make: <input type="text" name="make">
