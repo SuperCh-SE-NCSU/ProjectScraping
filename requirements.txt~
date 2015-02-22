@@ -1,3 +1,4 @@
+PAM==0.4.2
 Pillow==2.3.0
 Pygments==1.6
 Scrapy==0.24.4
