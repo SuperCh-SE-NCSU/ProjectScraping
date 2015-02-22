@@ -12,7 +12,7 @@ render = web.template.render('templates/',base="layout")
 
 class Index(object):
     def GET(self):
-        return render.hello_form()
+        return render.subscribe_form()
 
     def POST(self):
         form = web.input(username="Nobody", make="Toyota", model="Camry", year="2007",email="test@ncsu.edu")
