@@ -1,1 +1,1 @@
-web: python bin/post_form.py
+worker: python bin/post_form.py
