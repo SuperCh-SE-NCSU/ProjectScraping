@@ -3,7 +3,7 @@ import xmlprocess
 import time
 
 urls = (
-  '/', 'Index'
+  '/hello', 'Index'
 )
 
 app = web.application(urls, globals())
