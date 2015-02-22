@@ -1,4 +1,4 @@
-PAM==0.4.2
+lpthw.web==1.1
 Pillow==2.3.0
 Pygments==1.6
 Scrapy==0.24.4
@@ -26,7 +26,6 @@ html5lib==0.999
 httplib2==0.8
 ipython==1.2.1
 lockfile==0.8
-lpthw.web==1.1
 lxml==3.3.3
 mechanize==0.2.5
 mercurial==2.8.2
