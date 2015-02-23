@@ -1,6 +1,7 @@
 
+https://rocky-spire-5172.herokuapp.com/subscribe
 
-intall lpthw.web 
+install lpthw.web 
 sudo pip install lpthw.web
 
 scrapy craglist and kbb to get the information you need
