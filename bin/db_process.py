@@ -1,6 +1,7 @@
 import psycopg2
 import sys
 import urlparse
+import os
 
 def writeDB(username, make, model, year, email):
 	urlparse.uses_netloc.append("postgres")
