@@ -1,15 +1,29 @@
-<h1>Fill Out This Form</h1>
-
-<form action="/subscribe" method="POST">
-    User Name:<input type="text" name="username">
+<form class="form-signin" style="max-width: 350px; padding: 15px; margin: 0 auto;" action="/subscribe" method="POST">
+	<h1 class="form-signin-heading">Subscribe Now</h1>
+    
+    <!--username-->
+    <label for="inputUserName" class="sr-only">User Name</label>
+   	<input type="text" name="model" id="inputUserName" class="form-control" placeholder="User Name" required="" autofocus="">
     <br/>
-    Car Make: <input type="text" name="make">
+    
+    <!--make-->
+    <label for="inputMake" class="sr-only">Car Make</label>
+	<input type="text" name="make" id="inputMake" class="form-control" placeholder="Car Make" required="" autofocus="">    
     <br/>
-    Car Model: <input type="text" name="model">
+    
+    <!--model-->
+    <label for="inputModel" class="sr-only">Car Model</label>   
+    <input type="text" name="model" id="inputModel" class="form-control" placeholder="Car Model" required="" autofocus="">
     <br/>
-    Car Year: <input type="text" name="year">
+     
+    <!--year-->
+    <label for="inputEmail" class="sr-only">Car Year</label>
+	<input type="text" name="year" id="inputYear" class="form-control" placeholder="Car Year" required="" autofocus="">    
     <br/>
-    E-mail: <input type="email" name="email">
+    
+    <!--email-->
+    <label for="inputEmail" class="sr-only">Email address</label>
+    <input type="email" name="email" id="inputEmail" class="form-control" placeholder="Email address" required="" autofocus="">
     <br/>
-    <input type="submit">
+    <input type="submit" class="btn btn-lg btn-primary btn-block">
 </form>
