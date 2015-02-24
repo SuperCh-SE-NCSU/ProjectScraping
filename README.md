@@ -1,6 +1,6 @@
 
 https://rocky-spire-5172.herokuapp.com/subscribe
-![IMAGE ALT TEXT HERE](https://lh4.googleusercontent.com/G7gbONoYpglg94KAu66_oXmstfeFBnDxVR0xQHI_Gj9ZIeOvuy-kiuS7eUZdt47k6u5iCNxmjqs=w1809-h792)
+![IMAGE ALT TEXT HERE](https://lh3.googleusercontent.com/-OtvaZMJViLs/VOy_lkCp6XI/AAAAAAAAAUc/ZJuV9RqdQCA/w532-h295/Project.png)
 
 install lpthw.web 
 sudo pip install lpthw.web
