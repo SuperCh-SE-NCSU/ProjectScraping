@@ -1,14 +1,18 @@
 
+
+scrapy craglist and kbb to get the information you need
+
 1. Demo
+
 https://rocky-spire-5172.herokuapp.com/subscribe
 ![IMAGE ALT TEXT HERE](https://lh3.googleusercontent.com/-OtvaZMJViLs/VOy_lkCp6XI/AAAAAAAAAUc/ZJuV9RqdQCA/w532-h295/Project.png)
 
-2. Install 3rd part lib
+2. Install 3rd part library
+
+
 install lpthw.web 
 sudo pip install lpthw.web
    
-
-scrapy craglist and kbb to get the information you need
 
 3. Develop Phase
 
