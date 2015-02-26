@@ -11,23 +11,52 @@
 	<input type="text" name="make" id="inputMake" class="form-control" placeholder="Car Make" required="" autofocus="">    
     <br/>
     
-    <!--javascript should put after the label and input-->
-    <script>
-        jQuery('#inputMake').autocomplete({
-          source: [ "c++", "java", "php", "coldfusion", "javascript", "asp", "ruby" ]
-        });
-    </script>
-
     <!--model-->
     <label for="inputModel" class="sr-only">Car Model</label>   
     <input type="text" name="model" id="inputModel" class="form-control" placeholder="Car Model" required="" autofocus="">
     <br/>
-    
+
+    <!--javascript should put after the label and input-->
     <script>
-        jQuery('#inputModel').autocomplete({
-          source: [ "c++", "java", "php", "coldfusion", "javascript", "asp", "ruby" ]
+    jQuery(document).ready(function() {
+        jQuery('#inputMake').autocomplete({
+          source:  function(request, response) {
+                jQuery.ajax({
+                    type: "GET",
+                    url: "static/makeData.csv",
+                    dataType: "text",
+                    success: function(data) {
+                        var makeData = jQuery.csv.toArray(data); 
+                        var matcher = new RegExp( "\\b" + jQuery.ui.autocomplete.escapeRegex( request.term ), "i" );
+                        response( jQuery.grep( makeData, function( item ){
+                            return matcher.test( item );
+                        }));
+                    }
+                });
+            },
         });
-    </script>
+
+        jQuery('#inputModel').autocomplete({
+          source:  function(request, response) {
+                jQuery.ajax({
+                    type: "GET",
+                    url: "static/modelData.csv",
+                    dataType: "text",
+                    success: function(data) {
+                        var modelData = jQuery.csv.toArray(data); 
+                        var matcher = new RegExp( "\\b" + jQuery.ui.autocomplete.escapeRegex( request.term ), "i" );
+                        response( jQuery.grep( modelData, function( item ){
+                            return matcher.test( item );
+                        }));
+                    }
+                });
+            },
+        });
+    });
+
+    //jQuery('#inputMake').autocomplete( "option", "delay", 0 );
+    //jQuery('#inputModel').autocomplete( "option", "delay", 0 );
+    </script>    
 
     <!--year-->
     <label for="inputEmail" class="sr-only">Car Year</label>
