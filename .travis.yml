@@ -1,9 +1,6 @@
 language: python
 python:
   - "2.7"
-  - "3.2"
-  - "3.3"
-  - "3.4"
  
 # command to install dependencies
 install:
@@ -11,4 +8,4 @@ install:
   - pip install lpthw.web
 
 # command to run tests
-script: python bin/post_form.py 8080
+script: python bin/post_form.py
