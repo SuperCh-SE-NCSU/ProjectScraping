@@ -3,3 +3,4 @@ lpthw.web==1.1
 pyasn1==0.1.7
 pycparser==2.10
 psycopg2==2.4.5
+sendgrid==1.3.0
