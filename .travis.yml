@@ -12,4 +12,4 @@ install:
   - pip install lpthw.web
 
 # command to run tests
-script: python bin/post_form.py
+script: python bin/post_form.py $PORT
