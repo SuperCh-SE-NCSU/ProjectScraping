@@ -58,9 +58,9 @@ def sendgridEmail():
 
 def testSendgridEmail():
     sendgridEmail()
-
-        
-Task=namedtuple('task','name,time,task')
-Tasks = [Task("testtask", "17:50", sendgridEmail)]
-run(Tasks)
+    
+if __name__ == "__main__":    
+    Task=namedtuple('task','name,time,task')
+    Tasks = [Task("testtask", "17:50", sendgridEmail)]
+    run(Tasks)
 
