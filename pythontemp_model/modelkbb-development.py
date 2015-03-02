@@ -1,5 +1,4 @@
 import requests,sys,csv,traceback,re,json,os,urllib2
-import testKbb
 from bs4 import BeautifulSoup
 from random import random,shuffle
 from time import sleep
@@ -7,6 +6,13 @@ global str
 
 ### Kelly Blue Book ######################
 
+def extractPricekbb(html):
+    price=re.search(r'"privatepartyexcellent": \{\s*"priceMin":\s*\d*\.\d*,\s*"price":\s*(\d*)\.\d*,\s*"priceMax":\s*\d*\.\d*\s*\}',html)
+    if price:
+        return price.group(1)
+    else:
+        return 0
+    
 def kbbExtractJson(html):
     soup = BeautifulSoup(html, "lxml")
     jssearch = soup.find(name='script', attrs={'language' : 'javascript'})
@@ -93,7 +99,7 @@ def getKbbData(make,model,year):
         print vs
         for v in vs:
             href = v.parent.attrs['href']
-            #print href
+            print href
             #trim = href.split('/')[4]
             trims.add("http://www.kbb.com"+href)
     print trims
@@ -128,7 +134,7 @@ def getKbbData(make,model,year):
                 html3=response.read()
                 #"privatepartyexcellent": {"priceMin": 0.0, "price": 21589.0,"priceMax": 0.0},
                 #timeCur=re.search(r'"privatepartyexcellent": \{"priceMin": \d\.\d, "price": \d\.\d, "priceMax": \d.\d\},')
-                print testKbb.extractPricekbb(html3)
+                print extractPricekbb(html3)
                 trims3.add("http://www.kbb.com"+href)
             print trims3
         #print html
