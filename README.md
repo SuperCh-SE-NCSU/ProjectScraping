@@ -1,8 +1,9 @@
 
 ### Web Crawler Application
 
-Using Scrapy to crawle craglist and kbb to get saling infromation about used cars users specified with their kbb price
-Users can subscribe into our email service 
+Using Scrapy to crawle craglist and kbb to get saling infromation about used cars users specified with their kbb price.
+
+Users can subscribe into our email service.we will send them the lastest car information they need once per day. 
 ### Demo
 
 https://rocky-spire-5172.herokuapp.com<br/>
