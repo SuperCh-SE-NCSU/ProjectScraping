@@ -18,7 +18,7 @@ sudo pip install lpthw.web
 
 ### Develop Phase
 
-  (1).  Crawl craglist to get model and other information and send the information to users's emails（there is a demo now)
+  (1).  Crawl craigslist to get price and other information and send the information to subscribed users's emails (there is a demo now)
 
   (2).  Post to get the price from kbb (to do)
 
