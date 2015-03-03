@@ -18,19 +18,17 @@ sudo pip install lpthw.web
 
 ### Develop Phase
 
-  (1).  Crawl craigslist to get price and other information and send the information to subscribed users's emails (there is a demo now)
+  (1).  Crawl craigslist to get price and other information and send the information to subscribed users's emails (completed)
 
-  (2).  Post to get the price from kbb (to do)
+  (2).  Post to get the price from kbb (demo, to implement it in a function)
 
-  (3).  Integrate part 1 and part 2 (to do)
+  (3).  Integrate part 1 and part 2 (partly completed)
 
-  (4).  Build a server to display the information (to do)
-
-  (5).  Rewrite 1,2,3 in scrapy (to do)
+  (4).  Rewrite 1,2,3 in scrapy (to do)
   
-  (6).  Automatically generate XML file using PyRSSGen for RSS subscription (doing)
+  (5).  Build a website (completed)
   
-  (7).  Get data from dynamic website (done)
+  (6).  Get data from dynamic website (done)
 
-  (8).  Complete the whole system and compare the two strategies (to do)
+  (7).  Complete the whole system and compare the two strategies (to do)
 
