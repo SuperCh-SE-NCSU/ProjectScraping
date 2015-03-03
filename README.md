@@ -9,7 +9,7 @@ Users can subscribe into our email service.we will send them the lastest car inf
 https://rocky-spire-5172.herokuapp.com<br/>
 ![IMAGE ALT TEXT HERE](https://lh3.googleusercontent.com/-OtvaZMJViLs/VOy_lkCp6XI/AAAAAAAAAUc/ZJuV9RqdQCA/w532-h295/Project.png)
 
-### Install 3rd part library
+### Install 3rd part library (needed for the subscription)
 
 ```
 install lpthw.web 
