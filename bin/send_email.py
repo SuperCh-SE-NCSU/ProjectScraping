@@ -15,7 +15,7 @@ def perfrom_one_task(task=None):
     if time_str == task.time:
         print "Performing", task.name
         task.task()
-        time.sleep(70) # 睡眠70秒避免在相同时段内重复执行相同任务
+        time.sleep(70) # To avoid executing same tasks in same time sections 
         return True
     return False
 
