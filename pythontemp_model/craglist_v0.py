@@ -2,6 +2,8 @@ import urllib2
 import re
 import time
 import xml.etree.ElementTree as ET
+#This file is to crawl craigslit to get car sale information
+#and send emails to users
 
 tree = ET.parse('country_data.xml')
 root = tree.getroot()
