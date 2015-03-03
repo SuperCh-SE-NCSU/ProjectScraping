@@ -28,7 +28,7 @@ sudo pip install lpthw.web
   
   (5).  Build a website for users to subscribe to our email service (completed)
   
-  (6).  Get data from dynamic website (done)
+  (6).  Get data from a dynamic website (done)
 
-  (7).  Complete the whole system and compare the two strategies (to do)
+  (7).  Complete the whole system and compare the two different strategies (to do)
 
