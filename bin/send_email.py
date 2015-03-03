@@ -39,7 +39,7 @@ def sendgridEmail():
     cur.execute("SELECT * FROM users")
     conn.commit()
     rows = cur.fetchall()
-    sg = sendgrid.SendGridClient('ldong6@ncsu.edu', '1234567')
+    sg = sendgrid.SendGridClient('ldong6@ncsu.edu', '******')
 
     for row in rows:
         #print row
