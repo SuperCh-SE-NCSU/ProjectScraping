@@ -2,9 +2,9 @@
 ### Web Crawler Application  
 [![Build Status](https://travis-ci.org/SuperCh-SE-NCSU/ProjectScraping.svg?branch=master)](https://travis-ci.org/SuperCh-SE-NCSU/ProjectScraping)
 
-Using Scrapy to crawl craglist and kbb to get saling infromation about used cars users specified with their kbb price.
+Using Scrapy to crawl craigslist and kbb to get sale information about used cars users specified and their kbb price.
 
-Users can subscribe to our email service.we will send them the lastest car information they need once per day. 
+Users can subscribe to our email service.We will send them the lastest car information they need once per day. 
 ### Demo
 
 https://rocky-spire-5172.herokuapp.com<br/>
