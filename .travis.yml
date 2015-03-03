@@ -21,7 +21,7 @@
  
    
  # command to run tests
- #script: python bin/post_form.py
+ script: make test
 
 deploy:
   provider: heroku
