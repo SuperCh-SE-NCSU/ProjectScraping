@@ -18,9 +18,9 @@ sudo pip install lpthw.web
 
 ### Develop Phase
 
-  (1).  Crawl craigslist to get sale price and other information and send the information to subscribed users's emails (completed)
+  (1).  Crawl craigslist to get sale price and other information about used cars users specified and send the information to subscribed users's emails (completed)
 
-  (2).  Set parameters to get the price from kbb (demo, to implement it in a function)
+  (2).  Set parameters to get the price from kbb (demo, to be implemented in a function)
 
   (3).  Integrate part 1 and part 2 to form the information which will be sended to users (partly completed)
 
