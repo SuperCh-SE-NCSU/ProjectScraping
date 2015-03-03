@@ -16,8 +16,8 @@
    - pip install lpthw.web
    
  before_script:
--  - psql -c 'create database travis_ci_test;' -U postgres
-+  - psql -c 'create database subscribe;' -U postgres
+   - psql -c 'create database travis_ci_test;' -U postgres
+   - psql -c 'create database subscribe;' -U postgres
  
    
  # command to run tests
