@@ -22,7 +22,7 @@ sudo pip install lpthw.web
 
   (2).  Set parameters to get the price from kbb (demo, to implement it in a function)
 
-  (3).  Integrate part 1 and part 2 to form the information sended to users (partly completed)
+  (3).  Integrate part 1 and part 2 to form the information which will be sended to users (partly completed)
 
   (4).  Rewrite 1,2,3 in scrapy (to do)
   
