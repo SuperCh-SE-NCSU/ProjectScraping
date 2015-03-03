@@ -103,5 +103,6 @@ def testcraglistsearch():
                    print usercarlist.timepostlist[i]
                    print '-------------------------'
 
-
+def test():
+    pass
     
