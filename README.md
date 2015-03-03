@@ -1,5 +1,6 @@
 
-### Web Crawler Application
+### Web Crawler Application  
+[![Build Status](https://travis-ci.org/SuperCh-SE-NCSU/ProjectScraping.svg?branch=master)](https://travis-ci.org/SuperCh-SE-NCSU/ProjectScraping)
 
 Using Scrapy to crawle craglist and kbb to get saling infromation about used cars users specified with their kbb price.
 
@@ -12,7 +13,6 @@ https://rocky-spire-5172.herokuapp.com<br/>
 ### Install 3rd part library (needed for subscription)
 
 ```
-install lpthw.web 
 sudo pip install lpthw.web
 ```   
 

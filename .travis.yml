@@ -1,27 +1,28 @@
-language: python
-python:
-  - "2.7"
-  
+ language: python
+ 
+ python:
+    - "2.7"
+
+ env:
+   - lpthw.web
+   
+ # add PostgreSQL database
+ addons:
+   postgresql: "9.3"
+   
+ #command to install dependencies
+ install:
+   - pip install -r requirements.txt 
+   - pip install lpthw.web
+   
+ before_script:
+   - psql -c 'create database travis_ci_test;' -U postgres
+   - psql -c 'create database subscribe;' -U postgres
+ 
+   
+ # command to run tests
+ script: nosetests
+
 deploy:
   provider: heroku
   api_key: 2de4705a-1434-4c0f-b378-d58183479fac
-  app: rocky-spire-5172
-  on: master
-  run:
-    - "pip install -r requirements.txt"
-    - "pip install lpthw.web"
-  
-# command to install dependencies
-#install:
-#  - pip install -r requirements.txt 
-#  - pip install lpthw.web
-
-# add PostgreSQL database
-addons:
-  postgresql: "9.3"
-  
-before_script:
-  - psql -c 'create database travis_ci_test;' -U postgres
-  
-# command to run tests
-script: python bin/post_form.py
