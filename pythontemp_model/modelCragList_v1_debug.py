@@ -2,7 +2,7 @@ import urllib2
 import re
 import time
 import xml.etree.ElementTree as ET
-
+#This file contains the basic crawl function for craigslist.
 class carlist:
     def __init__(self,modellist,pricelist,carlinklist,abstractIlist,timepostlist):
         self.modellist=modellist
