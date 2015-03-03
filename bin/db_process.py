@@ -3,6 +3,8 @@ import psycopg2
 import sys
 import urlparse
 
+#This file is to write the information we get from users into the database and
+#read from database to get the input for crawling functions.
 
 def writeDB(username, make, model, year, email):
 	urlparse.uses_netloc.append("postgres")
