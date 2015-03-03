@@ -2,9 +2,9 @@
 ### Web Crawler Application  
 [![Build Status](https://travis-ci.org/SuperCh-SE-NCSU/ProjectScraping.svg?branch=master)](https://travis-ci.org/SuperCh-SE-NCSU/ProjectScraping)
 
-Using Scrapy to crawle craglist and kbb to get saling infromation about used cars users specified with their kbb price.
+Using Scrapy to crawl craglist and kbb to get saling infromation about used cars users specified with their kbb price.
 
-Users can subscribe into our email service.we will send them the lastest car information they need once per day. 
+Users can subscribe to our email service.we will send them the lastest car information they need once per day. 
 ### Demo
 
 https://rocky-spire-5172.herokuapp.com<br/>
@@ -20,7 +20,7 @@ sudo pip install lpthw.web
 
   (1).  Crawl craigslist to get sale price and other information and send the information to subscribed users's emails (completed)
 
-  (2).  Post to get the price from kbb (demo, to implement it in a function)
+  (2).  Set parameters to get the price from kbb (demo, to implement it in a function)
 
   (3).  Integrate part 1 and part 2 to form the information sended to users (partly completed)
 
