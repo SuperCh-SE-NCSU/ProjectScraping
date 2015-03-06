@@ -17,7 +17,8 @@ class Testcraigslist(unittest.TestCase):
            
 	def test_craglistsearch(self):
 		self.assertIsNotNone(self.usercarlist)
+		self.assertIsInstance(self.usercarlist, carlist)
 		#self.assertEqual(self.usercarlist, <__main__.carlist instance at 0x7fb9a6b9c4d0>)
-                   
+             
 if __name__ == '__main__':
     unittest.main()
