@@ -21,7 +21,7 @@
  
    
  # command to run tests
- script: nosetests
+ script: python tests/modelCragList_v1_test.py
 
 deploy:
   provider: heroku
