@@ -86,11 +86,7 @@ def craglistsearch(cmake,cmodel,cstartyear,cendyear,cminprice,cmaxprice,ctime):
     #print len(mileagel)
     usercarlist=carlist(model,price,carlink,abstractInformation,mileagel)
     return usercarlist
-    
-def testcraglistgetMilageAndYear():
-    milandyear=getMilageAndYear('http://raleigh.craigslist.org/cto/4902572544.html')
-    print milandyear['milage']
-    print milandyear['year']
+
     
 def testcraglistsearch():
     usercarlist=craglistsearch('toyota','camry','2007','2010',5000,10000,'2015-02-21 23:40:13')
@@ -102,7 +98,5 @@ def testcraglistsearch():
                    print usercarlist.abstractIlist[i]
                    print usercarlist.timepostlist[i]
                    print '-------------------------'
-
-def test():
-    pass
     
+#testcraglistsearch()

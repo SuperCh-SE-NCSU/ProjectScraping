@@ -3,14 +3,16 @@ import os, sys
 path = os.path.abspath(os.path.join('pythontemp_model'))
 sys.path.append(path)
 
-print path
-print sys.path
-
-import modelCragList_v1_debug
 import unittest
+from modelCragList_v1_debug import getMilageAndYear
+
 class Testcraigslist(unittest.TestCase):
-    def setUp(self):
-        self._init_()
-        
+	def setUp(self):
+		self.milageandy = getMilageAndYear('http://raleigh.craigslist.org/cto/4902572544.html')   
+		
+	#consider indention carefully   
+	def test_getMilageAndYear(self):
+		self.assertEqual(self.milageandy, {'milage': '106000','year': '2006'})
+       
 if __name__ == '__main__':
     unittest.main()
