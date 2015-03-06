@@ -4,6 +4,16 @@ from random import random,shuffle
 from time import sleep
 global str
 
+class carlistwithPrice:
+    def __init__(self,pricelist,modellist,pricelist,carlinklist,abstractIlist,timepostlist):
+        self.modellist=modellist
+        self.pricelist=pricelist
+        self.carlinklist=carlinklist
+        self.abstractIlist=abstractIlist
+        self.timepostlist=timepostlist
+        self.pricelist=pricelist
+
+def craglistsearchKbb(carlist):
 ### Kelly Blue Book ######################
 
 def extractPricekbb(html):
