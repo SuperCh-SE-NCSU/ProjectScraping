@@ -65,7 +65,7 @@ def craglistsearch(cmake,cmodel,cstartyear,cendyear,cminprice,cmaxprice,ctime):
                 
                     if cmodel in timeCur.group(7).lower() and int(timeCur.group(8))>=cminprice and int(timeCur.group(8))<=cmaxprice:
                         milandyear=getMilageAndYear('http://raleigh.craigslist.org'+timeCur.group(4))
-                        print milandyear
+                        #print milandyear
                         if milandyear['year']>=cstartyear and milandyear['year']<=cendyear:
                             #print milandyear['year']
                             timePost.append(timeCur.group(3))
@@ -87,16 +87,7 @@ def craglistsearch(cmake,cmodel,cstartyear,cendyear,cminprice,cmaxprice,ctime):
     usercarlist=carlist(model,price,carlink,abstractInformation,mileagel)
     return usercarlist
 
-    
-def testcraglistsearch():
-    usercarlist=craglistsearch('toyota','camry','2007','2010',5000,10000,'2015-02-21 23:40:13')
-    for i in range(len(usercarlist.modellist)):
-                   print '-------------------------'
-                   print usercarlist.modellist[i]
-                   print usercarlist.pricelist[i]
-                   print usercarlist.carlinklist[i]
-                   print usercarlist.abstractIlist[i]
-                   print usercarlist.timepostlist[i]
-                   print '-------------------------'
+#def testcraglistsearch():
+#	usercarlist=craglistsearch('toyota','camry','2007','2010',5000,10000,'2015-02-21 23:40:13')   
     
 #testcraglistsearch()
