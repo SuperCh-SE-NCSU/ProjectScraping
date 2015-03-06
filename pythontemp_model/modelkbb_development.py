@@ -86,7 +86,7 @@ def getKbbData(make,model,year):
     # 2.) get all trims
     trims = set()
 
-    print bodytypes
+    #print bodytypes
     
     for b in bodytypes:
         #html, session = getHtml(kbbTrimUrl(make,model,year,b), session)
@@ -96,13 +96,13 @@ def getKbbData(make,model,year):
         soup = BeautifulSoup(html, "lxml")
 
         vs = soup.find_all(text='Choose this style')
-        print vs
+        #print vs
         for v in vs:
             href = v.parent.attrs['href']
-            print href
+            #print href
             #trim = href.split('/')[4]
             trims.add("http://www.kbb.com"+href)
-    print trims
+    #print trims
     # 3.) scrape data for each trim
     scraped = dict()
     for t in trims:
@@ -116,7 +116,7 @@ def getKbbData(make,model,year):
         for v in vs2:
             href=v.parent.attrs['href']
             trims2.add("http://www.kbb.com"+href)
-        print trims2
+        #print trims2
         for t2 in trims2:
             response2=urllib2.urlopen(t2+'&pricetype=private-patry')
             html2=response2.read()
@@ -125,26 +125,27 @@ def getKbbData(make,model,year):
             soup=BeautifulSoup(html2,"lxml")
             trims3=set()
             vs3=soup.find_all(text='Get used car price')
-            print vs3
+            #print vs3
             for v3 in vs3:
                 href=v3.parent.attrs['href']
                 #print href
                 href=href.replace('retail', 'private-party')
                 response=urllib2.urlopen("http://www.kbb.com"+href+'&mileage=30000')
                 html3=response.read()
+                print html3
                 #"privatepartyexcellent": {"priceMin": 0.0, "price": 21589.0,"priceMax": 0.0},
                 #timeCur=re.search(r'"privatepartyexcellent": \{"priceMin": \d\.\d, "price": \d\.\d, "priceMax": \d.\d\},')
-                print extractPricekbb(html3)
+                #print extractPricekbb(html3)
                 trims3.add("http://www.kbb.com"+href)
-            print trims3
+            #print trims3
         #print html
         #jd = kbbExtractJson(html)
         #scraped[t] = jd['values']
     print scraped
     return scraped
 
-year='2013'
-make='Nissan'
-model='Altima'
+year='2007'
+make='Toyota'
+model='Corolla'
 pricing=getKbbData(make,model,year)
 
