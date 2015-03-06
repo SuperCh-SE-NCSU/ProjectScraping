@@ -11,6 +11,7 @@ class carlist:
         self.abstractIlist=abstractIlist
         self.timepostlist=timepostlist
 
+    
 def getMilageAndYear(url):
     response = urllib2.urlopen(url)
     html = response.read()
