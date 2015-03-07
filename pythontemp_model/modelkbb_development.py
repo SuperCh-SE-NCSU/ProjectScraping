@@ -2,63 +2,51 @@ import requests,sys,csv,traceback,re,json,os,urllib2
 from bs4 import BeautifulSoup
 from random import random,shuffle
 from time import sleep
+import modelCragList_v1_debug
 global str
 
-class carlistwithPrice:
-    def __init__(self,pricelist,modellist,pricelist,carlinklist,abstractIlist,timepostlist):
-        self.modellist=modellist
-        self.pricelist=pricelist
-        self.carlinklist=carlinklist
-        self.abstractIlist=abstractIlist
-        self.timepostlist=timepostlist
-        self.pricelist=pricelist
 
-def craglistsearchKbb(carlist):
 ### Kelly Blue Book ######################
 
 def extractPricekbb(html):
-    price=re.search(r'"privatepartyexcellent": \{\s*"priceMin":\s*\d*\.\d*,\s*"price":\s*(\d*)\.\d*,\s*"priceMax":\s*\d*\.\d*\s*\}',html)
-    if price:
-        return price.group(1)
+    pricelist=list()
+    price1=re.search(r'"privatepartyexcellent": \{\s*"priceMin":\s*\d*\.\d*,\s*"price":\s*(\d*)\.\d*,\s*"priceMax":\s*\d*\.\d*\s*\}',html)
+    if price1:
+        pricelist.append(price1.group(1))
     else:
-        return 0
+        pricelist.append(0)
+        
+    price2=re.search(r'"privatepartyverygood": \{\s*"priceMin":\s*\d*\.\d*,\s*"price":\s*(\d*)\.\d*,\s*"priceMax":\s*\d*\.\d*\s*\}',html)
+    if price2:
+        pricelist.append(price2.group(1))
+    else:
+        pricelist.append(0)
+        
+    price3=re.search(r'"privatepartygood": \{\s*"priceMin":\s*\d*\.\d*,\s*"price":\s*(\d*)\.\d*,\s*"priceMax":\s*\d*\.\d*\s*\}',html)
+    if price3:
+        pricelist.append(price3.group(1))
+    else:
+        pricelist.append(0)
+
+    price4=re.search(r'"privatepartyfair": \{\s*"priceMin":\s*\d*\.\d*,\s*"price":\s*(\d*)\.\d*,\s*"priceMax":\s*\d*\.\d*\s*\}',html)
+    if price4:
+        pricelist.append(price4.group(1))
+    else:
+        pricelist.append(0)
+
+    price5=re.search(r'"privatepartyfair": \{\s*"priceMin":\s*\d*\.\d*,\s*"price":\s*(\d*)\.\d*,\s*"priceMax":\s*\d*\.\d*\s*\}',html)
+    if price5:
+        pricelist.append(price5.group(1))
+    else:
+        pricelist.append(0)
+
+    price6=re.search(r'"retail": \{\s*"priceMin":\s*\d*\.\d*,\s*"price":\s*(\d*)\.\d*,\s*"priceMax":\s*\d*\.\d*\s*\}',html)
+    if price6:
+        pricelist.append(price6.group(1))
+    else:
+        pricelist.append(0)
     
-def kbbExtractJson(html):
-    soup = BeautifulSoup(html, "lxml")
-    jssearch = soup.find(name='script', attrs={'language' : 'javascript'})
-    if jssearch:
-        code = jssearch.text
-    else:
-        open("nojs.html", "w").write(html)
-        raise RuntimeError
-
-    js = code[code.find("data"):]
-    js = js[js.find("{"):]
-    bc = 0
-    idx = 0
-    for c in js:
-        if bc == 0 and idx>0: break
-        if c=="{": bc +=1
-        if c=="}": bc -= 1
-        idx+=1
-    else:
-        raise RuntimeError("bc={}".format(bc))
-
-    jsonstr = js[:idx]
-
-    return json.loads(jsonstr)
-
-
-def kbbGetData(sess, make,model,year):
-    kbbdata = dict()
-    kbbCacheFile = "{}/{}-{}-{}_kbb.json".format(cacheDir,make,model,year)
-    if os.path.isfile(kbbCacheFile):
-        kbbdata = json.load(open(kbbCacheFile))
-    else:
-        kbbdata = getKbbData(sess, make,model,year)
-        json.dump(kbbdata, open(kbbCacheFile, "w"))
-
-    return kbbdata
+    return pricelist
 
 
 def kbbBaseUrl(make,model,year):
@@ -82,43 +70,42 @@ def kbbTrimUrl(make,model,year, body):
     b = kbbBaseUrl(make,model,year)
     return b + "/styles/?intent=buy-used&bodystyle={}".format(body)
 
+def savehtml(filedst,content):
+    Html_file= open(filedst,"w")
+    Html_file.write(content)
+    Html_file.close()
 
-def getKbbData(make,model,year):
-    # 1.) get body types
-    #html, session = getHtml(kbbBodytypeUrl(make,model,year),
-    #                       cookies=dict(ZipCode=zipcode,PersistentZipCode=zipcode))
+def getKbbPrice(make,model,year,mileage):
+    #get make model year
     response=urllib2.urlopen(kbbBodytypeUrl(make,model,year))
     html=response.read()
-   
+    #get style like sedan
     re_bodystyle = re.compile(r'bodystyle=([^"\'?]+)')
     bodytypes = list(set(re_bodystyle.findall(html)))
-
-    # 2.) get all trims
-    trims = set()
-
-    print bodytypes
+    trims = dict()
+    styleprice=dict()
     
     for b in bodytypes:
-        #html, session = getHtml(kbbTrimUrl(make,model,year,b), session)
-        print kbbTrimUrl(make,model,year,b)
+        #print kbbTrimUrl(make,model,year,b)
         response=urllib2.urlopen(kbbTrimUrl(make,model,year,b))
         html=response.read()
         soup = BeautifulSoup(html, "lxml")
 
+        #get style in the second level like CE/LE
         vs = soup.find_all(text='Choose this style')
-        print vs
+        #http://www.pythonforbeginners.com/beautifulsoup/beautifulsoup-4-python
         for v in vs:
+            #print v.parent
+            style=v.parent.parent.find_all("div",{"class":"style-name section-title"})[0].get_text()
+            #print style
             href = v.parent.attrs['href']
-            print href
-            #trim = href.split('/')[4]
-            trims.add("http://www.kbb.com"+href)
-    print trims
-    # 3.) scrape data for each trim
-    scraped = dict()
-    for t in trims:
+            trims[style]="http://www.kbb.com"+href
+
+    #print trims
+    for key1,value1 in trims.iteritems():
         #html, session = getHtml(kbbCarUrl(make,model,year,t), session)
         #print t+'&pricetype=private-party&persistedcondition=good'
-        response=urllib2.urlopen(t)
+        response=urllib2.urlopen(value1)
         html=response.read()
         soup=BeautifulSoup(html,"lxml")
         trims2=set()
@@ -126,7 +113,7 @@ def getKbbData(make,model,year):
         for v in vs2:
             href=v.parent.attrs['href']
             trims2.add("http://www.kbb.com"+href)
-        print trims2
+        
         for t2 in trims2:
             response2=urllib2.urlopen(t2+'&pricetype=private-patry')
             html2=response2.read()
@@ -134,27 +121,39 @@ def getKbbData(make,model,year):
 
             soup=BeautifulSoup(html2,"lxml")
             trims3=set()
-            vs3=soup.find_all(text='Get used car price')
-            print vs3
+            vs3=soup.find_all("a",{"data-condition-select":"verygood"},text='Get used car price')
+            #print vs3
             for v3 in vs3:
-                href=v3.parent.attrs['href']
-                #print href
+                href=v3.attrs['href']
                 href=href.replace('retail', 'private-party')
-                response=urllib2.urlopen("http://www.kbb.com"+href+'&mileage=30000')
+                response=urllib2.urlopen("http://www.kbb.com"+href+'&mileage='+str(mileage))
                 html3=response.read()
-                #"privatepartyexcellent": {"priceMin": 0.0, "price": 21589.0,"priceMax": 0.0},
-                #timeCur=re.search(r'"privatepartyexcellent": \{"priceMin": \d\.\d, "price": \d\.\d, "priceMax": \d.\d\},')
-                print extractPricekbb(html3)
+                styleprice[key1.replace('\n', ' ').replace('\r', '')]=extractPricekbb(html3)
                 trims3.add("http://www.kbb.com"+href)
-            print trims3
+            #print trims3
         #print html
         #jd = kbbExtractJson(html)
         #scraped[t] = jd['values']
-    print scraped
-    return scraped
+    print styleprice
+    return styleprice
+    #print kbbBodytypeUrl(make,model,year)
+    #savehtml("test.html",html)
+        
+class carlistwithPrice:
+    def __init__(self,standardpricelist,modellist,pricelist,carlinklist,abstractIlist,timepostlist):
+        self.modellist=modellist
+        self.standardpricelist=standardpricelist
+        self.carlinklist=carlinklist
+        self.abstractIlist=abstractIlist
+        self.timepostlist=timepostlist
+        self.pricelist=pricelist
 
-year='2013'
-make='Nissan'
-model='Altima'
-pricing=getKbbData(make,model,year)
-
+def craglistsearchKbb(mcarlist):
+    price=list()
+    for i in range(len(mcarlist.modellist)):
+        tempprice=getKbbPrice(mcarlist.make[i],mcarlist.model[i],mcarlist.year[i],mcarlist.mileage[i])
+        price.append(tempprice)
+        
+def testgetKbbPrice():
+    getKbbPrice('Honda','Accord','2007',111000)
+testgetKbbPrice()
