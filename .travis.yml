@@ -21,7 +21,8 @@
  
    
  # command to run tests
- script: python tests/modelCragList_v1_test.py
+ script: python tests/modelCragList_v1_test.py -v
+ script: python tests/modelkbb_development_test.py -v
 
 deploy:
   provider: heroku
