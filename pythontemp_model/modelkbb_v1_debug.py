@@ -126,7 +126,7 @@ def getKbbPrice(make,model,year,mileage):
             for v3 in vs3:
                 href=v3.attrs['href']
                 href=href.replace('retail', 'private-party')
-                response=urllib2.urlopen("http://www.kbb.com"+href+'&mileage='+str(mileage))
+                response=urllib2.urlopen("http://www.kbb.com"+href+'&mileage='+mileage)
                 html3=response.read()
                 styleprice[key1.replace('\n', ' ').replace('\r', '')]=extractPricekbb(html3)
                 trims3.add("http://www.kbb.com"+href)
@@ -155,5 +155,5 @@ def craglistsearchKbb(mcarlist):
         price.append(tempprice)
         
 def testgetKbbPrice():
-    getKbbPrice('Honda','Accord','2007',111000)
-testgetKbbPrice()
+    getKbbPrice('Honda','Accord','2007','111000')
+#testgetKbbPrice()

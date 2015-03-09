@@ -4,12 +4,14 @@ import time
 import xml.etree.ElementTree as ET
 #This file contains the basic crawl function for craigslist.
 class carlist:
-    def __init__(self,modellist,pricelist,carlinklist,abstractIlist,timepostlist):
+    def __init__(self,modellist,pricelist,carlinklist,abstractIlist,mileagel,timepostlist,caryear):
         self.modellist=modellist
         self.pricelist=pricelist
         self.carlinklist=carlinklist
         self.abstractIlist=abstractIlist
         self.timepostlist=timepostlist
+        self.mileagel=mileagel
+        self.year=caryear
 
     
 def getMilageAndYear(url):
@@ -36,6 +38,7 @@ def craglistsearch(cmake,cmodel,cstartyear,cendyear,cminprice,cmaxprice,ctime):
     carlink=list()
     abstractInformation=list()
     mileagel=list()
+    caryear=list()
     
     timePost=list()
     today=True
@@ -75,6 +78,7 @@ def craglistsearch(cmake,cmodel,cstartyear,cendyear,cminprice,cmaxprice,ctime):
                             abstractInformation.append(timeCur.group(7))
                             mileagel.append(milandyear['milage'])
                             model.append(cmodel)
+                            caryear.append(milandyear['year'])
                             
         except:
             print 'error %d' %num
@@ -85,10 +89,17 @@ def craglistsearch(cmake,cmodel,cstartyear,cendyear,cminprice,cmaxprice,ctime):
     #print len(carlink)
     #print len(abstractInformation)
     #print len(mileagel)
-    usercarlist=carlist(model,price,carlink,abstractInformation,mileagel)
+    usercarlist=carlist(model,price,carlink,abstractInformation,mileagel,timePost,caryear)
     return usercarlist
 
-#def testcraglistsearch():
-#	usercarlist=craglistsearch('toyota','camry','2007','2010',5000,10000,'2015-02-21 23:40:13')   
-    
+def testcraglistsearch():
+    usercarlist=craglistsearch('toyota','camry','2007','2010',5000,10000,'2015-03-06 23:40:13')   
+    for i in range(len(usercarlist.modellist)):
+        print usercarlist.modellist[i]
+        print usercarlist.pricelist[i]
+        print usercarlist.carlinklist[i]
+        print usercarlist.abstractIlist[i]
+        print usercarlist.timepostlist[i]
+        print '--------------------------'
+        
 #testcraglistsearch()
