@@ -14,6 +14,7 @@
  install:
    - pip install lpthw.web
    - pip install requests
+   - pip install BeautifulSoup4
    - pip install -r requirements.txt 
    
  before_script:
