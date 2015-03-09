@@ -103,3 +103,4 @@ def testcraglistsearch():
         print '--------------------------'
         
 #testcraglistsearch()
+#getMilageAndYear('http://raleigh.craigslist.org/cto/4902572544.html')

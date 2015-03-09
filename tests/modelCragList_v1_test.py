@@ -16,10 +16,15 @@ class Testcraigslist(unittest.TestCase):
 		self.assertEqual(self.milageandy, {'milage': '106000','year': '2006'})
            
 	def test_craglistsearch(self):
-		self.usercarlist=craglistsearch('toyota','camry','2007','2010',5000,10000,'2015-02-21 23:40:13')  
+		self.usercarlist=craglistsearch('toyota','camry','2007','2010',5000,10000,'2015-03-06 23:40:13')  
 		self.assertIsNotNone(self.usercarlist)
 		self.assertIsInstance(self.usercarlist, carlist)
-		#self.assertEqual(self.usercarlist, <__main__.carlist instance at 0x7fb9a6b9c4d0>)
+		self.assertEqual(self.usercarlist.modellist[0],'camry')
+		#assertGreaterEqual(a, b)  a>=b
+		self.assertGreaterEqual(int(self.usercarlist.pricelist[0]),5000)
+		self.assertLessEqual(int(self.usercarlist.pricelist[0]),10000)
+
+
              
 if __name__ == '__main__':
     unittest.main()
