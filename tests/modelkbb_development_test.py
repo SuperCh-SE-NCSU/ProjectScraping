@@ -10,6 +10,7 @@ class Testkbb(unittest.TestCase):
 		self.year = '2007'
 		self.make = 'Toyota'
 		self.model = 'Corolla'
+		self.mileage = '111000'
 
 	def test_extractPricekbb(self):
 		self.response = urllib2.urlopen("http://www.kbb.com/toyota/corolla/2007-toyota-corolla/ce-sedan-4d/?condition=very-good&vehicleid=84286&intent=buy-used&category=sedan&pricetype=private-party&mileage=30000&persistedcondition=very-good#survey")
@@ -37,7 +38,7 @@ class Testkbb(unittest.TestCase):
 		self.assertEqual(self.kbbTrimUrl, 'http://www.kbb.com/toyota/corolla/2007-toyota-corolla/styles/?intent=buy-used&bodystyle=sedan')
 		
 	def test_getKbbPrice(self):
-		self.kbbPrice = getKbbPrice(self.make,self.model,self.year,'111000')
+		self.kbbPrice = getKbbPrice(self.make,self.model,self.year,self.mileage)
 		self.assertIsNotNone(self.kbbPrice)
 		self.assertEqual(type(self.kbbPrice).__name__, 'dict')
 
