@@ -35,7 +35,7 @@ def kbbExtractJson(html):
         raise RuntimeError("bc={}".format(bc))
 
     jsonstr = js[:idx]
-
+    print json.loads(jsonstr)
     return json.loads(jsonstr)
 
 
@@ -104,6 +104,7 @@ def getKbbData(make,model,year):
         response=urllib2.urlopen(t)
         html=response.read()
         soup=BeautifulSoup(html,"lxml")
+        print t
         trims2=set()
         vs2=soup.find_all(text='Choose price type')
         for v in vs2:
@@ -126,11 +127,12 @@ def getKbbData(make,model,year):
 
         #jd = kbbExtractJson(html)
         #scraped[t] = jd['values']
-    print scraped
+    #print scraped
     return scraped
 
 year='2007'
 make='Toyota'
 model='Corolla'
 #pricing=getKbbData(make,model,year)
-
+kbbBaseUrl(make,model,year)
+kbbCarUrl(make,model,year,'s-sedan-4d')
