@@ -3,7 +3,6 @@ path = os.path.abspath(os.path.join('pythontemp_model'))
 sys.path.append(path)
 
 import unittest
-import mock
 from modelkbb_v1_debug import *
 
 class Testkbb(unittest.TestCase):
@@ -22,18 +21,25 @@ class Testkbb(unittest.TestCase):
 		self.baseUrl = kbbBaseUrl(self.make,self.model,self.year)
 		self.assertEqual(self.baseUrl, 'http://www.kbb.com/toyota/corolla/2007-toyota-corolla')
 
-	#def kbbBaseUrl(self.make,self.model,self.year):
-   	#	mk = make.lower().replace(' ', '-')
-    #	md = model.lower().replace(' ', '-')
-    #	yr = year.lower().replace(' ', '-')
-    #	return "http://www.kbb.com/{make:}/{model:}/{year:}-{make:}-{model:}".format(self.make=mk,self.model=md,self.year=yr)
+	def test_kbbCarUrl(self):
+		self.trim = 's-sedan-4d'
+		self.kbbcarurl = kbbCarUrl(self.make,self.model,self.year,self.trim)
+		self.assertEqual(self.kbbcarurl, 'http://www.kbb.com/toyota/corolla/2007-toyota-corolla/s-sedan-4d?condition=good&intent=buy-used&pricetype=retail&persistedcondition=good')
 
-	#def test_kbbCarUrl(self):
-	#	self.trim = 's-sedan-4d'
-	#	#@mock.patch('extractPricekbb_v0.kbbCarUrl', side_effect=simple_kbbCarUrl)
-	#	self.kbbcarurl = kbbCarUrl(self.make,self.model,self.year,self.trim)
-    #	self.assertEqual(self.kbbcarurl, 'http://www.kbb.com/toyota/corolla/2007-toyota-corolla/s-sedan-4d?condition=good&intent=buy-used&pricetype=retail&persistedcondition=good')
+	#consider indention instead of whitespaces
+	def test_kbbBodytypeUrl(self):
+		self.kbbBodytypeUrl = kbbBodytypeUrl(self.make,self.model,self.year)
+		self.assertEqual(self.kbbBodytypeUrl, 'http://www.kbb.com/toyota/corolla/2007-toyota-corolla/categories/?intent=buy-used')
 
+	def test_kbbTrimUrl(self):
+		self.body = 'sedan'
+		self.kbbTrimUrl = kbbTrimUrl(self.make,self.model,self.year,self.body)
+		self.assertEqual(self.kbbTrimUrl, 'http://www.kbb.com/toyota/corolla/2007-toyota-corolla/styles/?intent=buy-used&bodystyle=sedan')
+		
+	def test_getKbbPrice(self):
+		self.kbbPrice = getKbbPrice(self.make,self.model,self.year,'111000')
+		self.assertIsNotNone(self.kbbPrice)
+		self.assertEqual(type(self.kbbPrice).__name__, 'dict')
 
 if __name__ == '__main__':
     unittest.main()
