@@ -12,7 +12,7 @@ import sched
 def perfrom_one_task(task=None):
     now = datetime.datetime.today()
     time_str = now.strftime('%H:%M')
-    if time_str >= task.time:
+    if time_str > task.time:
         print "Performing", task.name
         task.task()
         time.sleep(86400) # sleep one day to work
@@ -41,7 +41,7 @@ def sendgridEmail():
     rows = cur.fetchall()
 
     #send your email here, but that should not public on website, how to solve this problem?
-    sg = sendgrid.SendGridClient(SENDGRID_USERNAME, SENDGRID_PASSWORD)
+    sg = sendgrid.SendGridClient('SENDGRID_USERNAME', 'SENDGRID_PASSWORD')
     for row in rows:
         #print row
         #print type(row)
