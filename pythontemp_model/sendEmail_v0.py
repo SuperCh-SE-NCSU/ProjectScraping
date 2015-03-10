@@ -54,7 +54,7 @@ def sendgridEmail():
         mail_content='<html>'
         mail_content=mail_content+'<p>Dear '+username+',</p>'+'<p>  '+'You want to buy a '+model+' in '+str(year)+'</p>'
         mail_content=mail_content+'</html>'
-        message = sendgrid.Mail(to=email, subject='Information from ProjectScraping', html=mail_content, text='Body',from_email='ProjectScraping')
+        message = sendgrid.Mail(to=email, subject='Information from ProjectScraping区分之前的邮件', html=mail_content, text='Body',from_email='ProjectScraping')
         status, msg = sg.send(message)
 
 def testSendgridEmail():
