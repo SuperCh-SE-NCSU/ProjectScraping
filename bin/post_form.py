@@ -7,6 +7,7 @@ import os
 #year of make)
 urls = (
   '/', 'Index'
+  '/carInformation','Information'
 )
 
 app = web.application(urls, globals())
