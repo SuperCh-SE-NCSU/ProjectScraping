@@ -41,7 +41,7 @@ def sendgridEmail():
     rows = cur.fetchall()
 
     #send your email here, but that should not public on website, how to solve this problem?
-    sg = sendgrid.SendGridClient('SENDGRID_USERNAME', 'SENDGRID_PASSWORD')
+    sg = sendgrid.SendGridClient(os.environ['SENDGRID_USERNAME'], os.environ['SENDGRID_PASSWORD'])
     for row in rows:
         #print row
         #print type(row)
