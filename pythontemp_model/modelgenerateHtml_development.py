@@ -4,7 +4,7 @@ import modelkbb_v1_debug
 def generateHTML(cmake,cmodel,cstartyear,cendyear,cminprice,cmaxprice,ctime):
     usercarlist=modelCragList_v1_debug.craglistsearch(cmake,cmodel,cstartyear,cendyear,cminprice,cmaxprice,ctime)
     html_content='<html>'
-    temp_content='<center><p> model: '+cmodel+'</p>'
+    temp_content='<body><center><p> model: '+cmodel+'</p>'
     html_content=html_content+temp_content
     for i in range(len(usercarlist.modellist)):
         tempprice=modelkbb_v1_debug.getKbbPrice(cmake,usercarlist.modellist[i],usercarlist.year[i],usercarlist.mileagel[i])
@@ -15,7 +15,7 @@ def generateHTML(cmake,cmodel,cstartyear,cendyear,cminprice,cmaxprice,ctime):
         for key1,value1 in tempprice.iteritems():
             temp_content='<p> style: '+str(key1)+'</p><p>'+str(value1)+'</p>'
             html_content=html_content+temp_content
-        html_content+='<p>========================================</p></center>'
+        html_content+='<p>========================================</p></center><body>'
     Html_file= open("current.html","w")
     Html_file.write(html_content)
     Html_file.close()
