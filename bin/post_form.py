@@ -6,7 +6,7 @@ import os
 #address, the car they would like to receive information about.(car make,model,
 #year of make)
 urls = (
-  '/', 'Index'
+  '/', 'Index',
   '/carInformation','Information'
 )
 
@@ -32,7 +32,7 @@ class Information(object):
         render.carInformation()
     def POST(self):
         form = web.input(username="Nobody", make="Toyota", model="Camry", year="2007",email="test@ncsu.edu")
-        greeting = "%s, %s, %s, %s, %s" % (form.username, form.make,form.model,form.year,form.email)
+        greeting = "%s, %s, %s, %s, %s" % (form.username,form.make,form.model,form.year,form.email)
         return render.index(greeting = greeting)
         
 if __name__ == "__main__":
