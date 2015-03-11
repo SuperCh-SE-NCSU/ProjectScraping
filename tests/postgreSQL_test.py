@@ -1,8 +1,8 @@
 import unittest
 import os
 import psycopg2
-import sys
 import urlparse
+import sys
 import testing.postgresql
 from sqlalchemy import create_engine
 
@@ -12,7 +12,9 @@ class Testpostgresql(unittest.TestCase):
 		#setup new PostgreSQL server
 		self.postgresql = testing.postgresql.Postgresql()
 		# connect to PostgreSQL
-		self.engine = create_engine(self.postgresql.url())
+		urlparse.uses_netloc.append("postgres")
+		self.url = urlparse.urlparse(os.environ["DATABASE_URL"])
+		self.engine = create_engine(self.postgresql.url(self.url))
 		self.con = psycopg2.connect(**self.postgresql.dsn())
 		self.cur = self.con.cursor()
 		self.cur.execute('CREATE TABLE users(username character varying(50),car_make character varying(50),car_model character varying(50),year integer,email character varying(50));')
