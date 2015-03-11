@@ -29,7 +29,8 @@ class Index(object):
 
 class Information(object):
     def GET(self):
-        return render.carInformation()
+        print 'hello, world'
+
     def POST(self):
         form = web.input(username="Nobody", make="Toyota", model="Camry", year="2007",email="test@ncsu.edu")
         greeting = "%s, %s, %s, %s, %s" % (form.username,form.make,form.model,form.year,form.email)
