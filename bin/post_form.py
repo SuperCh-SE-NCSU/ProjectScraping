@@ -29,7 +29,11 @@ class Index(object):
 
 class Information(object):
     def GET(self):
-        web.seeother('/carInformation')
+        render.carInformation()
+    def POST(self):
+        form = web.input(username="Nobody", make="Toyota", model="Camry", year="2007",email="test@ncsu.edu")
+        greeting = "%s, %s, %s, %s, %s" % (form.username, form.make,form.model,form.year,form.email)
+        return render.index(greeting = greeting)
         
 if __name__ == "__main__":
 	app.run()
