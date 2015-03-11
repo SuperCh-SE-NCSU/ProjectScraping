@@ -29,7 +29,7 @@ class Index(object):
 
 class Information(object):
     def GET(self):
-        print 'hello, world'
+        return 'hello, world'
 
     def POST(self):
         form = web.input(username="Nobody", make="Toyota", model="Camry", year="2007",email="test@ncsu.edu")
