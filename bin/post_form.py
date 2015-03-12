@@ -2,6 +2,7 @@ import web
 import db_process
 import time
 import os
+import modelgenerateHtml_development as htmlgen
 #This file is to get input information from users,including their name, email
 #address, the car they would like to receive information about.(car make,model,
 #year of make)
@@ -33,10 +34,10 @@ class Information(object):
         return render2.carInformation()
 
     def POST(self):
-        form = web.input(username="Nobody", make="Toyota", model="Camry", year="2007",email="test@ncsu.edu")
-        greeting = "%s, %s, %s, %s, %s" % (form.username,form.make,form.model,form.year,form.email)
-        return render.index(greeting = greeting)
-        
+        form = web.input(username="Nobody", make="Toyota", model="Camry", startyear="2007",endyear='2010',minPrice='1000',maxPrice='20000',email="test@ncsu.edu")
+        #greeting = "%s, %s, %s, %s, %s" % (form.username,form.make,form.model,form.startyear,form.endyear,int(form.minPrice),int(form.maxPrice),form.email)
+        #return render.index(greeting = greeting)
+        return htmlgen.generateHtml(form.make,form.model,form.startyear,form.endyear,int(form.minPrice),int(form.maxPrice),'2015-03-06 23:40:13')
 if __name__ == "__main__":
 	app.run()
 
