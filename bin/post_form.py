@@ -14,6 +14,7 @@ app = web.application(urls, globals())
 
 render = web.template.render('templates/',base="layout")
 
+render2=web.template.render('templates/')
 
 class Index(object):
     def GET(self):
@@ -29,7 +30,7 @@ class Index(object):
 
 class Information(object):
     def GET(self):
-        return render.carInformation()
+        return render2.carInformation()
 
     def POST(self):
         form = web.input(username="Nobody", make="Toyota", model="Camry", year="2007",email="test@ncsu.edu")
