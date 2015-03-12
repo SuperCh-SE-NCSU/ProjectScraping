@@ -1,6 +1,6 @@
 <html>
 <body>
-<form class="form-signin" style="max-width: 350px; padding: 15px; margin: 0 auto;" action="/" method="POST">
+<form class="form-signin" style="max-width: 350px; padding: 15px; margin: 0 auto;" action="/carInformation" method="POST">
 	<h1 class="form-signin-heading">Subscribe Now</h1>
     <br/>
     <!--username-->
@@ -62,16 +62,16 @@
 
     <!--year-->
     <label for="inputstartYear" class="sr-only">Start Year</label>
-	<input type="number" name="startyear" id="inputYear" class="form-control" placeholder="Car Year (1909~2015)" min="1909" max="2015" required="" autofocus="">    
+	<input type="number" name="startyear" id="inputstartYear" class="form-control" placeholder="Car Year (1909~2015)" min="1909" max="2015" required="" autofocus="">    
     <br/>
         <label for="inputendYear" class="sr-only">End Year</label>
-	<input type="number" name="endyear" id="inputYear" class="form-control" placeholder="Car Year (1909~2015)" min="1909" max="2015" required="" autofocus="">    
+	<input type="number" name="endyear" id="inputendYear" class="form-control" placeholder="Car Year (1909~2015)" min="1909" max="2015" required="" autofocus="">    
     <br/>
     <label for="inputMinPrice" class="sr-only">Min Price</label>
-	<input type="number" name="minPrice" id="inputYear" class="form-control" placeholder="Car Year (1909~2015)" min="500" max="40000" required="" autofocus="">    
+	<input type="number" name="minPrice" id="inputMinPrice" class="form-control" placeholder="Price (500~20000)" min="500" max="40000" required="" autofocus="">    
     <br/>
     <label for="inputMaxPrice" class="sr-only">Max Price</label>
-	<input type="number" name="MaxPrice" id="inputYear" class="form-control" placeholder="Car Year (1909~2015)" min="500" max="40000" required="" autofocus="">    
+	<input type="number" name="MaxPrice" id="inputMaxPrice" class="form-control" placeholder="Price (500~20000)" min="500" max="40000" required="" autofocus="">    
     <br/>
     <!--email-->
     <label for="inputEmail" class="sr-only">Email address</label>

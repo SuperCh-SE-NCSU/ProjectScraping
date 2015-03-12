@@ -2,7 +2,9 @@ import modelCragList_v1_debug
 import modelkbb_v1_debug
 
 def generateHTML(cmake,cmodel,cstartyear,cendyear,cminprice,cmaxprice,ctime):
+    print cmake,cmodel,cstartyear,cendyear,cminprice,cmaxprice,ctime
     usercarlist=modelCragList_v1_debug.craglistsearch(cmake,cmodel,cstartyear,cendyear,cminprice,cmaxprice,ctime)
+    print len(usercarlist.carlinklist)
     html_content='<html>'
     temp_content='<body><center><p> model: '+cmodel+'</p>'
     html_content=html_content+temp_content
