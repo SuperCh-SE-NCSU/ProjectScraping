@@ -16,12 +16,13 @@ def generateHTML(cmake,cmodel,cstartyear,cendyear,cminprice,cmaxprice,ctime):
             temp_content='<p> style: '+str(key1)+'</p><p>'+str(value1)+'</p>'
             html_content=html_content+temp_content
         html_content+='<p>========================================</p></center><body>'
-    Html_file= open("current.html","w")
-    Html_file.write(html_content)
-    Html_file.close()
+    return html_content
+    #Html_file= open("current.html","w")
+    #Html_file.write(html_content)
+    #Html_file.close()
 
 def testHTML():
     generateHTML('toyota','camry','2007','2010',5000,10000,'2015-03-06 23:40:13')
 
-testHTML()
+#testHTML()
     
