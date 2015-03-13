@@ -81,57 +81,56 @@ def getKbbPrice(make,model,year,mileage):
     bodytypes = list(set(re_bodystyle.findall(html)))
     trims = dict()
     styleprice=dict()
-    
-    for b in bodytypes:
-        #print kbbTrimUrl(make,model,year,b)
-        response=urllib2.urlopen(kbbTrimUrl(make,model,year,b))
-        html=response.read()
-        soup = BeautifulSoup(html, "lxml")
+    try:
+        for b in bodytypes:
+            #print kbbTrimUrl(make,model,year,b)
+            response=urllib2.urlopen(kbbTrimUrl(make,model,year,b))
+            html=response.read()
+            soup = BeautifulSoup(html, "lxml")
 
-        #get style in the second level like CE/LE
-        vs = soup.find_all(text='Choose this style')
-        #http://www.pythonforbeginners.com/beautifulsoup/beautifulsoup-4-python
-        for v in vs:
-            #print v.parent
-            style=v.parent.parent.find_all("div",{"class":"style-name section-title"})[0].get_text()
-            #print style
-            href = v.parent.attrs['href']
-            trims[style]="http://www.kbb.com"+href
+            #get style in the second level like CE/LE
+            vs = soup.find_all(text='Choose this style')
+            #http://www.pythonforbeginners.com/beautifulsoup/beautifulsoup-4-python
+            for v in vs:
+                #print v.parent
+                style=v.parent.parent.find_all("div",{"class":"style-name section-title"})[0].get_text()
+                #print style
+                href = v.parent.attrs['href']
+                trims[style]="http://www.kbb.com"+href
 
-    #print trims
-    for key1,value1 in trims.iteritems():
-        #html, session = getHtml(kbbCarUrl(make,model,year,t), session)
-        #print t+'&pricetype=private-party&persistedcondition=good'
-        response=urllib2.urlopen(value1)
-        html=response.read()
-        soup=BeautifulSoup(html,"lxml")
-        trims2=set()
-        vs2=soup.find_all(text='Choose price type')
-        for v in vs2:
-            href=v.parent.attrs['href']
-            trims2.add("http://www.kbb.com"+href)
+        #print trims
+        for key1,value1 in trims.iteritems():
+            #html, session = getHtml(kbbCarUrl(make,model,year,t), session)
+            #print t+'&pricetype=private-party&persistedcondition=good'
+            response=urllib2.urlopen(value1)
+            html=response.read()
+            soup=BeautifulSoup(html,"lxml")
+            trims2=set()
+            vs2=soup.find_all(text='Choose price type')
+            for v in vs2:
+                href=v.parent.attrs['href']
+                trims2.add("http://www.kbb.com"+href)
         
-        for t2 in trims2:
-            response2=urllib2.urlopen(t2+'&pricetype=private-patry')
-            html2=response2.read()
-            #print html2
+            for t2 in trims2:
+                response2=urllib2.urlopen(t2+'&pricetype=private-patry')
+                html2=response2.read()
+                #print html2
 
-            soup=BeautifulSoup(html2,"lxml")
-            trims3=set()
-            vs3=soup.find_all("a",{"data-condition-select":"verygood"},text='Get used car price')
-            #print vs3
-            for v3 in vs3:
-                href=v3.attrs['href']
-                href=href.replace('retail', 'private-party')
-                response=urllib2.urlopen("http://www.kbb.com"+href+'&mileage='+mileage)
-                html3=response.read()
-                styleprice[key1.replace('\n', ' ').replace('\r', '')]=extractPricekbb(html3)
-                trims3.add("http://www.kbb.com"+href)
-            #print trims3
-        #print html
-        #jd = kbbExtractJson(html)
-        #scraped[t] = jd['values']
-    print styleprice
+                soup=BeautifulSoup(html2,"lxml")
+                trims3=set()
+                vs3=soup.find_all("a",{"data-condition-select":"verygood"},text='Get used car price')
+                #print vs3
+                for v3 in vs3:
+                    href=v3.attrs['href']
+                    href=href.replace('retail', 'private-party')
+                    response=urllib2.urlopen("http://www.kbb.com"+href+'&mileage='+mileage)
+                    html3=response.read()
+                    styleprice[key1.replace('\n', ' ').replace('\r', '')]=extractPricekbb(html3)
+                    trims3.add("http://www.kbb.com"+href)
+                #print trims3
+            #print html
+    except:
+        #print 'wrong'
     return styleprice
     #print kbbBodytypeUrl(make,model,year)
     #savehtml("test.html",html)
