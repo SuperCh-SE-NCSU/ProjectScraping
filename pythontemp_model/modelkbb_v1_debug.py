@@ -10,15 +10,9 @@ global str
 
 def extractPricekbb(html):
     pricelist=list()
-    price1=re.search(r'"privatepartyexcellent": \{\s*"priceMin":\s*\d*\.\d*,\s*"price":\s*(\d*)\.\d*,\s*"priceMax":\s*\d*\.\d*\s*\}',html)
-    if price1:
-        pricelist.append(price1.group(1))
-    else:
-        pricelist.append(0)
-        
-    price2=re.search(r'"privatepartyverygood": \{\s*"priceMin":\s*\d*\.\d*,\s*"price":\s*(\d*)\.\d*,\s*"priceMax":\s*\d*\.\d*\s*\}',html)
-    if price2:
-        pricelist.append(price2.group(1))
+    price4=re.search(r'"privatepartyfair": \{\s*"priceMin":\s*\d*\.\d*,\s*"price":\s*(\d*)\.\d*,\s*"priceMax":\s*\d*\.\d*\s*\}',html)
+    if price4:
+        pricelist.append(price4.group(1))
     else:
         pricelist.append(0)
         
@@ -27,24 +21,25 @@ def extractPricekbb(html):
         pricelist.append(price3.group(1))
     else:
         pricelist.append(0)
-
-    price4=re.search(r'"privatepartyfair": \{\s*"priceMin":\s*\d*\.\d*,\s*"price":\s*(\d*)\.\d*,\s*"priceMax":\s*\d*\.\d*\s*\}',html)
-    if price4:
-        pricelist.append(price4.group(1))
+        
+    price2=re.search(r'"privatepartyverygood": \{\s*"priceMin":\s*\d*\.\d*,\s*"price":\s*(\d*)\.\d*,\s*"priceMax":\s*\d*\.\d*\s*\}',html)
+    if price2:
+        pricelist.append(price2.group(1))
     else:
         pricelist.append(0)
 
-    price5=re.search(r'"privatepartyfair": \{\s*"priceMin":\s*\d*\.\d*,\s*"price":\s*(\d*)\.\d*,\s*"priceMax":\s*\d*\.\d*\s*\}',html)
-    if price5:
-        pricelist.append(price5.group(1))
+    price1=re.search(r'"privatepartyexcellent": \{\s*"priceMin":\s*\d*\.\d*,\s*"price":\s*(\d*)\.\d*,\s*"priceMax":\s*\d*\.\d*\s*\}',html)
+    if price1:
+        pricelist.append(price1.group(1))
     else:
         pricelist.append(0)
-
+        
     price6=re.search(r'"retail": \{\s*"priceMin":\s*\d*\.\d*,\s*"price":\s*(\d*)\.\d*,\s*"priceMax":\s*\d*\.\d*\s*\}',html)
     if price6:
         pricelist.append(price6.group(1))
     else:
         pricelist.append(0)
+        
     
     return pricelist
 
@@ -134,7 +129,7 @@ def getKbbPrice(make,model,year,mileage):
         #print html
         #jd = kbbExtractJson(html)
         #scraped[t] = jd['values']
-    print styleprice
+    #print styleprice
     return styleprice
     #print kbbBodytypeUrl(make,model,year)
     #savehtml("test.html",html)
@@ -155,6 +150,9 @@ def craglistsearchKbb(mcarlist):
         price.append(tempprice)
         
 def testgetKbbPrice():
-    getKbbPrice('toyota','corolla','2007','111000')
-#testgetKbbPrice()
+    pricelist=getKbbPrice('honda','civic','2006','63361')
+    for key1,value1 in pricelist.iteritems():
+        print str(key1)
+        print value1
+testgetKbbPrice()
 #kbbTrimUrl('Toyota','Corolla','2007','sedan')

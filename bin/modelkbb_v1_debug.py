@@ -10,15 +10,10 @@ global str
 
 def extractPricekbb(html):
     pricelist=list()
-    price1=re.search(r'"privatepartyexcellent": \{\s*"priceMin":\s*\d*\.\d*,\s*"price":\s*(\d*)\.\d*,\s*"priceMax":\s*\d*\.\d*\s*\}',html)
-    if price1:
-        pricelist.append(price1.group(1))
-    else:
-        pricelist.append(0)
-        
-    price2=re.search(r'"privatepartyverygood": \{\s*"priceMin":\s*\d*\.\d*,\s*"price":\s*(\d*)\.\d*,\s*"priceMax":\s*\d*\.\d*\s*\}',html)
-    if price2:
-        pricelist.append(price2.group(1))
+    
+    price4=re.search(r'"privatepartyfair": \{\s*"priceMin":\s*\d*\.\d*,\s*"price":\s*(\d*)\.\d*,\s*"priceMax":\s*\d*\.\d*\s*\}',html)
+    if price4:
+        pricelist.append(price4.group(1))
     else:
         pricelist.append(0)
         
@@ -27,25 +22,27 @@ def extractPricekbb(html):
         pricelist.append(price3.group(1))
     else:
         pricelist.append(0)
-
-    price4=re.search(r'"privatepartyfair": \{\s*"priceMin":\s*\d*\.\d*,\s*"price":\s*(\d*)\.\d*,\s*"priceMax":\s*\d*\.\d*\s*\}',html)
-    if price4:
-        pricelist.append(price4.group(1))
+        
+    price2=re.search(r'"privatepartyverygood": \{\s*"priceMin":\s*\d*\.\d*,\s*"price":\s*(\d*)\.\d*,\s*"priceMax":\s*\d*\.\d*\s*\}',html)
+    if price2:
+        pricelist.append(price2.group(1))
     else:
         pricelist.append(0)
 
-    price5=re.search(r'"privatepartyfair": \{\s*"priceMin":\s*\d*\.\d*,\s*"price":\s*(\d*)\.\d*,\s*"priceMax":\s*\d*\.\d*\s*\}',html)
-    if price5:
-        pricelist.append(price5.group(1))
+    price1=re.search(r'"privatepartyexcellent": \{\s*"priceMin":\s*\d*\.\d*,\s*"price":\s*(\d*)\.\d*,\s*"priceMax":\s*\d*\.\d*\s*\}',html)
+    if price1:
+        pricelist.append(price1.group(1))
     else:
         pricelist.append(0)
-
+        
     price6=re.search(r'"retail": \{\s*"priceMin":\s*\d*\.\d*,\s*"price":\s*(\d*)\.\d*,\s*"priceMax":\s*\d*\.\d*\s*\}',html)
     if price6:
         pricelist.append(price6.group(1))
     else:
         pricelist.append(0)
-    
+        
+
+        
     return pricelist
 
 

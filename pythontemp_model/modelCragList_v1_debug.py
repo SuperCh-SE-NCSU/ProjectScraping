@@ -101,6 +101,15 @@ def testcraglistsearch():
         print usercarlist.abstractIlist[i]
         print usercarlist.timepostlist[i]
         print '--------------------------'
-        
+
+def testcraglistsearch2():
+    usercarlist=craglistsearch('toyota','camry','2007','2010',5000,10000,'2015-03-06 23:40:13')   
+    for i in range(len(usercarlist.modellist)):
+        print usercarlist.modellist[i]
+        print usercarlist.pricelist[i]
+        print usercarlist.carlinklist[i]
+        print usercarlist.abstractIlist[i]
+        print usercarlist.timepostlist[i]
+        print '--------------------------'       
 #testcraglistsearch()
 #getMilageAndYear('http://raleigh.craigslist.org/cto/4902572544.html')
