@@ -1,2 +1,2 @@
-web: python bin/post_form.py -p $PORT
+web: python bin/post_form.py $PORT
 
