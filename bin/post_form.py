@@ -33,11 +33,11 @@ class Information(object):
     def GET(self):
         return render2.carInformation()
 
-    def POST(self):
-        form = web.input(username="Nobody", make="Toyota", model="Camry", startyear="2007",endyear='2010',minPrice='1000',maxPrice='20000',email="test@ncsu.edu")
+    #def POST(self):
+    #    form = web.input(username="Nobody", make="Toyota", model="Camry", startyear="2007",endyear='2010',minPrice='1000',maxPrice='20000',email="test@ncsu.edu")
         #greeting = "%s, %s, %s, %s, %s" % (form.username,form.make,form.model,form.startyear,form.endyear,int(form.minPrice),int(form.maxPrice),form.email)
         #return render.index(greeting = greeting)
-        return htmlgen.generateHTML(form.make,form.model,form.startyear,form.endyear,int(form.minPrice),int(form.maxPrice),'2015-03-06 23:40:13')
+    #    return htmlgen.generateHTML(form.make,form.model,form.startyear,form.endyear,int(form.minPrice),int(form.maxPrice),'2015-03-06 23:40:13')
 if __name__ == "__main__":
 	app.run()
 
