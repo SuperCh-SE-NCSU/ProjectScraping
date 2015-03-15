@@ -2,7 +2,7 @@ import web
 import db_process
 import time
 import os
-import modelgenerateHtml_development as htmlgen
+#import modelgenerateHtml_development as htmlgen
 #This file is to get input information from users,including their name, email
 #address, the car they would like to receive information about.(car make,model,
 #year of make)
