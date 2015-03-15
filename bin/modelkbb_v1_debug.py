@@ -130,6 +130,7 @@ def getKbbPrice(make,model,year,mileage):
                 #print trims3
             #print html
     except:
+        print 'wrong'
         #print 'wrong'
     return styleprice
     #print kbbBodytypeUrl(make,model,year)
