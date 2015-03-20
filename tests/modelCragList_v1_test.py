@@ -4,7 +4,7 @@ path = os.path.abspath(os.path.join('pythontemp_model'))
 sys.path.append(path)
 
 import unittest
-from modelCragList_v1_debug import *
+from modelCragList_v2_debug import *
 
 class Testcraigslist(unittest.TestCase):
 	def setUp(self):
