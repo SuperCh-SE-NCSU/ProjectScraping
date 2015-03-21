@@ -19,10 +19,10 @@ class Index(object):
         return render.subscribe_form()
 
     def POST(self):
-        currentTime=time.strftime('%Y-%m-%d %X',time.localtime(time.time()))
-        form = web.input(username="Nobody", make="Toyota", model="Camry", email="test@ncsu.edu", minYear="2007", maxYear="2015", minPrice="500", maxPrice="100000")        
+        tempcurrentTime=time.strftime('%Y-%m-%d %X',time.localtime(time.time()))
+        form = web.input(username="Nobody", make="Toyota", model="Camry", email="test@ncsu.edu", minYear="2007", maxYear="2015", minPrice="500", maxPrice="100000", currentTime=tempcurrentTime)        
         #xmlprocess.writeXml("bin/users.xml",form.make,form.model,form.year,form.username,tempcurrentTime,form.email)
-        db_process.writeDB(form.username, form.make, form.model, form.email, form.minYear, form.maxYear, form.minPrice, form.maxPrice)
+        db_process.writeDB(form.username, form.make, form.model, form.email, form.minYear, form.maxYear, form.minPrice, form.maxPrice, form.currentTime)
         greeting = "%s, %s, %s, %s, %s, %s, %s, %s" % (form.username, form.make, form.model, form.email, form.minYear, form.maxYear, form.minPrice, form.maxPrice)
         return render.index(greeting = greeting)
 
