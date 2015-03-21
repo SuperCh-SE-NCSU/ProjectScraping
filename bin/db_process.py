@@ -6,7 +6,7 @@ import urlparse
 #This file is to write the information we get from users into the database and
 #read from database to get the input for crawling functions.
 
-def writeDB(username, make, model, year, email):
+def writeDB(username, make, model, email, minYear, maxYear, minPrice, maxPrice):
 	urlparse.uses_netloc.append("postgres")
 	url = urlparse.urlparse(os.environ["DATABASE_URL"])
 	con=None
@@ -16,7 +16,7 @@ def writeDB(username, make, model, year, email):
 		#Heroku remote db
 		con=psycopg2.connect(database=url.path[1:], user=url.username, password=url.password, host=url.hostname, port=url.port)
 		cur=con.cursor()
-		cur.execute("INSERT INTO users VALUES ('" + username + "','" + make + "','" + model + "','" + year + "','" + email + "')")
+		cur.execute("INSERT INTO users VALUES ('" + username + "','" + make + "','" + model + "','" + email + "','" + minYear + "','" + maxYear + "','" + minPrice + "','" + maxPrice + "')")
 		con.commit()
 		
 	except psycopg2.DatabaseError, e:
