@@ -82,7 +82,7 @@ def sendgridEmailOnce(html_content,sendtoEmail):
 def testSendgridEmail():
     sendgridEmailOnce('123321', 'ldong6@ncsu.edu')
 
-testSendgridEmail()
+#testSendgridEmail()
 #Task=namedtuple('task','name,time,task')
 #Tasks = [Task("testtask", "21:28", sendgridEmail)]
 #run(Tasks)
