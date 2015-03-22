@@ -58,6 +58,7 @@ def craglistsearch(cmake,cmodel,cstartyear,cendyear,cminprice,cmaxprice,ctime):
 
 
             Terms8=re.findall(r'<span class="txt"> <span class="star"></span> <span class="pl"> <time\s*datetime=".+?" title=".+?">.+?</time> <a href=".+?"\s*data-id="\w+"\s*class="\w+">.+?</a>\s*</span>\s*<span\s*class="l2"> .+?</p>',html)
+            print Terms8
             if not Terms8:
                 today=False
                 break
@@ -106,5 +107,5 @@ def testcraglistsearch():
         print usercarlist.timepostlist[i]
         print '--------------------------'
         
-#testcraglistsearch()
+testcraglistsearch()
 #getMilageAndYear('http://raleigh.craigslist.org/cto/4902572544.html')

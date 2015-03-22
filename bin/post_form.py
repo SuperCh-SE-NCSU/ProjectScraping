@@ -9,6 +9,7 @@ from multiprocessing import Process
 #This file is to get input information from users,including their name, email
 #address, the car they would like to receive information about.(car make,model,
 #year of make)
+
 def f(email,make,model,startyear,endyear,minPrice,maxPrice,time):
     html=htmlgen.generateHTML(make,model,startyear,endyear,minPrice,maxPrice,time)
     print email
