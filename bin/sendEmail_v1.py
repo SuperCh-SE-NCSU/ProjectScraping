@@ -57,7 +57,7 @@ def sendgridEmail():
         message = sendgrid.Mail(to=email, subject='Information from ProjectScraping区分之前的邮件', html=mail_content, text='Body',from_email='ProjectScraping')
         status, msg = sg.send(message)
 
-def sendgirdEmailOnce(html_content):
+def sendgridEmailOnce(html_content):
     urlparse.uses_netloc.append("postgres")
     url = urlparse.urlparse('postgres://mtnmaytfyidfqd:BogLpswIqI-ZdbcaVTWkRfN3Gh@ec2-107-21-104-188.compute-1.amazonaws.com:5432/d9eedsvtae2kou')
 

@@ -6,12 +6,12 @@ def generateHTML(cmake,cmodel,cstartyear,cendyear,cminprice,cmaxprice,ctime):
     usercarlist=modelCragList_v1_debug.craglistsearch(cmake,cmodel,cstartyear,cendyear,cminprice,cmaxprice,ctime)
     print len(usercarlist.carlinklist)
     html_content='<html>'
-    temp_content='<body><center><p> Candidate Car '+cmodel+'</p>'
+    temp_content='<body><center><p> Candidate Car: '+cmodel+'</p>'
     html_content=html_content+temp_content
     for i in range(len(usercarlist.modellist)):
         html_content+='<p>'+usercarlist.abstractIlist[i]+'</p>'
         tempprice=modelkbb_v1_debug.getKbbPrice(cmake,usercarlist.modellist[i],usercarlist.year[i],usercarlist.mileagel[i])
-        temp_content='<p> year:'+usercarlist.year[i]+' &nbsp mileage: '+usercarlist.mileagel[i]+' &nbsp  price: '+usercarlist.pricelist[i]+'</p>'
+        temp_content='<p> year:'+usercarlist.year[i]+' &nbsp; mileage: '+usercarlist.mileagel[i]+' &nbsp;  price: '+usercarlist.pricelist[i]+'</p>'
         html_content=html_content+temp_content
         temp_content='<p> <a href=http://raleigh.craigslist.org'+usercarlist.carlinklist[i]+' target="_blank">http://raleigh.craigslist.org'+usercarlist.carlinklist[i]+'</a></p>'
         html_content=html_content+temp_content
@@ -36,5 +36,5 @@ def testHTML():
     generateHTML('toyota','camry','2007','2010',5000,10000,'2015-03-06 23:40:13')
 
 
-testHTML()
+#testHTML()
     

@@ -2,7 +2,7 @@ import web
 import db_process
 import time
 import os
-import sendEmail_v0 as sendEmail
+import sendEmail_v1 as sendEmail
 import modelgenerateHtml_development as htmlgen
 from multiprocessing import Process
 
