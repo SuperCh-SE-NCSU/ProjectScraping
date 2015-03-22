@@ -80,7 +80,7 @@ def sendgridEmailOnce(html_content,sendtoEmail):
     status, msg = sg.send(message)
         
 def testSendgridEmail():
-    sendgridEmailOnce('123321')
+    sendgridEmailOnce('123321', 'ldong6@ncsu.edu')
 
 testSendgridEmail()
 #Task=namedtuple('task','name,time,task')
