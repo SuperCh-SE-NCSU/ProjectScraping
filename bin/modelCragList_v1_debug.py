@@ -83,6 +83,8 @@ def craglistsearch(cmake,cmodel,cstartyear,cendyear,cminprice,cmaxprice,ctime):
         except:
             print 'error %d' %num
         num=num+100
+        if num>2500:
+            today=False
     ctime=mystrTime
     #print len(model)
     #print len(price)
