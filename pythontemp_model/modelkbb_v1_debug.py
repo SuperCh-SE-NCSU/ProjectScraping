@@ -154,5 +154,5 @@ def testgetKbbPrice():
     for key1,value1 in pricelist.iteritems():
         print str(key1)
         print value1
-testgetKbbPrice()
+#testgetKbbPrice()
 #kbbTrimUrl('Toyota','Corolla','2007','sedan')

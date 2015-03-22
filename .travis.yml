@@ -27,7 +27,7 @@
    
  # command to run tests
  script: 
-   - python tests/modelCragList_v1_test.py -v
+   - python tests/modelCragList_development_test.py -v
    - python tests/modelkbb_development_test.py -v
    
 

@@ -130,5 +130,5 @@ def testcraglistsearch2():
         print usercarlist.abstractIlist[i]
         print usercarlist.timepostlist[i]
         print '--------------------------'       
-testcraglistsearch2()
+#testcraglistsearch2()
 #getMilageAndYear('http://raleigh.craigslist.org/cto/4902572544.html')
