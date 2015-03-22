@@ -54,6 +54,7 @@ def craglistsearch(cmake,cmodel,cstartyear,cendyear,cminprice,cmaxprice,ctime):
                 tempstr='http://raleigh.craigslist.org/search/cto?s='+str(num)+'//'
             print tempstr
             response = urllib2.urlopen(tempstr)
+            print response
             html = response.read()
             print html
 
