@@ -44,6 +44,8 @@ def craglistsearch(cmake,cmodel,cstartyear,cendyear,cminprice,cmaxprice,ctime):
     today=True
     num=0
     mystrTime=time.strftime('%Y-%m-%d %X',time.localtime(time.time()))
+    print mystrTime
+    print cmake,cmodel,cstartyear,cendyear,cminprice,cmaxprice,ctime
     while today:
         try:
             if num==0:
