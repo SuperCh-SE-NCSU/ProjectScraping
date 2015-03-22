@@ -11,7 +11,7 @@ from multiprocessing import Process
 #year of make)
 def f(make,model,startyear,endyear,minPrice,maxPrice,time):
     html=htmlgen.generateHTML(make,model,startyear,endyear,minPrice,maxPrice,time)
-    #print html
+    print html
     sendEmail.sendgridEmailOnce(html)
     
     
