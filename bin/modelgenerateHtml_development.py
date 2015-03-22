@@ -6,7 +6,8 @@ def generateHTML(cmake_temp,cmodel_temp,cstartyear,cendyear,cminprice,cmaxprice,
     cmake=cmake_temp.lower()
     cmodel=cmodel_temp.lower()
     usercarlist=modelCragList_v1_debug.craglistsearch(cmake,cmodel,cstartyear,cendyear,cminprice,cmaxprice,ctime)
-    #print len(usercarlist.carlinklist)
+    print 'user: '
+    print len(usercarlist.carlinklist)
     html_content='<html>'
     temp_content='<body><center><p> Candidate Car: '+cmodel+'</p>'
     html_content=html_content+temp_content

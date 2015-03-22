@@ -57,7 +57,7 @@ def sendgridEmail():
         message = sendgrid.Mail(to=email, subject='Information from ProjectScraping区分之前的邮件', html=mail_content, text='Body',from_email='ProjectScraping')
         status, msg = sg.send(message)
 
-def sendgridEmailOnce(html_content):
+def sendgridEmailOnce(html_content,sendtoEmail):
     urlparse.uses_netloc.append("postgres")
     url = urlparse.urlparse('postgres://mtnmaytfyidfqd:BogLpswIqI-ZdbcaVTWkRfN3Gh@ec2-107-21-104-188.compute-1.amazonaws.com:5432/d9eedsvtae2kou')
 
@@ -76,11 +76,11 @@ def sendgridEmailOnce(html_content):
     #send your email here, but that should not public on website, how to solve this problem?
     sg = sendgrid.SendGridClient(os.environ['SENDGRID_USERNAME'], os.environ['SENDGRID_PASSWORD'])
 
-    message = sendgrid.Mail(to='ldong6@ncsu.edu', subject='Information from ProjectScraping区分之前的邮件', html=html_content, text='Body',from_email='ProjectScraping')
+    message = sendgrid.Mail(to=sendtoEmail, subject='Information from ProjectScraping区分之前的邮件', html=html_content, text='Body',from_email='ProjectScraping')
     status, msg = sg.send(message)
         
 def testSendgridEmail():
-    sendgridEmailOnce('123321')
+    sendgridEmailOnce('123321', 'ldong6@ncsu.edu')
 
 testSendgridEmail()
 #Task=namedtuple('task','name,time,task')
