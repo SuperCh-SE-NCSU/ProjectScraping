@@ -153,5 +153,5 @@ def craglistsearchKbb(mcarlist):
         
 def testgetKbbPrice():
     getKbbPrice('toyota','corolla','2007','111000')
-#testgetKbbPrice()
+testgetKbbPrice()
 #kbbTrimUrl('Toyota','Corolla','2007','sedan')
