@@ -2,7 +2,7 @@ import requests,sys,csv,traceback,re,json,os,urllib2
 from bs4 import BeautifulSoup
 from random import random,shuffle
 from time import sleep
-import modelCragList_v1_debug
+#import modelCragList_v1_debug
 global str
 
 
