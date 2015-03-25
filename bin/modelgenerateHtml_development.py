@@ -12,11 +12,12 @@ def generateHTML(cmake_temp,cmodel_temp,cstartyear,cendyear,cminprice,cmaxprice,
     temp_content='<body><center><p> Candidate Car: '+cmodel+'</p>'
     html_content=html_content+temp_content
     for i in range(len(usercarlist.modellist)):
+        html_content+='<p>========================================</p>'
         html_content+='<p>'+usercarlist.abstractIlist[i]+'</p>'
         tempprice=modelkbb_v1_debug.getKbbPrice(cmake,usercarlist.modellist[i],usercarlist.year[i],usercarlist.mileagel[i])
         temp_content='<p> year:'+usercarlist.year[i]+' &nbsp; mileage: '+usercarlist.mileagel[i]+' &nbsp;  price: '+usercarlist.pricelist[i]+'</p>'
         html_content=html_content+temp_content
-        temp_content='<p> <a href=http://raleigh.craigslist.org'+usercarlist.carlinklist[i]+' target="_blank">http://raleigh.craigslist.org'+usercarlist.carlinklist[i]+'</a></p>'
+        temp_content='<p> <a href=http://raleigh.craigslist.org'+usercarlist.carlinklist[i]+'>http://raleigh.craigslist.org'+usercarlist.carlinklist[i]+'</a></p>'
         html_content=html_content+temp_content
         html_content+='<table border="1" style="width:100%">'
         html_content+='<tr><td>Type</td><td>Fair</td><td>Good</td><td>Very Good</td><td>Excellent</td><td>Retail</td>'
@@ -26,8 +27,7 @@ def generateHTML(cmake_temp,cmodel_temp,cstartyear,cendyear,cminprice,cmaxprice,
             for j in range(len(value1)):
                 html_content+='<td>'+str(value1[j])+'</td>'
             html_content+='</tr>'
-        html_content+='</table>'
-        html_content+='<p>========================================</p>'
+        html_content+='</table>'  
     html_content+='</center><body>'
     
     Html_file= open("current.html","w")
