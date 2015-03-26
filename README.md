@@ -7,9 +7,8 @@ Using Scrapy to crawl craigslist and kbb to get sale information about used cars
 Users can subscribe to our email service.We will send them the lastest car information they need once per day. 
 ### Demo
 
-https://rocky-spire-5172.herokuapp.com<br/>
-![IMAGE ALT TEXT HERE](https://lh3.googleusercontent.com/-OtvaZMJViLs/VOy_lkCp6XI/AAAAAAAAAUc/ZJuV9RqdQCA/w532-h295/Project.png)
-
+http://152.46.17.210:8080/<br/>
+<img align=left src="https://github.com/SuperCh-SE-NCSU/ProjectScraping/tree/master/doc/stress_test.png" style="float:left;with:100px;height:300px">
 ### Install 3rd part library (needed for subscription)
 
 ```
