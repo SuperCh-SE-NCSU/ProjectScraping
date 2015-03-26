@@ -8,7 +8,7 @@ Users can subscribe to our email service.We will send them the lastest car infor
 ### Demo
 
 http://152.46.17.210:8080/<br/>
-<img align=left src="https://github.com/SuperCh-SE-NCSU/ProjectScraping/tree/master/doc/stress_test.png" style="float:left;with:100px;height:300px">
+<img align=left src="https://github.com/SuperCh-SE-NCSU/ProjectScraping/doc/stress_test.png" style="float:left;with:100px;height:300px">
 ### Install 3rd part library (needed for subscription)
 
 ```
