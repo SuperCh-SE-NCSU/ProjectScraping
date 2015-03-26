@@ -52,9 +52,9 @@ def craglistsearch(cmake,cmodel,cstartyear,cendyear,cminprice,cmaxprice,ctime):
                 tempstr='http://raleigh.craigslist.org/search/cto//'
             else:
                 tempstr='http://raleigh.craigslist.org/search/cto?s='+str(num)+'//'
-            #print tempstr
+            print tempstr
             response = urllib2.urlopen(tempstr)
-            #print response
+            print response
             html = response.read()
             #print html
 
@@ -108,5 +108,5 @@ def testcraglistsearch():
         print usercarlist.timepostlist[i]
         print '--------------------------'
         
-#testcraglistsearch()
+testcraglistsearch()
 #getMilageAndYear('http://raleigh.craigslist.org/cto/4902572544.html')
