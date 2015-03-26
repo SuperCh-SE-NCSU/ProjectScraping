@@ -1,4 +1,4 @@
-import modelCragList_v1_debug
+import modelCragList_v2_debug
 import modelkbb_v1_debug
 
 def generateHTML(cmake_temp,cmodel_temp,cstartyear,cendyear,cminprice,cmaxprice,ctime):
@@ -27,7 +27,8 @@ def generateHTML(cmake_temp,cmodel_temp,cstartyear,cendyear,cminprice,cmaxprice,
             for j in range(len(value1)):
                 html_content+='<td>'+str(value1[j])+'</td>'
             html_content+='</tr>'
-        html_content+='</table>'  
+        html_content+='</table>'
+        html_content+='<p>========================================</p>'
     html_content+='</center><body>'
     
     Html_file= open("current.html","w")
