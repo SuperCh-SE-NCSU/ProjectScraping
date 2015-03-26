@@ -54,7 +54,7 @@ def sendgridEmail():
         mail_content='<html>'
         mail_content=mail_content+'<p>Dear '+username+',</p>'+'<p>  '+'You want to buy a '+model+' in '+str(year)+'</p>'
         mail_content=mail_content+'</html>'
-        message = sendgrid.Mail(to=email, subject='Email from ProjectScraping', html=mail_content, text='Body',from_email='ProjectScraping')
+        message = sendgrid.Mail(to=email, subject='Information from VCL@ProjectScraping', html=mail_content, text='Body',from_email='ProjectScraping')
         status, msg = sg.send(message)
 
 def sendgridEmailOnce(html_content,sendtoEmail):
@@ -76,7 +76,7 @@ def sendgridEmailOnce(html_content,sendtoEmail):
     #send your email here, but that should not public on website, how to solve this problem?
     sg = sendgrid.SendGridClient(os.environ['SENDGRID_USERNAME'], os.environ['SENDGRID_PASSWORD'])
 
-    message = sendgrid.Mail(to=sendtoEmail, subject='Email from ProjectScraping', html=html_content, text='Body',from_email='ProjectScraping')
+    message = sendgrid.Mail(to=sendtoEmail, subject='Information from VCL@ProjectScraping', html=html_content, text='Body',from_email='ProjectScraping')
     status, msg = sg.send(message)
         
 def testSendgridEmail():
