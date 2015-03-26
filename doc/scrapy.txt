@@ -1,0 +1,5 @@
+https://github.com/scrapy/scrapy/wiki
+
+http://doc.scrapy.org/en/latest/topics/selectors.html
+
+py crawl craig -o items.csv -t csv

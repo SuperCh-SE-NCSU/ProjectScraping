@@ -15,3 +15,4 @@ class CraigslistSampleItem(Item):
   mileagel=Field()
   #model=Field()
   caryear=Field()
+  pricetype=Field()

@@ -1,12 +1,38 @@
 from scrapy.spider import BaseSpider
 from scrapy.selector import HtmlXPathSelector
 from craigslist_sample.items import CraigslistSampleItem
+from scrapy.http import Request
+import urllib2
+import re
+
+def getMilageAndYear(url):
+    response = urllib2.urlopen(url)
+    html = response.read()
+    #print html
+    try:
+        terms=re.search('<span>odometer:\s*<b>(\d*)</b></span>',html)
+        odometer=terms.group(1)
+    except:
+        odometer='0'
+    try:
+        terms=re.search('<p\s*class="attrgroup"><span><b>(\d*)',html)
+        year=terms.group(1)
+    except:
+        year='0'
+    milageandy={'milage':odometer,'year':year}
+    return milageandy
+            
 
 class MySpider(BaseSpider):
   name = "craig"
   allowed_domains = ["craigslist.org"]
   start_urls = ["http://raleigh.craigslist.org/search/cto"]
+  max_cid=24
 
+  def start_requests(self):
+    for i in range(self.max_cid):
+      yield Request('http://raleigh.craigslist.org/search/cto?s=%d'%(i*100),callback=self.parse)
+                    
   def parse(self, response):
       hxs = HtmlXPathSelector(response)
       
@@ -25,13 +51,17 @@ class MySpider(BaseSpider):
           
           #timePost,price,carlink,abstractInformation,mileagel,modle,caryear
           item = CraigslistSampleItem()
-          item ["carlink"] =title.xpath(".//a[@class='hdrlnk']/text()").extract()
-          item ["abstractInformation"] =title.xpath(".//a/@href").extract()
-          item ["timePost"]=title.xpath(".//span[@class='pl']/time/@datetime").extract()
-          item ["price"]=title.xpath(".//span[@class='price']/text()").extract()
+          L =title.xpath(".//a/@href").extract()
+          if len(L)>0:
+            item ["carlink"] = "http://raleigh.craigslist.org/"+str(L.pop())
+          item ["abstractInformation"] =str(list(title.xpath(".//a[@class='hdrlnk']/text()").extract()).pop())
+          item ["timePost"]=str(list(title.xpath(".//span[@class='pl']/time/@datetime").extract()).pop())
+         
+          L=title.xpath(".//span[@class='price'][1]/text()").extract()
+          if len(L)>0:
+             item ["price"]= str(L.pop())
           try:
-            milageandy=getMilageAndYear(self,"http://raleigh.craigslist.org/"+item ["carlink"])
-            print "http://raleigh.craigslist.org/"+item ["carlink"]
+            #milageandy=getMilageAndYear(item ["carlink"])
             item ["mileagel"]=milageandy['milage']
             item ["caryear"]=milageandy['year']
           except:
@@ -42,18 +72,16 @@ class MySpider(BaseSpider):
       
       return items
 
-  #def getMilageAndYear(self,response):
-  #  hxs=HtmlXPathSelector(response)
-  #  try:
-  #      terms=hxs.xpath('//span/odometer/b/text()').extract()
-  #      odometer=terms.group(1)
-  #  except:
-  #      odometer='0'
-  #  try:
-  #      year=re.search('\d*',str(hxs.xpath("//p[@class='attrgroup'/span/b/text()").extract()))
-  #  except:
-  #      year='0'
-  #  milageandy={'milage':odometer,'year':year}
-  #  return milageandy
-    
-
+  def getMilageAndYear(self,response):
+    hxs=HtmlXPathSelector(response)
+    try:
+      terms=hxs.xpath('//span/odometer/b/text()').extract()
+      odometer=terms.group(1)
+    except:
+      odometer='0'
+    try:
+      year=re.search('\d*',str(hxs.xpath("//p[@class='attrgroup'/span/b/text()").extract()))
+    except:
+      year='0'
+    milageandy={'milage':odometer,'year':year}
+    return milageandy
