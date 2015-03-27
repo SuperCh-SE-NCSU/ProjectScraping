@@ -17,12 +17,15 @@ class carlist:
 
     
 def getMilageAndYear(url):
+    
     try:
         response = urllib2.urlopen(url)
         html = response.read()
+        sleep(30)
     except:
         odometer='0'
         year='0'
+        
     #print html
     try:
         terms=re.search('<span>odometer:\s*<b>(\d*)</b></span>',html)
@@ -171,10 +174,11 @@ def craglistsearchAll():
                     break
 
                 try:
+                    print templink
                     milandyear=getMilageAndYear('http://raleigh.craigslist.org'+templink)
                 except:
                     milandyear={'year':'0000','milage':'0'}
-                    
+                print milandyear  
                 timePost.append(temptime)
                 price.append(tempprice)
                 carlink.append(templink)
@@ -215,5 +219,5 @@ def testcraglistsearch2():
         print usercarlist.abstractIlist[i]
         print usercarlist.timepostlist[i]
         print '--------------------------'       
-testcraglistsearch2()
+#testcraglistsearch2()
 #getMilageAndYear('http://raleigh.craigslist.org/cto/4902572544.html')
