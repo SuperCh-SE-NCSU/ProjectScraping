@@ -65,6 +65,6 @@ class Index(object):
 
 if __name__ == "__main__":
     Process(target=mail_process).run()
-	app.run()
+    app.run()
 
 
