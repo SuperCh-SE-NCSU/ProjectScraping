@@ -5,24 +5,9 @@ import os
 import psycopg2
 import urlparse
 import datetime,calendar, time
-import sched
+import schedule
 
 
-
-def perfrom_one_task(task=None):
-    now = datetime.datetime.today()
-    time_str = now.strftime('%H:%M')
-    if time_str > task.time:
-        print "Performing", task.name
-        task.task()
-        #time.sleep(86400) # sleep one day to work
-        return True
-    return False
-
-def run(Tasks):
-    while True:
-        map(perfrom_one_task, Tasks)
-        time.sleep(86400)  # sleep one day to work
 
 def sendgridEmail(html_content,sendtoEmail):
     urlparse.uses_netloc.append("postgres")
@@ -69,6 +54,6 @@ def testSendgridEmail():
 
 #testSendgridEmail()
 #Task=namedtuple('task','name,time,task')
-#Tasks = [Task("testtask", "21:28", sendgridEmail)]
+#Tasks = [Task("testtask", "21:13", sendgridEmail('123','zhu6@ncsu.edu'))]
 #run(Tasks)
 
