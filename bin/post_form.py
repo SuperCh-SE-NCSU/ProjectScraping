@@ -11,11 +11,23 @@ from multiprocessing import Process
 #address, the car they would like to receive information about.(car make,model,
 #year of make)
 
-def f(email,make,model,startyear,endyear,minPrice,maxPrice,time):
+#process 1
+def click_mail_process(email,make,model,startyear,endyear,minPrice,maxPrice,time):
     html=htmlgen.generateHTML(make,model,startyear,endyear,minPrice,maxPrice,time)
     print email
     print html
     sendEmail.sendgridEmailOnce(html,email)
+#process 2
+def mail_process():
+    while(1):
+        #read DB records
+        html=htmlgen.generateHTML(make,model,startyear,endyear,minPrice,maxPrice,time)
+        print email
+        print html
+        schedule.every().day.at("21:23").do(sendgridEmail(html, email))
+        schedule.run_pending()
+        time.sleep(62)
+    
     
     
 urls = (
@@ -35,12 +47,13 @@ class Index(object):
         form = web.input(username="Nobody", make="Toyota", model="Camry", email="test@ncsu.edu", minYear="2007", maxYear="2015", minPrice="500", maxPrice="100000", currentTime=tempcurrentTime)        
         #xmlprocess.writeXml("bin/users.xml",form.make,form.model,form.year,form.username,tempcurrentTime,form.email)
         db_process.writeDB(form.username, form.make, form.model, form.email, form.minYear, form.maxYear, form.minPrice, form.maxPrice, form.currentTime)
-        p = Process(target=f, args=(form.email,form.make,form.model,form.minYear,form.maxYear,int(form.minPrice),int(form.maxPrice),(datetime.datetime.now()-datetime.timedelta(days=3)).strftime("%Y-%m-%d %H:%M:%S"))
+        p = Process(target=click_mail_process, args=(form.email,form.make,form.model,form.minYear,form.maxYear,int(form.minPrice),int(form.maxPrice),(datetime.datetime.now()-datetime.timedelta(days=3)).strftime("%Y-%m-%d %H:%M:%S")))
         p.start()
         greeting = "%s, %s, %s, %s, %s, %s, %s, %s \n Please wait for ProjectScraping Email" % (form.username, form.make, form.model, form.email, form.minYear, form.maxYear, form.minPrice, form.maxPrice)
         return render.index(greeting = greeting)
 
 if __name__ == "__main__":
+    Process(target=mail_process).run()
 	app.run()
 
 
