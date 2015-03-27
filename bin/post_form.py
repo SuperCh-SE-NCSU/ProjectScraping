@@ -66,12 +66,5 @@ class Index(object):
         return render.index(greeting = greeting)
 
 if __name__ == "__main__":
-<<<<<<< HEAD
     app.run()
     Process(target=mail_process).run()
-=======
-    Process(target=mail_process).run()
-    app.run()
-
-
->>>>>>> bb8acacb86ced0bf3e411b2b5103747eab1d70b4
