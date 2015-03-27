@@ -3,6 +3,7 @@ import db_process
 import time
 import datetime
 import os
+import db_process as db
 import sendEmail_v1 as sendEmail
 import modelgenerateHtml_development as htmlgen
 from multiprocessing import Process
@@ -16,16 +17,26 @@ def click_mail_process(email,make,model,startyear,endyear,minPrice,maxPrice,time
     html=htmlgen.generateHTML(make,model,startyear,endyear,minPrice,maxPrice,time)
     print email
     print html
-    sendEmail.sendgridEmailOnce(html,email)
+    sendEmail.sendgridEmail(html,email)
 #process 2
 def mail_process():
     while(1):
         #read DB records
-        html=htmlgen.generateHTML(make,model,startyear,endyear,minPrice,maxPrice,time)
-        print email
-        print html
-        schedule.every().day.at("21:23").do(sendgridEmail(html, email))
-        schedule.run_pending()
+        rows = db.readDB()
+        for row in rows:
+            make=row[1]
+            model=row[2]
+            email=row[3]
+            startyear=row[4]
+            endyear=row[5]
+            minPrice=row[6]
+            maxPrice=row[7]
+            time=row[8]
+            html=htmlgen.generateHTML(make,model,startyear,endyear,minPrice,maxPrice,time)
+            print email
+            print html
+            schedule.every().day.at("21:23").do(sendgridEmail(html, email))
+            schedule.run_pending()
         time.sleep(62)
     
     
