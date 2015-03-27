@@ -2,6 +2,7 @@ import web
 import db_process
 import time
 import datetime
+import schedule
 import os
 import db_process as db
 import sendEmail_v1 as sendEmail
@@ -18,10 +19,9 @@ def click_mail_process(email,make,model,startyear,endyear,minPrice,maxPrice,time
     print email
     print html
     sendEmail.sendgridEmail(html,email)
-#process 2
-def mail_process():
-    while(1):
-        #read DB records
+
+def sendAllSubscribedEmail():
+    #read DB records
         rows = db.readDB()
         for row in rows:
             make=row[1]
@@ -33,11 +33,13 @@ def mail_process():
             maxPrice=row[7]
             time=row[8]
             html=htmlgen.generateHTML(make,model,startyear,endyear,minPrice,maxPrice,time)
-            print email
-            print html
-            schedule.every().day.at("21:23").do(sendgridEmail(html, email))
-            schedule.run_pending()
-        time.sleep(62)
+            sendEmail.sendgridEmail(html, email)
+            
+
+#process 2
+def mail_process():
+    schedule.every().hour.do(sendAllSubscribedEmail)
+    schedule.run_pending()
     
     
     
@@ -64,7 +66,5 @@ class Index(object):
         return render.index(greeting = greeting)
 
 if __name__ == "__main__":
+    app.run()
     Process(target=mail_process).run()
-	app.run()
-
-

@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-from collections import namedtuple
 import sendgrid
 import os
 import psycopg2
@@ -14,10 +13,9 @@ def sendgridEmail(html_content,sendtoEmail):
     status, msg = sg.send(message)
         
 def testSendgridEmail():
-    sendgridEmailOnce('123321', 'ldong6@ncsu.edu')
+    sendgridEmail(datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"), 'zhu6@ncsu.edu')
 
 #testSendgridEmail()
-#Task=namedtuple('task','name,time,task')
-#Tasks = [Task("testtask", "21:13", sendgridEmail('123','zhu6@ncsu.edu'))]
-#run(Tasks)
-
+#schedule.every().day.at((datetime.datetime.now()+datetime.timedelta(minutes=1)).strftime("%H:%M")).do(sendgridEmail(datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"), 'zhu6@ncsu.edu'))
+#while True:
+#    schedule.run_pending()
