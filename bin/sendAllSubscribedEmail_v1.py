@@ -25,10 +25,10 @@ def sendAllSubscribedEmail():
         time=row[8]
         print make,model,startyear,endyear,minPrice,maxPrice,time
         #print type(make),type(model),type(startyear),type(endyear),type(minPrice),type(maxPrice),type(time)
-        #html=htmlgen.generateHTML(make,model,startyear,endyear,minPrice,maxPrice,(datetime.datetime.now()-datetime.timedelta(days=3)).strftime("%Y-%m-%d %H:%M:%S"))
+        html=htmlgen.generateHTML(make,model,startyear,endyear,minPrice,maxPrice,(datetime.datetime.now()-datetime.timedelta(days=3)).strftime("%Y-%m-%d %H:%M:%S"))
         print email
-        sendEmail.sendgridEmail(datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"), email)
+        sendEmail.sendgridEmail(html, email)
 
-schedule.every(1).minutes.do(sendAllSubscribedEmail)
+schedule.every(60).minutes.do(sendAllSubscribedEmail)
 while True:
     schedule.run_pending()
