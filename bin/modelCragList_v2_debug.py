@@ -44,7 +44,7 @@ def craglistsearch(cmake,cmodel,cstartyear,cendyear,cminprice,cmaxprice,ctime):
     timePost=list()
     today=True
     num=0
-    mystrTime=time.strftime('%Y-%m-%d %X',time.localtime(time.time()))
+    mystrTime=datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     while today:
         if num==0:
             tempstr='http://raleigh.craigslist.org/search/cto//'
