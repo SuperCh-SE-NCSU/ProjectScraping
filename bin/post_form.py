@@ -16,24 +16,26 @@ from multiprocessing import Process
 #process 1
 def click_mail_process(email,make,model,startyear,endyear,minPrice,maxPrice,time):
     html=htmlgen.generateHTML(make,model,startyear,endyear,minPrice,maxPrice,time)
-    print email
-    print html
     sendEmail.sendgridEmail(html,email)
 
 def sendAllSubscribedEmail():
     #read DB records
-        rows = db.readDB()
-        for row in rows:
-            make=row[1]
-            model=row[2]
-            email=row[3]
-            startyear=row[4]
-            endyear=row[5]
-            minPrice=row[6]
-            maxPrice=row[7]
-            time=row[8]
-            html=htmlgen.generateHTML(make,model,startyear,endyear,minPrice,maxPrice,time)
-            sendEmail.sendgridEmail(html, email)
+    rows = db.readDB()
+    for row in rows:
+        make=row[1]
+        model=row[2]
+        email=row[3]
+        #year should be string, but in DB year is integer
+        startyear=str(row[4])
+        endyear=str(row[5])
+        minPrice=row[6]
+        maxPrice=row[7]
+        time=row[8]
+        print make,model,startyear,endyear,minPrice,maxPrice,time
+        print type(make),type(model),type(startyear),type(endyear),type(minPrice),type(maxPrice),type(time)
+        html=htmlgen.generateHTML(make,model,startyear,endyear,minPrice,maxPrice,(datetime.datetime.now()-datetime.timedelta(days=3)).strftime("%Y-%m-%d %H:%M:%S"))
+        print email
+        sendEmail.sendgridEmail(html, email)
             
 
 #process 2
@@ -66,5 +68,5 @@ class Index(object):
         return render.index(greeting = greeting)
 
 if __name__ == "__main__":
-    app.run()
-    Process(target=mail_process).run()
+    #app.run()
+    sendAllSubscribedEmail()
