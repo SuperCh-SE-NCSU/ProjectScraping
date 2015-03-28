@@ -4,7 +4,7 @@ import os
 import psycopg2
 import urlparse
 import datetime,calendar, time
-import schedule
+
 
 def sendgridEmail(html_content,sendtoEmail):
     #send your email here, but that should not public on website, how to solve this problem?
@@ -19,3 +19,7 @@ def testSendgridEmail():
 #schedule.every().day.at((datetime.datetime.now()+datetime.timedelta(minutes=1)).strftime("%H:%M")).do(sendgridEmail(datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"), 'zhu6@ncsu.edu'))
 #while True:
 #    schedule.run_pending()
+
+
+
+
