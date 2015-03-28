@@ -2,7 +2,9 @@ import web
 import db_process
 import time
 import datetime
+import schedule
 import os
+import db_process as db
 import sendEmail_v1 as sendEmail
 import modelgenerateHtml_development as htmlgen
 from multiprocessing import Process
@@ -14,21 +16,8 @@ from multiprocessing import Process
 #process 1
 def click_mail_process(email,make,model,startyear,endyear,minPrice,maxPrice,time):
     html=htmlgen.generateHTML(make,model,startyear,endyear,minPrice,maxPrice,time)
-    print email
-    print html
-    sendEmail.sendgridEmailOnce(html,email)
-#process 2
-def mail_process():
-    while(1):
-        #read DB records
-        html=htmlgen.generateHTML(make,model,startyear,endyear,minPrice,maxPrice,time)
-        print email
-        print html
-        schedule.every().day.at("21:23").do(sendgridEmail(html, email))
-        schedule.run_pending()
-        time.sleep(62)
-    
-    
+    sendEmail.sendgridEmail(html,email)
+
     
 urls = (
   '/', 'Index'
@@ -53,7 +42,6 @@ class Index(object):
         return render.index(greeting = greeting)
 
 if __name__ == "__main__":
-    Process(target=mail_process).run()
-	app.run()
-
+    app.run()
+    
 
