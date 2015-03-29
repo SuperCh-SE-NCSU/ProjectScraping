@@ -173,11 +173,11 @@ def craglistsearchAll():
                     today=False
                     break
 
-                #try:
-                #    print templink
-                #    milandyear=getMilageAndYear('http://raleigh.craigslist.org'+templink)
-                #except:
-                milandyear={'year':'0000','milage':'0'}
+                try:
+                    print templink
+                    milandyear=getMilageAndYear('http://raleigh.craigslist.org'+templink)
+                except:
+                    milandyear={'year':'0000','milage':'0'}
                 print milandyear  
                 timePost.append(temptime)
                 price.append(tempprice)
