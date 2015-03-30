@@ -13,7 +13,7 @@ def generateHTML(cmake_temp,cmodel_temp,cstartyear,cendyear,cminprice,cmaxprice,
     html_content=html_content+temp_content
     for i in range(len(usercarlist.modellist)):
         html_content+='<p>========================================</p>'
-        html_content+='<p>'+usercarlist.abstractIlist[i]+'&nbsp;&nbsp'+usercarlist.timepostlist[i]+'</p>'
+        html_content+='<p>'+usercarlist.abstractIlist[i]+'&nbsp;&nbsp;'+usercarlist.timepostlist[i]+'</p>'
         tempprice=modelkbb_v1_debug.getKbbPrice(cmake,usercarlist.modellist[i],usercarlist.year[i],usercarlist.mileagel[i])
         temp_content='<p> year:'+usercarlist.year[i]+' &nbsp; mileage: '+usercarlist.mileagel[i]+' &nbsp;  price: '+usercarlist.pricelist[i]+'</p>'
         html_content=html_content+temp_content
@@ -49,7 +49,7 @@ def generateHTMLnoKBB(cmake_temp,cmodel_temp,cstartyear,cendyear,cminprice,cmaxp
     html_content=html_content+temp_content
     for i in range(len(usercarlist.modellist)):
         html_content+='<p>========================================</p>'
-        html_content+='<p>'+usercarlist.abstractIlist[i]+'&nbsp;&nbsp'+usercarlist.timepostlist[i]+'</p>'
+        html_content+='<p>'+usercarlist.abstractIlist[i]+'&nbsp;&nbsp;'+usercarlist.timepostlist[i]+'</p>'
         #tempprice=modelkbb_v1_debug.getKbbPrice(cmake,usercarlist.modellist[i],usercarlist.year[i],usercarlist.mileagel[i])
         temp_content='<p> year:'+usercarlist.year[i]+' &nbsp; mileage: '+usercarlist.mileagel[i]+' &nbsp;  price: '+usercarlist.pricelist[i]+'</p>'
         html_content=html_content+temp_content

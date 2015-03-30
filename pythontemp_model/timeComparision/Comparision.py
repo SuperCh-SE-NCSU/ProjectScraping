@@ -62,5 +62,6 @@ def comparetest():
     print number2
     print time1
     print time2
-comparetest()
-    
+#comparetest()
+A={1,2,3,4}
+B={2,1,4,3}
