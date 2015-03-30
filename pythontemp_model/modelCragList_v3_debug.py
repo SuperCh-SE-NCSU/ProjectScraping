@@ -21,7 +21,7 @@ def getMilageAndYear(url):
     try:
         response = urllib2.urlopen(url)
         html = response.read()
-        time.sleep(30)
+        time.sleep(10)
     except:
         odometer='0'
         year='0'
@@ -131,7 +131,7 @@ def craglistsearchAll():
     num=0
     mystrTime=datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     print mystrTime
-    ctime=(datetime.datetime.now()-datetime.timedelta(days=1)).strftime("%Y-%m-%d %H:%M:%S")
+    ctime=(datetime.datetime.now()-datetime.timedelta(hours=1)).strftime("%Y-%m-%d %H:%M:%S")
     print ctime
     while today:
         if num==0:
