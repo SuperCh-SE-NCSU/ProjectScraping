@@ -1,7 +1,9 @@
 from nose.tools import *
-from ProjectScraping.bin.post_form import app
 from tests.tools import assert_response
-
+import os
+import sys
+sys.path.append(os.path.abspath(os.path.dirname(__file__) + '/' + '../..'))
+from post_form import app
 def test_index():
     # check that we get a 404 on the / URL
     resp = app.request("/")

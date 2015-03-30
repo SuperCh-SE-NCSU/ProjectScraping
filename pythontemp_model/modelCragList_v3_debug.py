@@ -21,7 +21,7 @@ def getMilageAndYear(url):
     try:
         response = urllib2.urlopen(url)
         html = response.read()
-        sleep(30)
+        time.sleep(30)
     except:
         odometer='0'
         year='0'
@@ -191,7 +191,9 @@ def craglistsearchAll():
         num=num+100
         if num>2400:
             break
+    time.sleep(30)
     ctime=mystrTime
+    
     #print len(model)
     #print len(price)
     #print len(carlink)
