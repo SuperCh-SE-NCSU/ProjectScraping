@@ -15,7 +15,7 @@ from multiprocessing import Process
 
 #process 1
 def click_mail_process(email,make,model,startyear,endyear,minPrice,maxPrice,time):
-    html=htmlgen.generateHTML(make,model,startyear,endyear,minPrice,maxPrice,time)
+    html=htmlgen.generateHTMLnoKBB(make,model,startyear,endyear,minPrice,maxPrice,time)
     sendEmail.sendgridEmail(html,email)
 
     
@@ -36,7 +36,7 @@ class Index(object):
         form = web.input(username="Nobody", make="Toyota", model="Camry", email="test@ncsu.edu", minYear="2007", maxYear="2015", minPrice="500", maxPrice="100000", currentTime=tempcurrentTime)        
         #xmlprocess.writeXml("bin/users.xml",form.make,form.model,form.year,form.username,tempcurrentTime,form.email)
         db_process.writeDB(form.username, form.make, form.model, form.email, form.minYear, form.maxYear, form.minPrice, form.maxPrice, form.currentTime)
-        p = Process(target=click_mail_process, args=(form.email,form.make,form.model,form.minYear,form.maxYear,int(form.minPrice),int(form.maxPrice),(datetime.datetime.now()-datetime.timedelta(days=3)).strftime("%Y-%m-%d %H:%M:%S")))
+        p = Process(target=click_mail_process, args=(form.email,form.make,form.model,form.minYear,form.maxYear,int(form.minPrice),int(form.maxPrice),(datetime.datetime.now()-datetime.timedelta(days=1)).strftime("%Y-%m-%d %H:%M:%S")))
         p.start()
         greeting = "%s, %s, %s, %s, %s, %s, %s, %s \n Please wait for ProjectScraping Email" % (form.username, form.make, form.model, form.email, form.minYear, form.maxYear, form.minPrice, form.maxPrice)
         return render.index(greeting = greeting)
