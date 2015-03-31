@@ -1,8 +1,7 @@
 from nose.tools import *
-from tests.tools import assert_response
-import os
-import sys
-sys.path.append(os.path.abspath(os.path.dirname(__file__) + '/' + '../..'))
+from tools import assert_response
+import os, sys
+sys.path.append(os.path.abspath('../bin'))
 from post_form import app
 def test_index():
     # check that we get a 404 on the / URL
