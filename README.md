@@ -5,8 +5,10 @@
 Using Scrapy to crawl craigslist and kbb to get sale information about used cars users specified and their kbb price.
 
 ### Goals
+Our goal is to offer a mailing service to people who are looking at craigslist for used car, providing a craigslist link to the car that they have expressed their interests in from our subscribing website and the kbb price for the specific car.
 
 ### Background
+*A lot of people look at craigslist for an ideal used car that they are planing to buy or are just interested in.
 
 ### Methods
 
