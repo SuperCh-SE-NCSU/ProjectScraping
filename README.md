@@ -8,8 +8,10 @@ Using Scrapy to crawl craigslist and kbb to get sale information about used cars
 Our goal is to offer a mailing service to people who are looking at craigslist for used car, providing a craigslist link to the car that they have expressed their interests in from our subscribing website and the kbb price for the specific car.
 
 ### Background
-*A lot of people look at craigslist for an ideal used car that they are planing to buy or are just interested in.
-
+*A lot of people look at craigslist for an ideal used car that they are planing to buy or are just interested in. Normally when people look at the car price that listed on a craigslist page, they want to know if the car is worth the price listed. For people who are not car experters, they usually go to kbb to check the average price with the same specified conditions that are listed on craigslist. 
+It's usually true that people will look through lots of cars on craigslist and check their kbb price time and time again. It could takes several days, or several weeks before they find their ideal car.
+Sometimes, a good car is just posted to craigslist, which is exactly the car you want. But you are busy with your work or being tangled with some personal thins and forget to check craigslist, you may miss the car.
+If there is some service that can email 
 ### Methods
 
 ### Result
