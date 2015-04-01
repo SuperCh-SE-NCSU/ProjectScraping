@@ -2,6 +2,8 @@ from scrapy.spider import BaseSpider
 from scrapy.selector import HtmlXPathSelector
 from craigslist_sample.items import CraigslistSampleItem
 from scrapy.http import Request
+from scrapy.exceptions import CloseSpider
+import datetime
 import urllib2
 import re
 
@@ -28,12 +30,22 @@ class MySpider(BaseSpider):
   allowed_domains = ["craigslist.org"]
   start_urls = ["http://raleigh.craigslist.org/search/cto"]
   max_cid=24
-
+ 
+  make='toyota'
+  model='camry'
+  starttime='2007'
+  endtime='2009'
+  minPrice=1000
+  maxPrice=10000
+  ctime=(datetime.datetime.now()-datetime.timedelta(days=1)).strftime('%Y-%m-%d %H:%M')
+  
   def start_requests(self):
     for i in range(self.max_cid):
       yield Request('http://raleigh.craigslist.org/search/cto?s=%d'%(i*100),callback=self.parse)
                     
   def parse(self, response):
+      
+      
       hxs = HtmlXPathSelector(response)
       
       titles = hxs.xpath('//p[@class="row"]')
@@ -53,22 +65,34 @@ class MySpider(BaseSpider):
           item = CraigslistSampleItem()
           L =title.xpath(".//a/@href").extract()
           if len(L)>0:
-            item ["carlink"] = "http://raleigh.craigslist.org/"+str(L.pop())
-          item ["abstractInformation"] =str(list(title.xpath(".//a[@class='hdrlnk']/text()").extract()).pop())
-          item ["timePost"]=str(list(title.xpath(".//span[@class='pl']/time/@datetime").extract()).pop())
+            item ["carlink"] = "http://raleigh.craigslist.org/"+L.pop().encode('ascii', 'ignore')
+          else:
+            item["carlink"]="unknown"
+    
+          item ["abstractInformation"] =(list(title.xpath(".//a[@class='hdrlnk']/text()").extract()).pop()).encode('ascii', 'ignore')
+          item ["timePost"]=(list(title.xpath(".//span[@class='pl']/time/@datetime").extract()).pop()).encode('ascii', 'ignore')
          
           L=title.xpath(".//span[@class='price'][1]/text()").extract()
           if len(L)>0:
-             item ["price"]= str(L.pop())
-          try:
-            #milageandy=getMilageAndYear(item ["carlink"])
-            item ["mileagel"]=milageandy['milage']
-            item ["caryear"]=milageandy['year']
-          except:
-            item ["mileagel"]='0'
-            item ["caryear"]='0'
+             item["price"]= (L.pop()).encode('ascii', 'ignore')
+          else:
+             item["price"]='0'
+          item["price"]=int(item["price"].replace('$',''))
+          
+          if item["price"]>=self.minPrice and item["price"]<=self.maxPrice and self.model in item["abstractInformation"].lower():
+              try:
+                milageandy=getMilageAndYear(item ["carlink"])
+                item ["mileagel"]=milageandy['milage']
+                item ["caryear"]=milageandy['year']
+              except:
+                item ["mileagel"]='0'
+                item ["caryear"]='0'
             
-          items.append(item)
+              if item["timePost"]<self.ctime:
+                  raise CloseSpider('bandwidth_exceeded')
+              
+              if item ["caryear"]>=self.starttime and item ["caryear"]<=self.endtime:
+                  items.append(item)
       
       return items
 

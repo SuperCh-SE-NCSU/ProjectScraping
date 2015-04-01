@@ -26,6 +26,7 @@ If there is some service that can send emails to him which notify him of a newly
 
 4.[Sendgrid](https://sendgrid.com/home-two) is used for email delivery service.
 
+
 **Introduction to web crawler**
 
 A Web crawler is an Internet bot that systematically browses the World Wide Web, typically for the purpose of Web indexing. A Web crawler may also be called a Web spider, an ant, an automatic indexer, or (in the FOAF software context) a Web scutter.
@@ -48,6 +49,8 @@ http://152.46.17.210:8080/<br/>
 
 2.We tried deploying the application to Heroku, but the IP of heroku is blocked by craigslist. Craigslist seems to block all the IPs from commercial servers.
 
+3.Time Comparision of three different mehtods
+<img align=left src="https://github.com/SuperCh-SE-NCSU/ProjectScraping/blob/master/doc/timeComparison.png" style="float:left;with:100px;height:300px">
 ### Conclusion
 
 
