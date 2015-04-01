@@ -24,7 +24,7 @@ If there is some service that can send emails to him which notify him of a newly
 
 4.[Sendgrid](https://sendgrid.com/home-two) is used for email delivery service.
 
-/home/liang/ProjectScraping/doc/timeComparison.png
+
 **Introduction to web crawler**
 
 A Web crawler is an Internet bot that systematically browses the World Wide Web, typically for the purpose of Web indexing. A Web crawler may also be called a Web spider, an ant, an automatic indexer, or (in the FOAF software context) a Web scutter.
