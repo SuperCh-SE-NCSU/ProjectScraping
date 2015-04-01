@@ -8,7 +8,7 @@ Using Scrapy to crawl craigslist and kbb to get sale information about used cars
 Our goal is to offer a mailing service to people who are looking at craigslist for used car, providing a craigslist link to the car that they have expressed their interests in from our subscribing website and the kbb price for the specific car.
 
 ### Background
-*A lot of people look at craigslist for an ideal used car that they are planing to buy or are just interested in. Normally when people look at the car price that listed on a craigslist page, they want to know if the car is worth the price listed. For people who are not car experters, they usually go to kbb to check the average price with the same specified conditions that are listed on craigslist. 
+A lot of people look at craigslist for an ideal used car that they are planing to buy or are just interested in. Normally when people look at the car price that listed on a craigslist page, they want to know if the car is worth the price listed. For people who are not car experters, they usually go to kbb to check the average price with the same specified conditions that are listed on craigslist. 
 
 It's usually true that people will look through lots of cars on craigslist and check their kbb price time and time again. It could takes several days, or several weeks before they find their ideal car.
 
@@ -34,20 +34,27 @@ Crawlers can validate hyperlinks and HTML code. They can also be used for web sc
 
 
 ### Result
+The following website is developed for people to subscribe to our email notification service.
+http://152.46.17.210:8080/<br/>
+<img align=left src="https://github.com/SuperCh-SE-NCSU/ProjectScraping/blob/master/pythontemp_model/img/subscribe.png" style="float:left;with:100px;height:300px">
+
+
 
 ### Disscussion
 
+1.We tested the functionality by subscribe with different car information specified.We received the email. Then we checked craigslist and found that all the cars satisfying the condition are included in the email.
+
+2.We tried deploying the application to Heroku, but the IP of heroku is blocked by craigslist. Craigslist seems to block all the IPs from commercial servers.
+
 ### Conclusion
 
+
 ### Future Work
-
+1. A server is needed to long-time service.
+2. the information sending to users could be beautified to a table, with pictures.
 ### Reference
-
-Users can subscribe to our email service.We will send them the lastest car information they need once per day. 
 ### Demo
 
-http://152.46.17.210:8080/<br/>
-<img align=left src="https://github.com/SuperCh-SE-NCSU/ProjectScraping/blob/master/pythontemp_model/img/subscribe.png" style="float:left;with:100px;height:300px">
 ### Install 3rd part library (needed for subscription)
 
 ```
