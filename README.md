@@ -14,15 +14,16 @@ Sometimes, a good car is just posted to craigslist, which is exactly the car a p
 If there is some service that can send emails to him which notify him of a newly posted car, he won't miss it.
 
 ### Methods
-*A basic website is developed for users to subscribe to our email notification service 
+1.A basic website is developed for users to subscribe to our email notification service 
 
-*postgresql is used to store subscribed user information.
+2.postgresql is used to store subscribed user information.
 
-*A web crawler is used to craw craigslist and kbb for car informations.
+3.A web crawler is used to craw craigslist and kbb for car informations.
 
-*[Sendgrid](https://sendgrid.com/home-two) is used for email delivery service.
-
-####Introduction to web crawler
+4.[Sendgrid](https://sendgrid.com/home-two) is used for email delivery service.
+-------------------------------
+Introduction to web crawler
+-------------------------------
 A Web crawler is an Internet bot that systematically browses the World Wide Web, typically for the purpose of Web indexing. A Web crawler may also be called a Web spider,[1] an ant, an automatic indexer,[2] or (in the FOAF software context) a Web scutter.[3]
 
 Web search engines and some other sites use Web crawling or spidering software to update their web content or indexes of others sites' web content. Web crawlers can copy all the pages they visit for later processing by a search engine that indexes the downloaded pages so that users can search them much more quickly.
