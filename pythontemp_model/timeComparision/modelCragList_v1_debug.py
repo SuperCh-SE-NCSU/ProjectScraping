@@ -1,6 +1,7 @@
 import urllib2
 import re
 import time
+import datetime
 import xml.etree.ElementTree as ET
 #This file contains the basic crawl function for craigslist.
 class carlist:
@@ -85,7 +86,8 @@ def craglistsearch(cmake,cmodel,cstartyear,cendyear,cminprice,cmaxprice,ctime):
                             caryear.append(milandyear['year'])
                             
         except:
-            print 'error %d' %num
+            today=True
+            #print 'error %d' %num
         num=num+100
         if num>2500:
             today=False
@@ -99,7 +101,8 @@ def craglistsearch(cmake,cmodel,cstartyear,cendyear,cminprice,cmaxprice,ctime):
     return usercarlist
 
 def testcraglistsearch():
-    usercarlist=craglistsearch('toyota','camry','2007','2010',5000,10000,'2015-03-06 23:40:13')   
+    ctime=(datetime.datetime.now()-datetime.timedelta(days=1)).strftime("%Y-%m-%d %H:%M")
+    usercarlist=craglistsearch('toyota','camry','2007','2010',5000,10000,ctime)   
     for i in range(len(usercarlist.modellist)):
         print usercarlist.modellist[i]
         print usercarlist.pricelist[i]
