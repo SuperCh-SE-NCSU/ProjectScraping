@@ -90,7 +90,7 @@ def craglistsearch(cmake,cmodel,cstartyear,cendyear,cminprice,cmaxprice,ctime):
                     try:
                         milandyear=getMilageAndYear('http://raleigh.craigslist.org'+templink)
                     except:
-                        milandyear={'year':'0000','milage':'0'}
+                        milandyear={'year':'0000','milage':'unknown'}
                     if milandyear['year']>=cstartyear and milandyear['year']<=cendyear:
                             #print milandyear['year']
                         timePost.append(temptime)

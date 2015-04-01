@@ -44,7 +44,7 @@ def generateHTMLnoKBB(cmake_temp,cmodel_temp,cstartyear,cendyear,cminprice,cmaxp
     print 'user: '
     print len(usercarlist.carlinklist)
     html_content='<html>'
-    html_content+='<body><p>Welcome to choose ProjectScraping Service. We will send you email with candidate car with kbb price every day. Below is the car posted no later than 24 hours</p>' 
+    html_content+='<body><p>Welcome to choose ProjectScraping Service. We will send you email with candidate car and kbb price every day. Below is the car posted no later than 24 hours</p>' 
     temp_content='<center><p> Your desired car model: '+cmodel+'</p>'
     html_content=html_content+temp_content
     for i in range(len(usercarlist.modellist)):
