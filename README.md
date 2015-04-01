@@ -48,7 +48,7 @@ http://152.46.17.210:8080/<br/>
 2.We tried deploying the application to Heroku, but the IP of heroku is blocked by craigslist. Craigslist seems to block all the IPs from commercial servers.
 
 3.Time Comparision of three different mehtods
-<img align=left src="https://github.com/SuperCh-SE-NCSU/ProjectScraping/blob/master/ProjectScraping/doc/timeComparison.png" style="float:left;with:100px;height:300px">
+<img align=left src="https://github.com/SuperCh-SE-NCSU/ProjectScraping/blob/master/doc/timeComparison.png" style="float:left;with:100px;height:300px">
 ### Conclusion
 
 
