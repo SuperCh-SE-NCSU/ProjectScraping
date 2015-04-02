@@ -4,11 +4,6 @@
 
 Using Scrapy to crawl craigslist and kbb to get sale information about used cars users specified and their kbb price.
 
-### Goals
-Our goal is to offer a mailing service to people who are looking at craigslist for used car, providing a craigslist link to the car that they have expressed their interests in from our subscribing website and the kbb price for the specific car.
-
-To be To be more specific, we develop a website for people to subscribe to our email service and get car information that they specified.(car model, year of make, mileage,etc)Based on these information, we crawl craiglist and find the right car, which agree with the customer¡¯s needs and look up the price for the car from Kbb. Then we will email subscribed customers the information they need: the basic information( such as year, make, mileage,price), a link to the original posts on craiglist, and the price from Kbb.
-
 ### Background
 A lot of people look at craigslist for an ideal used car that they are planing to buy or are just interested in. Normally when people look at the car price that listed on a craigslist page, they want to know if the car is worth the price listed. For people who are not car experters, they usually go to kbb to check the average price with the same specified conditions that are listed on craigslist. 
 
@@ -16,6 +11,16 @@ It's usually true that people will look through lots of cars on craigslist and c
 
 Sometimes, a good car is just posted to craigslist, which is exactly the car a person want. But he isbusy with your work or being tangled with some personal thins and forget to check craigslist, he may miss the car.
 If there is some service that can send emails to him which notify him of a newly posted car, he won't miss it.
+
+### Goals
+Our goal is to offer a mailing service to people who are looking at craigslist for used car, providing a craigslist link to the car that they have expressed their interests in from our subscribing website and the kbb price for the specific car.
+
+To be To be more specific, we develop a website for people to subscribe to our email service and get car information that they specified.(car model, year of make, mileage,etc)Based on these information, we crawl craiglist and find the right car, which agree with the customer¡¯s needs and look up the price for the car from Kbb. Then we will email subscribed customers the information they need: the basic information( such as year, make, mileage,price), a link to the original posts on craiglist, and the price from Kbb.
+There should be two versions of our application.
+
+Version_1: Minimal functionality. According to customers' need specified on our subscription website, send them emails including information that they need from 2 websites, Craglist and kbb.(work done)
+
+Version_2: Full functionality. Besides the subscription service, Build a database of customers login information and search records and extend the functionality of our website, so that everytime customer login our website, they will get latest car information since last login. (Future work)
 
 ### Methods
 1.A basic website is developed for users to subscribe to our email notification service 
@@ -25,7 +30,6 @@ If there is some service that can send emails to him which notify him of a newly
 3.A web crawler is used to craw craigslist and kbb for car informations.
 
 4.[Sendgrid](https://sendgrid.com/home-two) is used for email delivery service.
-
 
 **Introduction to web crawler**
 
@@ -41,16 +45,16 @@ The following website is developed for people to subscribe to our email notifica
 http://152.46.17.210:8080/<br/>
 <img align=left src="https://github.com/SuperCh-SE-NCSU/ProjectScraping/blob/master/pythontemp_model/img/subscribe.png" style="float:left;with:100px;height:300px">
 
-
+We tested the functionality by subscribe with different car information specified.We received the email. Then we checked craigslist and found that all the cars satisfying the condition are included in the email.
 
 ### Disscussion
+####1.Advantages of this application####
+Right now, people have to go to craiglist to find the car they are interested in with a seller¡¯s price, and then go to kbb, checking out the review price.It¡¯s a pain to look up cars¡¯ kbb price again and again. Our application will do these two jobs for customers automatically, and people can get updated information emailed to them everyday so they won't miss a newly added target.
+####2.
 
-1.We tested the functionality by subscribe with different car information specified.We received the email. Then we checked craigslist and found that all the cars satisfying the condition are included in the email.
 
 2.We tried deploying the application to Heroku, but the IP of heroku is blocked by craigslist. Craigslist seems to block all the IPs from commercial servers.
 
-3.Time Comparision of three different mehtods
-<img align=left src="https://github.com/SuperCh-SE-NCSU/ProjectScraping/blob/master/doc/timeComparison.png" style="float:left;with:100px;height:300px">
 ### Conclusion
 
 
