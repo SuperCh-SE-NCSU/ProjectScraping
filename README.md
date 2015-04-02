@@ -48,11 +48,11 @@ http://152.46.17.210:8080/<br/>
 We tested the functionality by subscribe with different car information specified.We received the email. Then we checked craigslist and found that all the cars satisfying the condition are included in the email.
 
 ### Disscussion
-####1.Advantages of this application####
+'''1.Advantages of this application'''
 
 Right now, people have to go to craiglist to find the car they are interested in with a seller¡¯s price, and then go to kbb, checking out the review price.It¡¯s a pain to look up cars¡¯ kbb price again and again. Our application will do these two jobs for customers automatically, and people can get updated information emailed to them everyday so they won't miss a newly added target.
 
-####2.Difficulty during deploying the application####
+'''2.Difficulty during deploying the application'''
 
 We tried deploying the application to Heroku, but the IP of heroku is blocked by craigslist. Craigslist seems to block all the IPs from commercial servers.
 
@@ -66,7 +66,7 @@ Web crawler is a powerful tool which makes gathering information from webpage mo
 3. The information sending to users could be beautified into a table, with pictures.
 
 ### Reference
-[Learn python-the hard way](http://learnpythonthehardway.org/book/ex51.html
+1.[Learn python-the hard way](http://learnpythonthehardway.org/book/ex51.html
 )
 
 
