@@ -49,21 +49,24 @@ We tested the functionality by subscribe with different car information specifie
 
 ### Disscussion
 ####1.Advantages of this application####
+
 Right now, people have to go to craiglist to find the car they are interested in with a seller¡¯s price, and then go to kbb, checking out the review price.It¡¯s a pain to look up cars¡¯ kbb price again and again. Our application will do these two jobs for customers automatically, and people can get updated information emailed to them everyday so they won't miss a newly added target.
-####2.
 
+####2.Difficulty during deploying the application####
 
-2.We tried deploying the application to Heroku, but the IP of heroku is blocked by craigslist. Craigslist seems to block all the IPs from commercial servers.
+We tried deploying the application to Heroku, but the IP of heroku is blocked by craigslist. Craigslist seems to block all the IPs from commercial servers.
 
 ### Conclusion
 
 
 ### Future Work
-1. A server is needed to long-time service.
-2. the information sending to users could be beautified to a table, with pictures.
-### Reference
-### Demo
+1. Achieve full functionality in version 2.
+2. A server is needed to long-time service.
+3. the information sending to users could be beautified to a table, with pictures.
 
+### Reference
+[Learn python-the hard way](http://learnpythonthehardway.org/book/ex51.html
+)
 ### Install 3rd part library (needed for subscription)
 
 ```
