@@ -50,7 +50,7 @@ We tested the functionality by subscribe with different car information specifie
 ### Disscussion
 **1.Advantages of this application**
 
-Right now, people have to go to craiglist to find the car they are interested in with a seller¡¯s price, and then go to kbb, checking out the review price.It¡¯s a pain to look up cars¡¯ kbb price again and again. Our application will do these two jobs for customers automatically, and people can get updated information emailed to them everyday so they won't miss a newly added target.
+Right now, people have to go to craiglist to find the car they are interested in with a posted price, and then go to kbb, checking out the review price.It is a pain to look up the kbb price for different cars again and again. Our application will do these two jobs for customers automatically, and people can get updated information emailed to them everyday so they won't miss a newly added target.
 
 **2.Difficulty during deploying the application**
 
