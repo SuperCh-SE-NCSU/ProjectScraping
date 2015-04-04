@@ -31,7 +31,7 @@ Version_2: Full functionality. Besides the subscription service, Build a databas
 
 4.[Sendgrid](https://sendgrid.com/home-two) is used for email delivery service.
 
-**Introduction to web crawler**
+#### Introduction to web crawler
 
 A Web crawler is an Internet bot that systematically browses the World Wide Web, typically for the purpose of Web indexing. A Web crawler may also be called a Web spider, an ant, an automatic indexer, or (in the FOAF software context) a Web scutter.
 
@@ -39,10 +39,14 @@ Web search engines and some other sites use Web crawling or spidering software t
 
 Crawlers can validate hyperlinks and HTML code. They can also be used for web scraping (see also data-driven programming).
 
-### Design
+### Design and Pattern
 <img align=center src="https://github.com/SuperCh-SE-NCSU/ProjectScraping/blob/master/doc/ProjectScraping--design.png">
 
 User can choose different restrictions (car model, car make, year,  price and email) and subscribe our daily email. We will keep users' personal information in PostgreSQL database and ensure safety. Then we try to use different crawler engine (regular regression, beautifulsoup and scrapy) to obtain latest information users need on Craglist and kbb and send email daily.
+
+#### Public-subscribe design pattern
+We also use public-subscribe design pattern. We build  a one-to-many dependence between our system and subscribers. And when we collect latest car information and send email daily, all subscribers are notified by emails.
+   - Public-subscribe design pattern alerts other objects’ changes without rebuilding dependencies on them. The individual views implement the Observer interface and register with the model. The model tracks the list of all observers that subscribe to changes. When a model changes, the model iterates through all registered observers and notifies them of the change. With this approach, the model never requires specific information about any views.
 
 ### Implementation
 <img align=center src="https://github.com/SuperCh-SE-NCSU/ProjectScraping/blob/master/doc/ProjectScraping--implement.png">
@@ -94,6 +98,7 @@ Web crawler is a powerful tool which makes gathering information from webpage mo
 2.https://github.com/scrapy/scrapy<br/>
 3.https://github.com/scrapy/scrapy/wiki<br/>
 4.https://doc.scrapy.org/en/latest/<br/>
+5.http://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern
 
 
 
