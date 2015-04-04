@@ -44,6 +44,13 @@ Crawlers can validate hyperlinks and HTML code. They can also be used for web sc
 
 User can choose different restrictions (car model, car make, year,  price and email) and subscribe our daily email. We will keep users' personal information in PostgreSQL database and ensure safety. Then we try to use different crawler engine (regular regression, beautifulsoup and scrapy) to obtain latest information users need on Craglist and kbb and send email daily.
 
+### Implementation
+<img align=center src="https://github.com/SuperCh-SE-NCSU/ProjectScraping/blob/master/doc/ProjectScraping--implement.png">
+
+When clicking "subscribe" button, the main process will write user's information into database immediately,  and a sub process will generate simultaneously. The sub process will send a welcome email to user. The first email only include available cars in Craglist, so it will be very fast.
+
+There is also a send email process on our server. This process is a 24/7 service, and everyday it will send emails to each subscribers. The content of emails comes from crawler engine.
+
 ### Test procedure
    To be completed
    
