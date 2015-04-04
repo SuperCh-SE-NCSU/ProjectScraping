@@ -39,6 +39,9 @@ Web search engines and some other sites use Web crawling or spidering software t
 
 Crawlers can validate hyperlinks and HTML code. They can also be used for web scraping (see also data-driven programming).
 
+### Design
+<img align=center src="https://github.com/SuperCh-SE-NCSU/ProjectScraping/blob/master/doc/ProjectScraping--design.png">
+
 ### Test procedure
    To be completed
    
@@ -48,7 +51,8 @@ Crawlers can validate hyperlinks and HTML code. They can also be used for web sc
 ### Result
 The following website is developed for people to subscribe to our email notification service.
 http://152.46.17.210:8080/<br/>
-<img align=left src="https://github.com/SuperCh-SE-NCSU/ProjectScraping/blob/master/pythontemp_model/img/subscribe.png" style="float:left;with:100px;height:300px">
+
+<img align=center src="https://github.com/SuperCh-SE-NCSU/ProjectScraping/blob/master/pythontemp_model/img/subscribe.png">
 
 We tested the functionality by subscribe with different car information specified.We received the email. Then we checked craigslist and found that all the cars satisfying the condition are included in the email.
 
