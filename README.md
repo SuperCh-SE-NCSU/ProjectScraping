@@ -1,5 +1,5 @@
 
-### Web Crawler Application  
+# Web Crawler Application  
 [![Build Status](https://travis-ci.org/SuperCh-SE-NCSU/ProjectScraping.svg?branch=master)](https://travis-ci.org/SuperCh-SE-NCSU/ProjectScraping)
 
 Using Scrapy to crawl craigslist and kbb to get sale information about used cars users specified and their kbb price.
