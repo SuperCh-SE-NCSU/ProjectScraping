@@ -42,6 +42,8 @@ Crawlers can validate hyperlinks and HTML code. They can also be used for web sc
 ### Design
 <img align=center src="https://github.com/SuperCh-SE-NCSU/ProjectScraping/blob/master/doc/ProjectScraping--design.png">
 
+User can choose different restrictions (car model, car make, year,  price and email) and subscribe our daily email. We will keep users' personal information in PostgreSQL database and ensure safety. Then we try to use different crawler engine (regular regression, beautifulsoup and scrapy) to obtain latest information users need on Craglist and kbb and send email daily.
+
 ### Test procedure
    To be completed
    
