@@ -90,10 +90,10 @@ Web crawler is a powerful tool which makes gathering information from webpage mo
 3. The information sending to users could be beautified into a table, with pictures.
 
 ### Reference
-1.Shaw, Zed A. "Learn Python the hard way." (2010).
-2.https://github.com/scrapy/scrapy
-3.https://github.com/scrapy/scrapy/wiki
-4.https://doc.scrapy.org/en/latest/
+1.Shaw, Zed A. "Learn Python the hard way." (2010).<br/>
+2.https://github.com/scrapy/scrapy<br/>
+3.https://github.com/scrapy/scrapy/wiki<br/>
+4.https://doc.scrapy.org/en/latest/<br/>
 
 
 
