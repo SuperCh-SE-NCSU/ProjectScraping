@@ -200,31 +200,34 @@ def writeFourJapaneseCarKbbPrice():
 import csv
 
 def testReadMakeModel():
-    with open('../../static/allData.csv', 'rb') as csvfile:
+    with open('../../static/hotCar.csv', 'rb') as csvfile:
         target=open("2007_111000.html",'w')
         html='<html>'
-        html+='<body><center><p>2007,&nbsp; 111000</p>
+        html+='<body><center><p>2007,&nbsp; 111000</p>'
         spamreader = csv.reader(csvfile, delimiter=' ', quotechar='|')
         for row in spamreader:
         #print len(row)
             for makemodel in row:
             #print type(makemodel)
                 try:
-                    html+='<p>========================================</p>'
                     make, model=makemodel.split(',')
+                    html+='<p>========================================</p>'
                     html+='<p>'+make+'&nbsp;'+model+'</p>'
                     tempCar=getKbbPrice(make,model,'2007','111000')
                     html_content=htmlGeneratedContent(tempCar)
+                    print html_content
                     html+=html_content
+                    target.write(html)
                     #print make, model
                 except:
-                     html+='<p>Not working &nbsp'+make+'&nbsp;'+model+'</p>'
+                    html+='<p>Not working &nbsp'+make+'&nbsp;'+model+'</p>'
                     print makemodel
+        target.close()
         #print type(row)
         #print ', '.join(row)
 
 def writeAllData():
-    with open('../../static/allData.csv', 'rb') as csvfile:
+    with open('../../static/hotCar.csv', 'rb') as csvfile:
         spamreader = csv.reader(csvfile, delimiter=' ', quotechar='|')
         for row in spamreader:
             for makemodel in row:
