@@ -51,6 +51,13 @@ When clicking "subscribe" button, the main process will write user's information
 
 There is also a send email process on our server. This process is a 24/7 service, and everyday it will send emails to each subscribers. The content of emails comes from crawler engine.
 
+### Platform and optimization trial
+- At very begining, we tried to put our system on Heroku and Amazon web services. However, after deploy our system on these two platform, we found that craglist and kbb block the IP address of these two companies, and we cannot crawl any information. So we change to NCSU VCL now.
+
+- In order to increase the speed of crawling, we decided to build another local database to store crawling results. But after deep consideration, we find this database is useless. There are several reasons:
+   - Content send to subscribers must be latest, so store obsolete into database is useless;
+   - If we build this database, we have to update it daily. Because we cannot access their databases, so the only method is still crawling. What is more, it is unrealisitic to store all information locally.
+
 ### Test procedure
    To be completed
    
