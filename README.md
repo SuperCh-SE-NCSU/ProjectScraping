@@ -15,7 +15,7 @@ If there is some service that can send emails to him which notify him of a newly
 ### Goals
 Our goal is to offer a mailing service to people who are looking at craigslist for used car, providing a craigslist link to the car that they have expressed their interests in from our subscribing website and the kbb price for the specific car.
 
-To be To be more specific, we develop a website for people to subscribe to our email service and get car information that they specified.(car model, year of make, mileage,etc)Based on these information, we crawl craiglist and find the right car, which agree with the customer¡¯s needs and look up the price for the car from Kbb. Then we will email subscribed customers the information they need: the basic information( such as year, make, mileage,price), a link to the original posts on craiglist, and the price from Kbb.
+To be To be more specific, we develop a website for people to subscribe to our email service and get car information that they specified.(car model, year of make, mileage,etc)Based on these information, we crawl craiglist and find the right car, which agree with the customerÂ¡Â¯s needs and look up the price for the car from Kbb. Then we will email subscribed customers the information they need: the basic information( such as year, make, mileage,price), a link to the original posts on craiglist, and the price from Kbb.
 There should be two versions of our application.
 
 Version_1: Minimal functionality. According to customers' need specified on our subscription website, send them emails including information that they need from 2 websites, Craglist and kbb.(work done)
@@ -39,6 +39,11 @@ Web search engines and some other sites use Web crawling or spidering software t
 
 Crawlers can validate hyperlinks and HTML code. They can also be used for web scraping (see also data-driven programming).
 
+### Test procedure
+   To be completed
+   
+### Completeness of the tests
+   To be completed
 
 ### Result
 The following website is developed for people to subscribe to our email notification service.
@@ -66,8 +71,10 @@ Web crawler is a powerful tool which makes gathering information from webpage mo
 3. The information sending to users could be beautified into a table, with pictures.
 
 ### Reference
-1.[Learn python-the hard way](http://learnpythonthehardway.org/book/ex51.html
-)
+1.Shaw, Zed A. "Learn Python the hard way." (2010).
+2.https://github.com/scrapy/scrapy
+3.https://github.com/scrapy/scrapy/wiki
+4.https://doc.scrapy.org/en/latest/
 
 
 
