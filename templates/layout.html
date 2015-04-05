@@ -30,54 +30,6 @@ $def with (content)
     <![endif]-->
   <style type="text/css"></style>
 
-  <!--import csv file-->
-  <script>
-    var allData = [];
-    var makeData = [];
-    var modelData = [];
-    jQuery(document).ready(function() {
-            jQuery.ajax({
-                type: "GET",
-                url: "static/allData.csv",
-                dataType: "text",
-                success: function(data) {var allData = jQuery.csv.toArrays(data); console.log(allData[0][1]);}
-                //{processData(data);console.log(allTextLines);}
-                //var array = jQuery.csv.toArrays(data);window.alert(data);}
-             });
-        });
-
-        function processData(array) {
-            var allTextLines = allText.split(/\r\n|\n/);
-            var headers = allTextLines[0].split(',');
-            var make = [];
-            var model = [];
-
-            for (var i=0; i<array.length; i++) {
-                make.push(array[i][1]);
-                }
-            };
-        
-
-        jQuery(document).ready(function() {
-            jQuery.ajax({
-                type: "GET",
-                url: "static/makeData.csv",
-                dataType: "text",
-                success: function(data) { makeData = jQuery.csv.toArray(data); console.log(makeData);}
-             });
-        });
-
-        jQuery(document).ready(function() {
-            jQuery.ajax({
-                type: "GET",
-                url: "static/modelData.csv",
-                dataType: "text",
-                success: function(data) { modelData = jQuery.csv.toArray(data); console.log(modelData);}
-             });
-        });
-
-  </script>
-
 </head>
 
   <!--<body style="background-color: #FFFFFF">-->

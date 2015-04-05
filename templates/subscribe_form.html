@@ -19,39 +19,48 @@
     <!--javascript should put after the label and input-->
     <script>
     jQuery(document).ready(function() {
-        jQuery('#inputMake').autocomplete({
-          source:  function(request, response) {
-                jQuery.ajax({
-                    type: "GET",
-                    url: "static/makeData.csv",
-                    dataType: "text",
-                    success: function(data) {
-                        var makeData = jQuery.csv.toArray(data); 
-                        var matcher = new RegExp( "\\b" + jQuery.ui.autocomplete.escapeRegex( request.term ), "i" );
-                        response( jQuery.grep( makeData, function( item ){
-                            return matcher.test( item );
-                        }));
-                    }
-                });
-            },
+        jQuery.ajax({
+            type: "GET",
+            url: "static/makeData.csv",
+            dataType: "text",
+            success: function(data) {
+                var makeData = jQuery.csv.toArray(data); 
+                jQuery( "#inputMake" ).autocomplete({
+                    source: makeData,
+                    minLength:0
+                    }).bind('focus', function(){ jQuery(this).autocomplete("search"); } );
+            }
         });
-
-        jQuery('#inputModel').autocomplete({
-          source:  function(request, response) {
-                jQuery.ajax({
-                    type: "GET",
-                    url: "static/modelData.csv",
-                    dataType: "text",
-                    success: function(data) {
-                        var modelData = jQuery.csv.toArray(data); 
-                        var matcher = new RegExp( "\\b" + jQuery.ui.autocomplete.escapeRegex( request.term ), "i" );
-                        response( jQuery.grep( modelData, function( item ){
-                            return matcher.test( item );
-                        }));
+           
+        //get corresponding model data, according to car make
+        jQuery.ajax({
+            type: "GET",
+            url: "static/allData.csv",
+            dataType: "text",
+            success: function(data) {
+                //get the selected value in 'inputmake' textbox
+                var make = jQuery('#inputMake').val();
+                var modelData = [];
+                var allData = jQuery.csv.toArrays(data);
+                var stop = false;
+                for(var i=0; i<allData.length; i++){
+                    if (allData[i][0] == make){
+                        modelData.push(allData[i][1]);
+                        stop = true;
                     }
-                });
-            },
+                    //exit for loop if condition is not satisified
+                    if ((allData[i][0] != make) && stop){
+                        break;
+                    }
+                }
+                //alert(modelData);
+                jQuery( "#inputModel" ).autocomplete({
+                    source: modelData,
+                    minLength:0
+                    }).bind('focus', function(){ jQuery(this).autocomplete("search"); } );
+            }
         });
+                            
     });
 
     //jQuery('#inputMake').autocomplete( "option", "delay", 0 );
@@ -60,10 +69,10 @@
 
     <!--year-->
     <label for="inputstartYear" class="sr-only">Start Year</label>
-    <input type="number" name="minYear" id="inputstartYear" class="form-control" placeholder="Start Year (1909~2015)" min="1909" max="2015" required="" autofocus="" value="2008">    
+    <input type="number" name="minYear" id="inputstartYear" class="form-control" placeholder="Start Year (1992~2015)" min="1992" max="2015" required="" autofocus="" value="2008">    
     <h6></h6>
     <label for="inputendYear" class="sr-only">End Year</label>
-    <input type="number" name="maxYear" id="inputendYear" class="form-control" placeholder="End Year (1909~2015)" min="1909" max="2015" required="" autofocus="" value="2015"> 
+    <input type="number" name="maxYear" id="inputendYear" class="form-control" placeholder="End Year (1992~2015)" min="1992" max="2015" required="" autofocus="" value="2015"> 
     <h6></h6>
     <!--price-->
     <label for="inputMinPrice" class="sr-only">Min Price</label>

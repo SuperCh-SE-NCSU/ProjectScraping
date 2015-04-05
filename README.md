@@ -1,5 +1,5 @@
 
-### Web Crawler Application  
+# Web Crawler Application  
 [![Build Status](https://travis-ci.org/SuperCh-SE-NCSU/ProjectScraping.svg?branch=master)](https://travis-ci.org/SuperCh-SE-NCSU/ProjectScraping)
 
 Using Scrapy to crawl craigslist and kbb to get sale information about used cars users specified and their kbb price.
@@ -31,13 +31,35 @@ Version_2: Full functionality. Besides the subscription service, Build a databas
 
 4.[Sendgrid](https://sendgrid.com/home-two) is used for email delivery service.
 
-**Introduction to web crawler**
+#### Introduction to web crawler
 
 A Web crawler is an Internet bot that systematically browses the World Wide Web, typically for the purpose of Web indexing. A Web crawler may also be called a Web spider, an ant, an automatic indexer, or (in the FOAF software context) a Web scutter.
 
 Web search engines and some other sites use Web crawling or spidering software to update their web content or indexes of others sites' web content. Web crawlers can copy all the pages they visit for later processing by a search engine that indexes the downloaded pages so that users can search them much more quickly.
 
 Crawlers can validate hyperlinks and HTML code. They can also be used for web scraping (see also data-driven programming).
+
+### Design and Pattern
+<img align=center src="https://github.com/SuperCh-SE-NCSU/ProjectScraping/blob/master/doc/ProjectScraping--design.png">
+
+User can choose different restrictions (car model, car make, year,  price and email) and subscribe our daily email. We will keep users' personal information in PostgreSQL database and ensure safety. Then we try to use different crawler engine (regular regression, beautifulsoup and scrapy) to obtain latest information users need on Craglist and kbb and send email daily.
+
+#### Public-subscribe design pattern
+We also use public-subscribe design pattern. We build  a one-to-many dependence between our system and subscribers. And when we collect latest car information and send email daily, all subscribers are notified by emails.
+   - Public-subscribe design pattern alerts other objects’ changes without rebuilding dependencies on them. The individual views implement the Observer interface and register with the model. The model tracks the list of all observers that subscribe to changes. When a model changes, the model iterates through all registered observers and notifies them of the change. With this approach, the model never requires specific information about any views.
+
+### Implementation
+<img align=center src="https://github.com/SuperCh-SE-NCSU/ProjectScraping/blob/master/doc/ProjectScraping--implement.png">
+When clicking "subscribe" button, the main process will write user's information into database immediately,  and a sub process will generate simultaneously. The sub process will send a welcome email to user. The first email only include available cars in Craglist, so it will be very fast.
+
+There is also a send email process on our server. This process is a 24/7 service, and everyday it will send emails to each subscribers. The content of emails comes from crawler engine.
+
+### Platform and optimization trial
+- At very begining, we tried to put our system on Heroku and Amazon web services. However, after deploy our system on these two platform, we found that craglist and kbb block the IP address of these two companies, and we cannot crawl any information. So we change to NCSU VCL now.
+
+- In order to increase the speed of crawling, we decided to build another local database to store crawling results. But after deep consideration, we find this database is useless. There are several reasons:
+   - Content send to subscribers must be latest, so store obsolete into database is useless;
+   - If we build this database, we have to update it daily. Because we cannot access their databases, so the only method is still crawling. What is more, it is unrealisitic to store all information locally.
 
 ### Test procedure
    To be completed
@@ -48,7 +70,8 @@ Crawlers can validate hyperlinks and HTML code. They can also be used for web sc
 ### Result
 The following website is developed for people to subscribe to our email notification service.
 http://152.46.17.210:8080/<br/>
-<img align=left src="https://github.com/SuperCh-SE-NCSU/ProjectScraping/blob/master/pythontemp_model/img/subscribe.png" style="float:left;with:100px;height:300px">
+
+<img align=center src="https://github.com/SuperCh-SE-NCSU/ProjectScraping/blob/master/pythontemp_model/img/subscribe.png">
 
 We tested the functionality by subscribe with different car information specified.We received the email. Then we checked craigslist and found that all the cars satisfying the condition are included in the email.
 
@@ -71,10 +94,11 @@ Web crawler is a powerful tool which makes gathering information from webpage mo
 3. The information sending to users could be beautified into a table, with pictures.
 
 ### Reference
-1.Shaw, Zed A. "Learn Python the hard way." (2010).
-2.https://github.com/scrapy/scrapy
-3.https://github.com/scrapy/scrapy/wiki
-4.https://doc.scrapy.org/en/latest/
+1.Shaw, Zed A. "Learn Python the hard way." (2010).<br/>
+2.https://github.com/scrapy/scrapy<br/>
+3.https://github.com/scrapy/scrapy/wiki<br/>
+4.https://doc.scrapy.org/en/latest/<br/>
+5.http://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern
 
 
 
