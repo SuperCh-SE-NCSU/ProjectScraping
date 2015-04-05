@@ -1,0 +1,1767 @@
+[
+    {
+        "make": "McLaren", 
+        "model": "McLaren 650S", 
+        "modelurl": "/mclaren/650s/"
+    }, 
+    {
+        "make": "McLaren", 
+        "model": "McLaren MP4-12C", 
+        "modelurl": "/mclaren/mp4-12c/"
+    }, 
+    {
+        "make": "McLaren", 
+        "model": "McLaren P1", 
+        "modelurl": "/mclaren/p1/"
+    }, 
+    {
+        "make": "Maserati", 
+        "model": "Maserati Ghibli", 
+        "modelurl": "/maserati/ghibli/"
+    }, 
+    {
+        "make": "Maserati", 
+        "model": "Maserati GranTurismo", 
+        "modelurl": "/maserati/granturismo/"
+    }, 
+    {
+        "make": "Maserati", 
+        "model": "Maserati Quattroporte", 
+        "modelurl": "/maserati/quattroporte/"
+    }, 
+    {
+        "make": "MINI", 
+        "model": "MINI Clubman", 
+        "modelurl": "/mini/clubman/"
+    }, 
+    {
+        "make": "MINI", 
+        "model": "MINI Convertible", 
+        "modelurl": "/mini/convertible/"
+    }, 
+    {
+        "make": "MINI", 
+        "model": "MINI Countryman", 
+        "modelurl": "/mini/countryman/"
+    }, 
+    {
+        "make": "MINI", 
+        "model": "MINI Coupe", 
+        "modelurl": "/mini/coupe/"
+    }, 
+    {
+        "make": "MINI", 
+        "model": "MINI Hardtop", 
+        "modelurl": "/mini/hardtop/"
+    }, 
+    {
+        "make": "MINI", 
+        "model": "MINI Hardtop 2 Door", 
+        "modelurl": "/mini/hardtop-2-door/"
+    }, 
+    {
+        "make": "MINI", 
+        "model": "MINI Hardtop 4 Door", 
+        "modelurl": "/mini/hardtop-4-door/"
+    }, 
+    {
+        "make": "MINI", 
+        "model": "MINI Paceman", 
+        "modelurl": "/mini/paceman/"
+    }, 
+    {
+        "make": "MINI", 
+        "model": "MINI Roadster", 
+        "modelurl": "/mini/roadster/"
+    }, 
+    {
+        "make": "Chevrolet", 
+        "model": "Chevrolet Camaro", 
+        "modelurl": "/chevrolet/camaro/"
+    }, 
+    {
+        "make": "Chevrolet", 
+        "model": "Chevrolet City Express", 
+        "modelurl": "/chevrolet/city-express/"
+    }, 
+    {
+        "make": "Chevrolet", 
+        "model": "Chevrolet Colorado Crew Cab", 
+        "modelurl": "/chevrolet/colorado-crew-cab/"
+    }, 
+    {
+        "make": "Chevrolet", 
+        "model": "Chevrolet Colorado Extended Cab", 
+        "modelurl": "/chevrolet/colorado-extended-cab/"
+    }, 
+    {
+        "make": "Chevrolet", 
+        "model": "Chevrolet Corvette", 
+        "modelurl": "/chevrolet/corvette/"
+    }, 
+    {
+        "make": "Chevrolet", 
+        "model": "Chevrolet Cruze", 
+        "modelurl": "/chevrolet/cruze/"
+    }, 
+    {
+        "make": "Chevrolet", 
+        "model": "Chevrolet Equinox", 
+        "modelurl": "/chevrolet/equinox/"
+    }, 
+    {
+        "make": "Chevrolet", 
+        "model": "Chevrolet Express 1500 Cargo", 
+        "modelurl": "/chevrolet/express-1500-cargo/"
+    }, 
+    {
+        "make": "Chevrolet", 
+        "model": "Chevrolet Express 1500 Passenger", 
+        "modelurl": "/chevrolet/express-1500-passenger/"
+    }, 
+    {
+        "make": "Chevrolet", 
+        "model": "Chevrolet Express 2500 Cargo", 
+        "modelurl": "/chevrolet/express-2500-cargo/"
+    }, 
+    {
+        "make": "Chevrolet", 
+        "model": "Chevrolet Express 2500 Passenger", 
+        "modelurl": "/chevrolet/express-2500-passenger/"
+    }, 
+    {
+        "make": "Chevrolet", 
+        "model": "Chevrolet Express 3500 Cargo", 
+        "modelurl": "/chevrolet/express-3500-cargo/"
+    }, 
+    {
+        "make": "Chevrolet", 
+        "model": "Chevrolet Express 3500 Passenger", 
+        "modelurl": "/chevrolet/express-3500-passenger/"
+    }, 
+    {
+        "make": "Chevrolet", 
+        "model": "Chevrolet Impala", 
+        "modelurl": "/chevrolet/impala/"
+    }, 
+    {
+        "make": "Chevrolet", 
+        "model": "Chevrolet Malibu", 
+        "modelurl": "/chevrolet/malibu/"
+    }, 
+    {
+        "make": "Chevrolet", 
+        "model": "Chevrolet Silverado 1500 Crew Cab", 
+        "modelurl": "/chevrolet/silverado-1500-crew-cab/"
+    }, 
+    {
+        "make": "Chevrolet", 
+        "model": "Chevrolet Silverado 1500 Double Cab", 
+        "modelurl": "/chevrolet/silverado-1500-double-cab/"
+    }, 
+    {
+        "make": "Chevrolet", 
+        "model": "Chevrolet Silverado 1500 Regular Cab", 
+        "modelurl": "/chevrolet/silverado-1500-regular-cab/"
+    }, 
+    {
+        "make": "Chevrolet", 
+        "model": "Chevrolet Silverado 2500 HD Crew Cab", 
+        "modelurl": "/chevrolet/silverado-2500-hd-crew-cab/"
+    }, 
+    {
+        "make": "Chevrolet", 
+        "model": "Chevrolet Silverado 2500 HD Double Cab", 
+        "modelurl": "/chevrolet/silverado-2500-hd-double-cab/"
+    }, 
+    {
+        "make": "Chevrolet", 
+        "model": "Chevrolet Silverado 2500 HD Regular Cab", 
+        "modelurl": "/chevrolet/silverado-2500-hd-regular-cab/"
+    }, 
+    {
+        "make": "Chevrolet", 
+        "model": "Chevrolet Silverado 3500 HD Crew Cab", 
+        "modelurl": "/chevrolet/silverado-3500-hd-crew-cab/"
+    }, 
+    {
+        "make": "Chevrolet", 
+        "model": "Chevrolet Silverado 3500 HD Double Cab", 
+        "modelurl": "/chevrolet/silverado-3500-hd-double-cab/"
+    }, 
+    {
+        "make": "Chevrolet", 
+        "model": "Chevrolet Silverado 3500 HD Regular Cab", 
+        "modelurl": "/chevrolet/silverado-3500-hd-regular-cab/"
+    }, 
+    {
+        "make": "Chevrolet", 
+        "model": "Chevrolet Sonic", 
+        "modelurl": "/chevrolet/sonic/"
+    }, 
+    {
+        "make": "Chevrolet", 
+        "model": "Chevrolet Spark", 
+        "modelurl": "/chevrolet/spark/"
+    }, 
+    {
+        "make": "Chevrolet", 
+        "model": "Chevrolet Spark EV", 
+        "modelurl": "/chevrolet/spark-ev/"
+    }, 
+    {
+        "make": "Chevrolet", 
+        "model": "Chevrolet SS", 
+        "modelurl": "/chevrolet/ss/"
+    }, 
+    {
+        "make": "Chevrolet", 
+        "model": "Chevrolet Suburban", 
+        "modelurl": "/chevrolet/suburban/"
+    }, 
+    {
+        "make": "Chevrolet", 
+        "model": "Chevrolet Suburban 1500", 
+        "modelurl": "/chevrolet/suburban-1500/"
+    }, 
+    {
+        "make": "Chevrolet", 
+        "model": "Chevrolet Tahoe", 
+        "modelurl": "/chevrolet/tahoe/"
+    }, 
+    {
+        "make": "Chevrolet", 
+        "model": "Chevrolet Traverse", 
+        "modelurl": "/chevrolet/traverse/"
+    }, 
+    {
+        "make": "Chevrolet", 
+        "model": "Chevrolet Trax", 
+        "modelurl": "/chevrolet/trax/"
+    }, 
+    {
+        "make": "Chevrolet", 
+        "model": "Chevrolet Volt", 
+        "modelurl": "/chevrolet/volt/"
+    }, 
+    {
+        "make": "Lamborghini", 
+        "model": "Lamborghini Aventador", 
+        "modelurl": "/lamborghini/aventador/"
+    }, 
+    {
+        "make": "Lamborghini", 
+        "model": "Lamborghini Gallardo", 
+        "modelurl": "/lamborghini/gallardo/"
+    }, 
+    {
+        "make": "Lamborghini", 
+        "model": "Lamborghini Huracan", 
+        "modelurl": "/lamborghini/huracan/"
+    }, 
+    {
+        "make": "Mercedes-Benz", 
+        "model": "Mercedes-Benz B-Class", 
+        "modelurl": "/mercedes-benz/b-class/"
+    }, 
+    {
+        "make": "Mercedes-Benz", 
+        "model": "Mercedes-Benz C-Class", 
+        "modelurl": "/mercedes-benz/c-class/"
+    }, 
+    {
+        "make": "Mercedes-Benz", 
+        "model": "Mercedes-Benz CLA-Class", 
+        "modelurl": "/mercedes-benz/cla-class/"
+    }, 
+    {
+        "make": "Mercedes-Benz", 
+        "model": "Mercedes-Benz CL-Class", 
+        "modelurl": "/mercedes-benz/cl-class/"
+    }, 
+    {
+        "make": "Mercedes-Benz", 
+        "model": "Mercedes-Benz CLS-Class", 
+        "modelurl": "/mercedes-benz/cls-class/"
+    }, 
+    {
+        "make": "Mercedes-Benz", 
+        "model": "Mercedes-Benz E-Class", 
+        "modelurl": "/mercedes-benz/e-class/"
+    }, 
+    {
+        "make": "Mercedes-Benz", 
+        "model": "Mercedes-Benz G-Class", 
+        "modelurl": "/mercedes-benz/g-class/"
+    }, 
+    {
+        "make": "Mercedes-Benz", 
+        "model": "Mercedes-Benz GLA-Class", 
+        "modelurl": "/mercedes-benz/gla-class/"
+    }, 
+    {
+        "make": "Mercedes-Benz", 
+        "model": "Mercedes-Benz GL-Class", 
+        "modelurl": "/mercedes-benz/gl-class/"
+    }, 
+    {
+        "make": "Mercedes-Benz", 
+        "model": "Mercedes-Benz GLK-Class", 
+        "modelurl": "/mercedes-benz/glk-class/"
+    }, 
+    {
+        "make": "Mercedes-Benz", 
+        "model": "Mercedes-Benz M-Class", 
+        "modelurl": "/mercedes-benz/m-class/"
+    }, 
+    {
+        "make": "Mercedes-Benz", 
+        "model": "Mercedes-Benz Mercedes-AMG GT", 
+        "modelurl": "/mercedes-benz/mercedes-amg-gt/"
+    }, 
+    {
+        "make": "Mercedes-Benz", 
+        "model": "Mercedes-Benz S-Class", 
+        "modelurl": "/mercedes-benz/s-class/"
+    }, 
+    {
+        "make": "Mercedes-Benz", 
+        "model": "Mercedes-Benz SL-Class", 
+        "modelurl": "/mercedes-benz/sl-class/"
+    }, 
+    {
+        "make": "Mercedes-Benz", 
+        "model": "Mercedes-Benz SLK-Class", 
+        "modelurl": "/mercedes-benz/slk-class/"
+    }, 
+    {
+        "make": "Mercedes-Benz", 
+        "model": "Mercedes-Benz SLS-Class", 
+        "modelurl": "/mercedes-benz/sls-class/"
+    }, 
+    {
+        "make": "Mercedes-Benz", 
+        "model": "Mercedes-Benz Sprinter 2500 Cargo", 
+        "modelurl": "/mercedes-benz/sprinter-2500-cargo/"
+    }, 
+    {
+        "make": "Mercedes-Benz", 
+        "model": "Mercedes-Benz Sprinter 2500 Crew", 
+        "modelurl": "/mercedes-benz/sprinter-2500-crew/"
+    }, 
+    {
+        "make": "Mercedes-Benz", 
+        "model": "Mercedes-Benz Sprinter 2500 Passenger", 
+        "modelurl": "/mercedes-benz/sprinter-2500-passenger/"
+    }, 
+    {
+        "make": "Mercedes-Benz", 
+        "model": "Mercedes-Benz Sprinter 3500 Cargo", 
+        "modelurl": "/mercedes-benz/sprinter-3500-cargo/"
+    }, 
+    {
+        "make": "Volkswagen", 
+        "model": "Volkswagen Beetle", 
+        "modelurl": "/volkswagen/beetle/"
+    }, 
+    {
+        "make": "Volkswagen", 
+        "model": "Volkswagen CC", 
+        "modelurl": "/volkswagen/cc/"
+    }, 
+    {
+        "make": "Volkswagen", 
+        "model": "Volkswagen e-Golf", 
+        "modelurl": "/volkswagen/e-golf/"
+    }, 
+    {
+        "make": "Volkswagen", 
+        "model": "Volkswagen Eos", 
+        "modelurl": "/volkswagen/eos/"
+    }, 
+    {
+        "make": "Volkswagen", 
+        "model": "Volkswagen Golf", 
+        "modelurl": "/volkswagen/golf/"
+    }, 
+    {
+        "make": "Volkswagen", 
+        "model": "Volkswagen Golf GTI", 
+        "modelurl": "/volkswagen/golf-gti/"
+    }, 
+    {
+        "make": "Volkswagen", 
+        "model": "Volkswagen Golf R", 
+        "modelurl": "/volkswagen/golf-r/"
+    }, 
+    {
+        "make": "Volkswagen", 
+        "model": "Volkswagen Golf SportWagen", 
+        "modelurl": "/volkswagen/golf-sportwagen/"
+    }, 
+    {
+        "make": "Volkswagen", 
+        "model": "Volkswagen GTI", 
+        "modelurl": "/volkswagen/gti/"
+    }, 
+    {
+        "make": "Volkswagen", 
+        "model": "Volkswagen Jetta", 
+        "modelurl": "/volkswagen/jetta/"
+    }, 
+    {
+        "make": "Volkswagen", 
+        "model": "Volkswagen Jetta SportWagen", 
+        "modelurl": "/volkswagen/jetta-sportwagen/"
+    }, 
+    {
+        "make": "Volkswagen", 
+        "model": "Volkswagen Passat", 
+        "modelurl": "/volkswagen/passat/"
+    }, 
+    {
+        "make": "Volkswagen", 
+        "model": "Volkswagen Tiguan", 
+        "modelurl": "/volkswagen/tiguan/"
+    }, 
+    {
+        "make": "Volkswagen", 
+        "model": "Volkswagen Touareg", 
+        "modelurl": "/volkswagen/touareg/"
+    }, 
+    {
+        "make": "Alfa Romeo", 
+        "model": "Alfa Romeo 4C", 
+        "modelurl": "/alfa-romeo/4c/"
+    }, 
+    {
+        "make": "Rolls-Royce", 
+        "model": "Rolls-Royce Ghost", 
+        "modelurl": "/rolls-royce/ghost/"
+    }, 
+    {
+        "make": "Rolls-Royce", 
+        "model": "Rolls-Royce Phantom", 
+        "modelurl": "/rolls-royce/phantom/"
+    }, 
+    {
+        "make": "Rolls-Royce", 
+        "model": "Rolls-Royce Wraith", 
+        "modelurl": "/rolls-royce/wraith/"
+    }, 
+    {
+        "make": "Cadillac", 
+        "model": "Cadillac ATS", 
+        "modelurl": "/cadillac/ats/"
+    }, 
+    {
+        "make": "Cadillac", 
+        "model": "Cadillac ATS-V", 
+        "modelurl": "/cadillac/ats-v/"
+    }, 
+    {
+        "make": "Cadillac", 
+        "model": "Cadillac CTS", 
+        "modelurl": "/cadillac/cts/"
+    }, 
+    {
+        "make": "Cadillac", 
+        "model": "Cadillac ELR", 
+        "modelurl": "/cadillac/elr/"
+    }, 
+    {
+        "make": "Cadillac", 
+        "model": "Cadillac Escalade", 
+        "modelurl": "/cadillac/escalade/"
+    }, 
+    {
+        "make": "Cadillac", 
+        "model": "Cadillac Escalade ESV", 
+        "modelurl": "/cadillac/escalade-esv/"
+    }, 
+    {
+        "make": "Cadillac", 
+        "model": "Cadillac SRX", 
+        "modelurl": "/cadillac/srx/"
+    }, 
+    {
+        "make": "Cadillac", 
+        "model": "Cadillac XTS", 
+        "modelurl": "/cadillac/xts/"
+    }, 
+    {
+        "make": "Honda", 
+        "model": "Honda Accord", 
+        "modelurl": "/honda/accord/"
+    }, 
+    {
+        "make": "Honda", 
+        "model": "Honda Accord Hybrid", 
+        "modelurl": "/honda/accord-hybrid/"
+    }, 
+    {
+        "make": "Honda", 
+        "model": "Honda Civic", 
+        "modelurl": "/honda/civic/"
+    }, 
+    {
+        "make": "Honda", 
+        "model": "Honda Crosstour", 
+        "modelurl": "/honda/crosstour/"
+    }, 
+    {
+        "make": "Honda", 
+        "model": "Honda CR-V", 
+        "modelurl": "/honda/cr-v/"
+    }, 
+    {
+        "make": "Honda", 
+        "model": "Honda CR-Z", 
+        "modelurl": "/honda/cr-z/"
+    }, 
+    {
+        "make": "Honda", 
+        "model": "Honda Fit", 
+        "modelurl": "/honda/fit/"
+    }, 
+    {
+        "make": "Honda", 
+        "model": "Honda Insight", 
+        "modelurl": "/honda/insight/"
+    }, 
+    {
+        "make": "Honda", 
+        "model": "Honda Odyssey", 
+        "modelurl": "/honda/odyssey/"
+    }, 
+    {
+        "make": "Honda", 
+        "model": "Honda Pilot", 
+        "modelurl": "/honda/pilot/"
+    }, 
+    {
+        "make": "Honda", 
+        "model": "Honda Ridgeline", 
+        "modelurl": "/honda/ridgeline/"
+    }, 
+    {
+        "make": "Ford", 
+        "model": "Ford C-MAX Energi", 
+        "modelurl": "/ford/c-max-energi/"
+    }, 
+    {
+        "make": "Ford", 
+        "model": "Ford C-MAX Hybrid", 
+        "modelurl": "/ford/c-max-hybrid/"
+    }, 
+    {
+        "make": "Ford", 
+        "model": "Ford E150 Cargo", 
+        "modelurl": "/ford/e150-cargo/"
+    }, 
+    {
+        "make": "Ford", 
+        "model": "Ford E150 Passenger", 
+        "modelurl": "/ford/e150-passenger/"
+    }, 
+    {
+        "make": "Ford", 
+        "model": "Ford E250 Cargo", 
+        "modelurl": "/ford/e250-cargo/"
+    }, 
+    {
+        "make": "Ford", 
+        "model": "Ford E350 Super Duty Cargo", 
+        "modelurl": "/ford/e350-super-duty-cargo/"
+    }, 
+    {
+        "make": "Ford", 
+        "model": "Ford E350 Super Duty Passenger", 
+        "modelurl": "/ford/e350-super-duty-passenger/"
+    }, 
+    {
+        "make": "Ford", 
+        "model": "Ford Edge", 
+        "modelurl": "/ford/edge/"
+    }, 
+    {
+        "make": "Ford", 
+        "model": "Ford Escape", 
+        "modelurl": "/ford/escape/"
+    }, 
+    {
+        "make": "Ford", 
+        "model": "Ford Expedition", 
+        "modelurl": "/ford/expedition/"
+    }, 
+    {
+        "make": "Ford", 
+        "model": "Ford Expedition EL", 
+        "modelurl": "/ford/expedition-el/"
+    }, 
+    {
+        "make": "Ford", 
+        "model": "Ford Explorer", 
+        "modelurl": "/ford/explorer/"
+    }, 
+    {
+        "make": "Ford", 
+        "model": "Ford F150 Regular Cab", 
+        "modelurl": "/ford/f150-regular-cab/"
+    }, 
+    {
+        "make": "Ford", 
+        "model": "Ford F150 Super Cab", 
+        "modelurl": "/ford/f150-super-cab/"
+    }, 
+    {
+        "make": "Ford", 
+        "model": "Ford F150 SuperCrew Cab", 
+        "modelurl": "/ford/f150-supercrew-cab/"
+    }, 
+    {
+        "make": "Ford", 
+        "model": "Ford F250 Super Duty Crew Cab", 
+        "modelurl": "/ford/f250-super-duty-crew-cab/"
+    }, 
+    {
+        "make": "Ford", 
+        "model": "Ford F250 Super Duty Regular Cab", 
+        "modelurl": "/ford/f250-super-duty-regular-cab/"
+    }, 
+    {
+        "make": "Ford", 
+        "model": "Ford F250 Super Duty Super Cab", 
+        "modelurl": "/ford/f250-super-duty-super-cab/"
+    }, 
+    {
+        "make": "Ford", 
+        "model": "Ford F350 Super Duty Crew Cab", 
+        "modelurl": "/ford/f350-super-duty-crew-cab/"
+    }, 
+    {
+        "make": "Ford", 
+        "model": "Ford F350 Super Duty Regular Cab", 
+        "modelurl": "/ford/f350-super-duty-regular-cab/"
+    }, 
+    {
+        "make": "Ford", 
+        "model": "Ford F350 Super Duty Super Cab", 
+        "modelurl": "/ford/f350-super-duty-super-cab/"
+    }, 
+    {
+        "make": "Ford", 
+        "model": "Ford F450 Super Duty Crew Cab", 
+        "modelurl": "/ford/f450-super-duty-crew-cab/"
+    }, 
+    {
+        "make": "Ford", 
+        "model": "Ford Fiesta", 
+        "modelurl": "/ford/fiesta/"
+    }, 
+    {
+        "make": "Ford", 
+        "model": "Ford Flex", 
+        "modelurl": "/ford/flex/"
+    }, 
+    {
+        "make": "Ford", 
+        "model": "Ford Focus", 
+        "modelurl": "/ford/focus/"
+    }, 
+    {
+        "make": "Ford", 
+        "model": "Ford Focus ST", 
+        "modelurl": "/ford/focus-st/"
+    }, 
+    {
+        "make": "Ford", 
+        "model": "Ford Fusion", 
+        "modelurl": "/ford/fusion/"
+    }, 
+    {
+        "make": "Ford", 
+        "model": "Ford Fusion Energi", 
+        "modelurl": "/ford/fusion-energi/"
+    }, 
+    {
+        "make": "Ford", 
+        "model": "Ford Mustang", 
+        "modelurl": "/ford/mustang/"
+    }, 
+    {
+        "make": "Ford", 
+        "model": "Ford Taurus", 
+        "modelurl": "/ford/taurus/"
+    }, 
+    {
+        "make": "Ford", 
+        "model": "Ford Transit 150 Van", 
+        "modelurl": "/ford/transit-150-van/"
+    }, 
+    {
+        "make": "Ford", 
+        "model": "Ford Transit 150 Wagon", 
+        "modelurl": "/ford/transit-150-wagon/"
+    }, 
+    {
+        "make": "Ford", 
+        "model": "Ford Transit 250 Van", 
+        "modelurl": "/ford/transit-250-van/"
+    }, 
+    {
+        "make": "Ford", 
+        "model": "Ford Transit 350 HD Van", 
+        "modelurl": "/ford/transit-350-hd-van/"
+    }, 
+    {
+        "make": "Ford", 
+        "model": "Ford Transit 350 Van", 
+        "modelurl": "/ford/transit-350-van/"
+    }, 
+    {
+        "make": "Ford", 
+        "model": "Ford Transit 350 Wagon", 
+        "modelurl": "/ford/transit-350-wagon/"
+    }, 
+    {
+        "make": "Ford", 
+        "model": "Ford Transit Connect Cargo", 
+        "modelurl": "/ford/transit-connect-cargo/"
+    }, 
+    {
+        "make": "Ford", 
+        "model": "Ford Transit Connect Passenger", 
+        "modelurl": "/ford/transit-connect-passenger/"
+    }, 
+    {
+        "make": "Mazda", 
+        "model": "Mazda CX-5", 
+        "modelurl": "/mazda/cx-5/"
+    }, 
+    {
+        "make": "Mazda", 
+        "model": "Mazda CX-9", 
+        "modelurl": "/mazda/cx-9/"
+    }, 
+    {
+        "make": "Mazda", 
+        "model": "Mazda MAZDA2", 
+        "modelurl": "/mazda/mazda2/"
+    }, 
+    {
+        "make": "Mazda", 
+        "model": "Mazda MAZDA3", 
+        "modelurl": "/mazda/mazda3/"
+    }, 
+    {
+        "make": "Mazda", 
+        "model": "Mazda MAZDA5", 
+        "modelurl": "/mazda/mazda5/"
+    }, 
+    {
+        "make": "Mazda", 
+        "model": "Mazda MAZDA6", 
+        "modelurl": "/mazda/mazda6/"
+    }, 
+    {
+        "make": "Mazda", 
+        "model": "Mazda MX-5 Miata", 
+        "modelurl": "/mazda/mx-5-miata/"
+    }, 
+    {
+        "make": "Jeep", 
+        "model": "Jeep Cherokee", 
+        "modelurl": "/jeep/cherokee/"
+    }, 
+    {
+        "make": "Jeep", 
+        "model": "Jeep Compass", 
+        "modelurl": "/jeep/compass/"
+    }, 
+    {
+        "make": "Jeep", 
+        "model": "Jeep Grand Cherokee", 
+        "modelurl": "/jeep/grand-cherokee/"
+    }, 
+    {
+        "make": "Jeep", 
+        "model": "Jeep Patriot", 
+        "modelurl": "/jeep/patriot/"
+    }, 
+    {
+        "make": "Jeep", 
+        "model": "Jeep Renegade", 
+        "modelurl": "/jeep/renegade/"
+    }, 
+    {
+        "make": "Jeep", 
+        "model": "Jeep Wrangler", 
+        "modelurl": "/jeep/wrangler/"
+    }, 
+    {
+        "make": "Infiniti", 
+        "model": "Infiniti Q40", 
+        "modelurl": "/infiniti/q40/"
+    }, 
+    {
+        "make": "Infiniti", 
+        "model": "Infiniti Q50", 
+        "modelurl": "/infiniti/q50/"
+    }, 
+    {
+        "make": "Infiniti", 
+        "model": "Infiniti Q60", 
+        "modelurl": "/infiniti/q60/"
+    }, 
+    {
+        "make": "Infiniti", 
+        "model": "Infiniti Q70", 
+        "modelurl": "/infiniti/q70/"
+    }, 
+    {
+        "make": "Infiniti", 
+        "model": "Infiniti QX50", 
+        "modelurl": "/infiniti/qx50/"
+    }, 
+    {
+        "make": "Infiniti", 
+        "model": "Infiniti QX60", 
+        "modelurl": "/infiniti/qx60/"
+    }, 
+    {
+        "make": "Infiniti", 
+        "model": "Infiniti QX70", 
+        "modelurl": "/infiniti/qx70/"
+    }, 
+    {
+        "make": "Infiniti", 
+        "model": "Infiniti QX80", 
+        "modelurl": "/infiniti/qx80/"
+    }, 
+    {
+        "make": "BMW", 
+        "model": "BMW 2 Series", 
+        "modelurl": "/bmw/2-series/"
+    }, 
+    {
+        "make": "BMW", 
+        "model": "BMW 3 Series", 
+        "modelurl": "/bmw/3-series/"
+    }, 
+    {
+        "make": "BMW", 
+        "model": "BMW 4 Series", 
+        "modelurl": "/bmw/4-series/"
+    }, 
+    {
+        "make": "BMW", 
+        "model": "BMW 5 Series", 
+        "modelurl": "/bmw/5-series/"
+    }, 
+    {
+        "make": "BMW", 
+        "model": "BMW 6 Series", 
+        "modelurl": "/bmw/6-series/"
+    }, 
+    {
+        "make": "BMW", 
+        "model": "BMW 7 Series", 
+        "modelurl": "/bmw/7-series/"
+    }, 
+    {
+        "make": "BMW", 
+        "model": "BMW i3", 
+        "modelurl": "/bmw/i3/"
+    }, 
+    {
+        "make": "BMW", 
+        "model": "BMW i8", 
+        "modelurl": "/bmw/i8/"
+    }, 
+    {
+        "make": "BMW", 
+        "model": "BMW M3", 
+        "modelurl": "/bmw/m3/"
+    }, 
+    {
+        "make": "BMW", 
+        "model": "BMW M4", 
+        "modelurl": "/bmw/m4/"
+    }, 
+    {
+        "make": "BMW", 
+        "model": "BMW M5", 
+        "modelurl": "/bmw/m5/"
+    }, 
+    {
+        "make": "BMW", 
+        "model": "BMW M6", 
+        "modelurl": "/bmw/m6/"
+    }, 
+    {
+        "make": "BMW", 
+        "model": "BMW X1", 
+        "modelurl": "/bmw/x1/"
+    }, 
+    {
+        "make": "BMW", 
+        "model": "BMW X3", 
+        "modelurl": "/bmw/x3/"
+    }, 
+    {
+        "make": "BMW", 
+        "model": "BMW X4", 
+        "modelurl": "/bmw/x4/"
+    }, 
+    {
+        "make": "BMW", 
+        "model": "BMW X5", 
+        "modelurl": "/bmw/x5/"
+    }, 
+    {
+        "make": "BMW", 
+        "model": "BMW X6", 
+        "modelurl": "/bmw/x6/"
+    }, 
+    {
+        "make": "BMW", 
+        "model": "BMW X6 M", 
+        "modelurl": "/bmw/x6-m/"
+    }, 
+    {
+        "make": "BMW", 
+        "model": "BMW Z4", 
+        "modelurl": "/bmw/z4/"
+    }, 
+    {
+        "make": "SRT", 
+        "model": "SRT Viper", 
+        "modelurl": "/srt/viper/"
+    }, 
+    {
+        "make": "smart", 
+        "model": "smart fortwo", 
+        "modelurl": "/smart/fortwo/"
+    }, 
+    {
+        "make": "smart", 
+        "model": "smart fortwo electric drive", 
+        "modelurl": "/smart/fortwo-electric-drive/"
+    }, 
+    {
+        "make": "Land Rover", 
+        "model": "Land Rover Discovery Sport", 
+        "modelurl": "/land-rover/discovery-sport/"
+    }, 
+    {
+        "make": "Land Rover", 
+        "model": "Land Rover LR2", 
+        "modelurl": "/land-rover/lr2/"
+    }, 
+    {
+        "make": "Land Rover", 
+        "model": "Land Rover LR4", 
+        "modelurl": "/land-rover/lr4/"
+    }, 
+    {
+        "make": "Land Rover", 
+        "model": "Land Rover Range Rover", 
+        "modelurl": "/land-rover/range-rover/"
+    }, 
+    {
+        "make": "Land Rover", 
+        "model": "Land Rover Range Rover Evoque", 
+        "modelurl": "/land-rover/range-rover-evoque/"
+    }, 
+    {
+        "make": "Land Rover", 
+        "model": "Land Rover Range Rover Sport", 
+        "modelurl": "/land-rover/range-rover-sport/"
+    }, 
+    {
+        "make": "Lincoln", 
+        "model": "Lincoln MKC", 
+        "modelurl": "/lincoln/mkc/"
+    }, 
+    {
+        "make": "Lincoln", 
+        "model": "Lincoln MKS", 
+        "modelurl": "/lincoln/mks/"
+    }, 
+    {
+        "make": "Lincoln", 
+        "model": "Lincoln MKT", 
+        "modelurl": "/lincoln/mkt/"
+    }, 
+    {
+        "make": "Lincoln", 
+        "model": "Lincoln MKX", 
+        "modelurl": "/lincoln/mkx/"
+    }, 
+    {
+        "make": "Lincoln", 
+        "model": "Lincoln MKZ", 
+        "modelurl": "/lincoln/mkz/"
+    }, 
+    {
+        "make": "Lincoln", 
+        "model": "Lincoln Navigator", 
+        "modelurl": "/lincoln/navigator/"
+    }, 
+    {
+        "make": "Lincoln", 
+        "model": "Lincoln Navigator L", 
+        "modelurl": "/lincoln/navigator-l/"
+    }, 
+    {
+        "make": "Acura", 
+        "model": "Acura ILX", 
+        "modelurl": "/acura/ilx/"
+    }, 
+    {
+        "make": "Acura", 
+        "model": "Acura MDX", 
+        "modelurl": "/acura/mdx/"
+    }, 
+    {
+        "make": "Acura", 
+        "model": "Acura RDX", 
+        "modelurl": "/acura/rdx/"
+    }, 
+    {
+        "make": "Acura", 
+        "model": "Acura RLX", 
+        "modelurl": "/acura/rlx/"
+    }, 
+    {
+        "make": "Acura", 
+        "model": "Acura RLX Sport Hybrid", 
+        "modelurl": "/acura/rlx-sport-hybrid/"
+    }, 
+    {
+        "make": "Acura", 
+        "model": "Acura TL", 
+        "modelurl": "/acura/tl/"
+    }, 
+    {
+        "make": "Acura", 
+        "model": "Acura TLX", 
+        "modelurl": "/acura/tlx/"
+    }, 
+    {
+        "make": "Acura", 
+        "model": "Acura TSX", 
+        "modelurl": "/acura/tsx/"
+    }, 
+    {
+        "make": "Jaguar", 
+        "model": "Jaguar F-TYPE", 
+        "modelurl": "/jaguar/f-type/"
+    }, 
+    {
+        "make": "Jaguar", 
+        "model": "Jaguar XF", 
+        "modelurl": "/jaguar/xf/"
+    }, 
+    {
+        "make": "Jaguar", 
+        "model": "Jaguar XJ Series", 
+        "modelurl": "/jaguar/xj-series/"
+    }, 
+    {
+        "make": "Jaguar", 
+        "model": "Jaguar XK Series", 
+        "modelurl": "/jaguar/xk-series/"
+    }, 
+    {
+        "make": "GMC", 
+        "model": "GMC Acadia", 
+        "modelurl": "/gmc/acadia/"
+    }, 
+    {
+        "make": "GMC", 
+        "model": "GMC Canyon Crew Cab", 
+        "modelurl": "/gmc/canyon-crew-cab/"
+    }, 
+    {
+        "make": "GMC", 
+        "model": "GMC Canyon Extended Cab", 
+        "modelurl": "/gmc/canyon-extended-cab/"
+    }, 
+    {
+        "make": "GMC", 
+        "model": "GMC Savana 1500 Cargo", 
+        "modelurl": "/gmc/savana-1500-cargo/"
+    }, 
+    {
+        "make": "GMC", 
+        "model": "GMC Savana 1500 Passenger", 
+        "modelurl": "/gmc/savana-1500-passenger/"
+    }, 
+    {
+        "make": "GMC", 
+        "model": "GMC Savana 2500 Cargo", 
+        "modelurl": "/gmc/savana-2500-cargo/"
+    }, 
+    {
+        "make": "GMC", 
+        "model": "GMC Savana 2500 Passenger", 
+        "modelurl": "/gmc/savana-2500-passenger/"
+    }, 
+    {
+        "make": "GMC", 
+        "model": "GMC Savana 3500 Cargo", 
+        "modelurl": "/gmc/savana-3500-cargo/"
+    }, 
+    {
+        "make": "GMC", 
+        "model": "GMC Savana 3500 Passenger", 
+        "modelurl": "/gmc/savana-3500-passenger/"
+    }, 
+    {
+        "make": "GMC", 
+        "model": "GMC Sierra 1500 Crew Cab", 
+        "modelurl": "/gmc/sierra-1500-crew-cab/"
+    }, 
+    {
+        "make": "GMC", 
+        "model": "GMC Sierra 1500 Double Cab", 
+        "modelurl": "/gmc/sierra-1500-double-cab/"
+    }, 
+    {
+        "make": "GMC", 
+        "model": "GMC Sierra 1500 Regular Cab", 
+        "modelurl": "/gmc/sierra-1500-regular-cab/"
+    }, 
+    {
+        "make": "GMC", 
+        "model": "GMC Sierra 2500 HD Crew Cab", 
+        "modelurl": "/gmc/sierra-2500-hd-crew-cab/"
+    }, 
+    {
+        "make": "GMC", 
+        "model": "GMC Sierra 2500 HD Double Cab", 
+        "modelurl": "/gmc/sierra-2500-hd-double-cab/"
+    }, 
+    {
+        "make": "GMC", 
+        "model": "GMC Sierra 2500 HD Regular Cab", 
+        "modelurl": "/gmc/sierra-2500-hd-regular-cab/"
+    }, 
+    {
+        "make": "GMC", 
+        "model": "GMC Sierra 3500 HD Crew Cab", 
+        "modelurl": "/gmc/sierra-3500-hd-crew-cab/"
+    }, 
+    {
+        "make": "GMC", 
+        "model": "GMC Sierra 3500 HD Double Cab", 
+        "modelurl": "/gmc/sierra-3500-hd-double-cab/"
+    }, 
+    {
+        "make": "GMC", 
+        "model": "GMC Sierra 3500 HD Regular Cab", 
+        "modelurl": "/gmc/sierra-3500-hd-regular-cab/"
+    }, 
+    {
+        "make": "GMC", 
+        "model": "GMC Terrain", 
+        "modelurl": "/gmc/terrain/"
+    }, 
+    {
+        "make": "GMC", 
+        "model": "GMC Yukon", 
+        "modelurl": "/gmc/yukon/"
+    }, 
+    {
+        "make": "GMC", 
+        "model": "GMC Yukon XL", 
+        "modelurl": "/gmc/yukon-xl/"
+    }, 
+    {
+        "make": "GMC", 
+        "model": "GMC Yukon XL 1500", 
+        "modelurl": "/gmc/yukon-xl-1500/"
+    }, 
+    {
+        "make": "Toyota", 
+        "model": "Toyota 4Runner", 
+        "modelurl": "/toyota/4runner/"
+    }, 
+    {
+        "make": "Toyota", 
+        "model": "Toyota Avalon", 
+        "modelurl": "/toyota/avalon/"
+    }, 
+    {
+        "make": "Toyota", 
+        "model": "Toyota Camry", 
+        "modelurl": "/toyota/camry/"
+    }, 
+    {
+        "make": "Toyota", 
+        "model": "Toyota Corolla", 
+        "modelurl": "/toyota/corolla/"
+    }, 
+    {
+        "make": "Toyota", 
+        "model": "Toyota FJ Cruiser", 
+        "modelurl": "/toyota/fj-cruiser/"
+    }, 
+    {
+        "make": "Toyota", 
+        "model": "Toyota Highlander", 
+        "modelurl": "/toyota/highlander/"
+    }, 
+    {
+        "make": "Toyota", 
+        "model": "Toyota Land Cruiser", 
+        "modelurl": "/toyota/land-cruiser/"
+    }, 
+    {
+        "make": "Toyota", 
+        "model": "Toyota Prius", 
+        "modelurl": "/toyota/prius/"
+    }, 
+    {
+        "make": "Toyota", 
+        "model": "Toyota Prius c", 
+        "modelurl": "/toyota/prius-c/"
+    }, 
+    {
+        "make": "Toyota", 
+        "model": "Toyota Prius Plug-in Hybrid", 
+        "modelurl": "/toyota/prius-plug-in-hybrid/"
+    }, 
+    {
+        "make": "Toyota", 
+        "model": "Toyota Prius v", 
+        "modelurl": "/toyota/prius-v/"
+    }, 
+    {
+        "make": "Toyota", 
+        "model": "Toyota RAV4", 
+        "modelurl": "/toyota/rav4/"
+    }, 
+    {
+        "make": "Toyota", 
+        "model": "Toyota Sequoia", 
+        "modelurl": "/toyota/sequoia/"
+    }, 
+    {
+        "make": "Toyota", 
+        "model": "Toyota Sienna", 
+        "modelurl": "/toyota/sienna/"
+    }, 
+    {
+        "make": "Toyota", 
+        "model": "Toyota Tacoma Access Cab", 
+        "modelurl": "/toyota/tacoma-access-cab/"
+    }, 
+    {
+        "make": "Toyota", 
+        "model": "Toyota Tacoma Double Cab", 
+        "modelurl": "/toyota/tacoma-double-cab/"
+    }, 
+    {
+        "make": "Toyota", 
+        "model": "Toyota Tacoma Regular Cab", 
+        "modelurl": "/toyota/tacoma-regular-cab/"
+    }, 
+    {
+        "make": "Toyota", 
+        "model": "Toyota Tundra CrewMax", 
+        "modelurl": "/toyota/tundra-crewmax/"
+    }, 
+    {
+        "make": "Toyota", 
+        "model": "Toyota Tundra Double Cab", 
+        "modelurl": "/toyota/tundra-double-cab/"
+    }, 
+    {
+        "make": "Toyota", 
+        "model": "Toyota Tundra Regular Cab", 
+        "modelurl": "/toyota/tundra-regular-cab/"
+    }, 
+    {
+        "make": "Toyota", 
+        "model": "Toyota Venza", 
+        "modelurl": "/toyota/venza/"
+    }, 
+    {
+        "make": "Toyota", 
+        "model": "Toyota Yaris", 
+        "modelurl": "/toyota/yaris/"
+    }, 
+    {
+        "make": "Aston Martin", 
+        "model": "Aston Martin DB9", 
+        "modelurl": "/aston-martin/db9/"
+    }, 
+    {
+        "make": "Aston Martin", 
+        "model": "Aston Martin Rapide S", 
+        "modelurl": "/aston-martin/rapide-s/"
+    }, 
+    {
+        "make": "Aston Martin", 
+        "model": "Aston Martin Vanquish", 
+        "modelurl": "/aston-martin/vanquish/"
+    }, 
+    {
+        "make": "Aston Martin", 
+        "model": "Aston Martin Vantage", 
+        "modelurl": "/aston-martin/vantage/"
+    }, 
+    {
+        "make": "Volvo", 
+        "model": "Volvo S60", 
+        "modelurl": "/volvo/s60/"
+    }, 
+    {
+        "make": "Volvo", 
+        "model": "Volvo S80", 
+        "modelurl": "/volvo/s80/"
+    }, 
+    {
+        "make": "Volvo", 
+        "model": "Volvo V60", 
+        "modelurl": "/volvo/v60/"
+    }, 
+    {
+        "make": "Volvo", 
+        "model": "Volvo XC60", 
+        "modelurl": "/volvo/xc60/"
+    }, 
+    {
+        "make": "Volvo", 
+        "model": "Volvo XC70", 
+        "modelurl": "/volvo/xc70/"
+    }, 
+    {
+        "make": "Volvo", 
+        "model": "Volvo XC90", 
+        "modelurl": "/volvo/xc90/"
+    }, 
+    {
+        "make": "Ferrari", 
+        "model": "Ferrari 458 Italia", 
+        "modelurl": "/ferrari/458-italia/"
+    }, 
+    {
+        "make": "Ferrari", 
+        "model": "Ferrari 458 Speciale", 
+        "modelurl": "/ferrari/458-speciale/"
+    }, 
+    {
+        "make": "Ferrari", 
+        "model": "Ferrari 458 Spider", 
+        "modelurl": "/ferrari/458-spider/"
+    }, 
+    {
+        "make": "Ferrari", 
+        "model": "Ferrari California", 
+        "modelurl": "/ferrari/california/"
+    }, 
+    {
+        "make": "Ferrari", 
+        "model": "Ferrari F12berlinetta", 
+        "modelurl": "/ferrari/f12berlinetta/"
+    }, 
+    {
+        "make": "Ferrari", 
+        "model": "Ferrari FF", 
+        "modelurl": "/ferrari/ff/"
+    }, 
+    {
+        "make": "Chrysler", 
+        "model": "Chrysler 200", 
+        "modelurl": "/chrysler/200/"
+    }, 
+    {
+        "make": "Chrysler", 
+        "model": "Chrysler 300", 
+        "modelurl": "/chrysler/300/"
+    }, 
+    {
+        "make": "Chrysler", 
+        "model": "Chrysler Town & Country", 
+        "modelurl": "/chrysler/town--country/"
+    }, 
+    {
+        "make": "FIAT", 
+        "model": "FIAT 500", 
+        "modelurl": "/fiat/500/"
+    }, 
+    {
+        "make": "FIAT", 
+        "model": "FIAT 500 Abarth", 
+        "modelurl": "/fiat/500-abarth/"
+    }, 
+    {
+        "make": "FIAT", 
+        "model": "FIAT 500c", 
+        "modelurl": "/fiat/500c/"
+    }, 
+    {
+        "make": "FIAT", 
+        "model": "FIAT 500e", 
+        "modelurl": "/fiat/500e/"
+    }, 
+    {
+        "make": "FIAT", 
+        "model": "FIAT 500L", 
+        "modelurl": "/fiat/500l/"
+    }, 
+    {
+        "make": "FIAT", 
+        "model": "FIAT 500X", 
+        "modelurl": "/fiat/500x/"
+    }, 
+    {
+        "make": "Scion", 
+        "model": "Scion FR-S", 
+        "modelurl": "/scion/fr-s/"
+    }, 
+    {
+        "make": "Scion", 
+        "model": "Scion iQ", 
+        "modelurl": "/scion/iq/"
+    }, 
+    {
+        "make": "Scion", 
+        "model": "Scion tC", 
+        "modelurl": "/scion/tc/"
+    }, 
+    {
+        "make": "Scion", 
+        "model": "Scion xB", 
+        "modelurl": "/scion/xb/"
+    }, 
+    {
+        "make": "Scion", 
+        "model": "Scion xD", 
+        "modelurl": "/scion/xd/"
+    }, 
+    {
+        "make": "Bentley", 
+        "model": "Bentley Continental", 
+        "modelurl": "/bentley/continental/"
+    }, 
+    {
+        "make": "Bentley", 
+        "model": "Bentley Flying Spur", 
+        "modelurl": "/bentley/flying-spur/"
+    }, 
+    {
+        "make": "Bentley", 
+        "model": "Bentley Mulsanne", 
+        "modelurl": "/bentley/mulsanne/"
+    }, 
+    {
+        "make": "Lotus", 
+        "model": "Lotus Evora", 
+        "modelurl": "/lotus/evora/"
+    }, 
+    {
+        "make": "Ram", 
+        "model": "Ram 1500 Crew Cab", 
+        "modelurl": "/ram/1500-crew-cab/"
+    }, 
+    {
+        "make": "Ram", 
+        "model": "Ram 1500 Quad Cab", 
+        "modelurl": "/ram/1500-quad-cab/"
+    }, 
+    {
+        "make": "Ram", 
+        "model": "Ram 1500 Regular Cab", 
+        "modelurl": "/ram/1500-regular-cab/"
+    }, 
+    {
+        "make": "Ram", 
+        "model": "Ram 2500 Crew Cab", 
+        "modelurl": "/ram/2500-crew-cab/"
+    }, 
+    {
+        "make": "Ram", 
+        "model": "Ram 2500 Mega Cab", 
+        "modelurl": "/ram/2500-mega-cab/"
+    }, 
+    {
+        "make": "Ram", 
+        "model": "Ram 2500 Regular Cab", 
+        "modelurl": "/ram/2500-regular-cab/"
+    }, 
+    {
+        "make": "Ram", 
+        "model": "Ram 3500 Crew Cab", 
+        "modelurl": "/ram/3500-crew-cab/"
+    }, 
+    {
+        "make": "Ram", 
+        "model": "Ram 3500 Mega Cab", 
+        "modelurl": "/ram/3500-mega-cab/"
+    }, 
+    {
+        "make": "Ram", 
+        "model": "Ram 3500 Regular Cab", 
+        "modelurl": "/ram/3500-regular-cab/"
+    }, 
+    {
+        "make": "Ram", 
+        "model": "Ram C/V Tradesman", 
+        "modelurl": "/ram/c-v-tradesman/"
+    }, 
+    {
+        "make": "Ram", 
+        "model": "Ram ProMaster 1500 Cargo", 
+        "modelurl": "/ram/promaster-1500-cargo/"
+    }, 
+    {
+        "make": "Ram", 
+        "model": "Ram ProMaster 2500 Cargo", 
+        "modelurl": "/ram/promaster-2500-cargo/"
+    }, 
+    {
+        "make": "Ram", 
+        "model": "Ram ProMaster 3500 Cargo", 
+        "modelurl": "/ram/promaster-3500-cargo/"
+    }, 
+    {
+        "make": "Ram", 
+        "model": "Ram ProMaster Cargo Van", 
+        "modelurl": "/ram/promaster-cargo-van/"
+    }, 
+    {
+        "make": "Ram", 
+        "model": "Ram ProMaster City", 
+        "modelurl": "/ram/promaster-city/"
+    }, 
+    {
+        "make": "Ram", 
+        "model": "Ram ProMaster Window Van", 
+        "modelurl": "/ram/promaster-window-van/"
+    }, 
+    {
+        "make": "Tesla", 
+        "model": "Tesla Model S", 
+        "modelurl": "/tesla/model-s/"
+    }, 
+    {
+        "make": "Buick", 
+        "model": "Buick Enclave", 
+        "modelurl": "/buick/enclave/"
+    }, 
+    {
+        "make": "Buick", 
+        "model": "Buick Encore", 
+        "modelurl": "/buick/encore/"
+    }, 
+    {
+        "make": "Buick", 
+        "model": "Buick LaCrosse", 
+        "modelurl": "/buick/lacrosse/"
+    }, 
+    {
+        "make": "Buick", 
+        "model": "Buick Regal", 
+        "modelurl": "/buick/regal/"
+    }, 
+    {
+        "make": "Buick", 
+        "model": "Buick Verano", 
+        "modelurl": "/buick/verano/"
+    }, 
+    {
+        "make": "Lexus", 
+        "model": "Lexus CT", 
+        "modelurl": "/lexus/ct/"
+    }, 
+    {
+        "make": "Lexus", 
+        "model": "Lexus ES", 
+        "modelurl": "/lexus/es/"
+    }, 
+    {
+        "make": "Lexus", 
+        "model": "Lexus GS", 
+        "modelurl": "/lexus/gs/"
+    }, 
+    {
+        "make": "Lexus", 
+        "model": "Lexus GX", 
+        "modelurl": "/lexus/gx/"
+    }, 
+    {
+        "make": "Lexus", 
+        "model": "Lexus IS", 
+        "modelurl": "/lexus/is/"
+    }, 
+    {
+        "make": "Lexus", 
+        "model": "Lexus LS", 
+        "modelurl": "/lexus/ls/"
+    }, 
+    {
+        "make": "Lexus", 
+        "model": "Lexus LX", 
+        "modelurl": "/lexus/lx/"
+    }, 
+    {
+        "make": "Lexus", 
+        "model": "Lexus NX", 
+        "modelurl": "/lexus/nx/"
+    }, 
+    {
+        "make": "Lexus", 
+        "model": "Lexus RC", 
+        "modelurl": "/lexus/rc/"
+    }, 
+    {
+        "make": "Lexus", 
+        "model": "Lexus RX", 
+        "modelurl": "/lexus/rx/"
+    }, 
+    {
+        "make": "Porsche", 
+        "model": "Porsche 911", 
+        "modelurl": "/porsche/911/"
+    }, 
+    {
+        "make": "Porsche", 
+        "model": "Porsche 918 Spyder", 
+        "modelurl": "/porsche/918-spyder/"
+    }, 
+    {
+        "make": "Porsche", 
+        "model": "Porsche Boxster", 
+        "modelurl": "/porsche/boxster/"
+    }, 
+    {
+        "make": "Porsche", 
+        "model": "Porsche Cayenne", 
+        "modelurl": "/porsche/cayenne/"
+    }, 
+    {
+        "make": "Porsche", 
+        "model": "Porsche Cayman", 
+        "modelurl": "/porsche/cayman/"
+    }, 
+    {
+        "make": "Porsche", 
+        "model": "Porsche Macan", 
+        "modelurl": "/porsche/macan/"
+    }, 
+    {
+        "make": "Porsche", 
+        "model": "Porsche Panamera", 
+        "modelurl": "/porsche/panamera/"
+    }, 
+    {
+        "make": "Audi", 
+        "model": "Audi A3", 
+        "modelurl": "/audi/a3/"
+    }, 
+    {
+        "make": "Audi", 
+        "model": "Audi A4", 
+        "modelurl": "/audi/a4/"
+    }, 
+    {
+        "make": "Audi", 
+        "model": "Audi A5", 
+        "modelurl": "/audi/a5/"
+    }, 
+    {
+        "make": "Audi", 
+        "model": "Audi A6", 
+        "modelurl": "/audi/a6/"
+    }, 
+    {
+        "make": "Audi", 
+        "model": "Audi A7", 
+        "modelurl": "/audi/a7/"
+    }, 
+    {
+        "make": "Audi", 
+        "model": "Audi A8", 
+        "modelurl": "/audi/a8/"
+    }, 
+    {
+        "make": "Audi", 
+        "model": "Audi allroad", 
+        "modelurl": "/audi/allroad/"
+    }, 
+    {
+        "make": "Audi", 
+        "model": "Audi Q3", 
+        "modelurl": "/audi/q3/"
+    }, 
+    {
+        "make": "Audi", 
+        "model": "Audi Q5", 
+        "modelurl": "/audi/q5/"
+    }, 
+    {
+        "make": "Audi", 
+        "model": "Audi Q7", 
+        "modelurl": "/audi/q7/"
+    }, 
+    {
+        "make": "Audi", 
+        "model": "Audi R8", 
+        "modelurl": "/audi/r8/"
+    }, 
+    {
+        "make": "Audi", 
+        "model": "Audi RS 5", 
+        "modelurl": "/audi/rs-5/"
+    }, 
+    {
+        "make": "Audi", 
+        "model": "Audi RS 7", 
+        "modelurl": "/audi/rs-7/"
+    }, 
+    {
+        "make": "Audi", 
+        "model": "Audi S3", 
+        "modelurl": "/audi/s3/"
+    }, 
+    {
+        "make": "Audi", 
+        "model": "Audi S4", 
+        "modelurl": "/audi/s4/"
+    }, 
+    {
+        "make": "Audi", 
+        "model": "Audi S5", 
+        "modelurl": "/audi/s5/"
+    }, 
+    {
+        "make": "Audi", 
+        "model": "Audi S6", 
+        "modelurl": "/audi/s6/"
+    }, 
+    {
+        "make": "Audi", 
+        "model": "Audi S7", 
+        "modelurl": "/audi/s7/"
+    }, 
+    {
+        "make": "Audi", 
+        "model": "Audi S8", 
+        "modelurl": "/audi/s8/"
+    }, 
+    {
+        "make": "Audi", 
+        "model": "Audi SQ5", 
+        "modelurl": "/audi/sq5/"
+    }, 
+    {
+        "make": "Audi", 
+        "model": "Audi TT", 
+        "modelurl": "/audi/tt/"
+    }
+]
