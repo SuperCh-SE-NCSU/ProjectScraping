@@ -88,7 +88,7 @@ There is also a send email process on our server. This process is a 24/7 service
 - The following website is developed for people to subscribe to our email notification service.
 http://152.46.17.210:8080/<br/>
 
-<img align=center src="https://github.com/SuperCh-SE-NCSU/ProjectScraping/blob/master/doc/subscribe.png" width=200;height=100/>
+<img align=center src="https://github.com/SuperCh-SE-NCSU/ProjectScraping/blob/master/doc/subscribe.png" width=400;height=200/>
 
 - In following video, we display follow issues:
    - https://www.youtube.com/watch?v=Bmi7bwp5V7k&feature=youtu.be
