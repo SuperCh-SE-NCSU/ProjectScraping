@@ -66,14 +66,23 @@ There is also a send email process on our server. This process is a 24/7 service
    
 ### Completeness of the tests
    To be completed
+   - We tested the functionality by subscribe with different car information specified.We received the email. Then we checked craigslist and found that all the cars satisfying the condition are included in the email.
 
 ### Result
-The following website is developed for people to subscribe to our email notification service.
+- The following website is developed for people to subscribe to our email notification service.
 http://152.46.17.210:8080/<br/>
 
 <img align=center src="https://github.com/SuperCh-SE-NCSU/ProjectScraping/blob/master/pythontemp_model/img/subscribe.png">
 
-We tested the functionality by subscribe with different car information specified.We received the email. Then we checked craigslist and found that all the cars satisfying the condition are included in the email.
+- In following video, we display follow issues:
+   - https://www.youtube.com/watch?v=Bmi7bwp5V7k&feature=youtu.be
+   - User first subscribes our email service. 
+   - Then user receives a welcome email including available cars in Craglist immediately.
+   - User try to compare the time of manual searching on two website and our web email service.
+   - The video shows that user receives second email before he finish manual search.
+   - The second email includes information of available cars on Craglist and completed car prices on kbb.
+   - Actually, second email is the service about sending latest information daily. In this video, in order to minimise the time, we set daily email 2 minutes after subscribe.
+
 
 ### Disscussion
 **1.Advantages of this application**
