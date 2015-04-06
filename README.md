@@ -48,11 +48,27 @@ User can choose different restrictions (car model, car make, year,  price and em
 We also use public-subscribe design pattern. We build  a one-to-many dependence between our system and subscribers. And when we collect latest car information and send email daily, all subscribers are notified by emails.
    - Public-subscribe design pattern alerts other objects’ changes without rebuilding dependencies on them. The individual views implement the Observer interface and register with the model. The model tracks the list of all observers that subscribe to changes. When a model changes, the model iterates through all registered observers and notifies them of the change. With this approach, the model never requires specific information about any views.
 
+### File system architecture
+- ProjectScraping:
+   - Web.py initial directory.
+- bin:
+   - Executable file of web application.
+- doc:
+   - Related images and documents.
+- pythontemp_model:
+   - All historical versions of python files and test files. These files do not execute when application running.
+- static:
+   - Javascript, css and csv files.
+- templates:
+   - Website html files.
+- tests:
+   - All test files.
+
 ### Implementation
 <img align=center src="https://github.com/SuperCh-SE-NCSU/ProjectScraping/blob/master/doc/ProjectScraping--implement.png">
 When clicking "subscribe" button, the main process will write user's information into database immediately,  and a sub process will generate simultaneously. The sub process will send a welcome email to user. The first email only include available cars in Craglist, so it will be very fast.
 
-There is also a sending email process on our server. This process is a 24/7 service, and everyday it will send emails to each subscribers. The content of emails comes from crawler engine.
+There is also a send email process on our server. This process is a 24/7 service, and everyday it will send emails to each subscribers. The content of emails comes from crawler engine.
 
 ### Platform and optimization trial
 - At very begining, we tried to put our system on Heroku and Amazon web services. However, after deploy our system on these two platform, we found that craglist and kbb block the IP address of these two companies, and we cannot crawl any information. So we change to NCSU VCL now.
@@ -66,14 +82,23 @@ There is also a sending email process on our server. This process is a 24/7 serv
    
 ### Completeness of the tests
    To be completed
+   - We tested the functionality by subscribe with different car information specified.We received the email. Then we checked craigslist and found that all the cars satisfying the condition are included in the email.
 
 ### Result
-The following website is developed for people to subscribe to our email notification service.
+- The following website is developed for people to subscribe to our email notification service.
 http://152.46.17.210:8080/<br/>
 
-<img align=center src="https://github.com/SuperCh-SE-NCSU/ProjectScraping/blob/master/doc/subscribe.png">
+<img align=center src="https://github.com/SuperCh-SE-NCSU/ProjectScraping/blob/master/pythontemp_model/img/subscribe.png">
 
-We tested the functionality by subscribe with different car information specified.We received the email. Then we checked craigslist and found that all the cars satisfying the condition are included in the email.
+- In following video, we display follow issues:
+   - https://www.youtube.com/watch?v=Bmi7bwp5V7k&feature=youtu.be
+   - User first subscribes our email service. 
+   - Then user receives a welcome email including available cars in Craglist immediately.
+   - User try to compare the time of manual searching on two website and our web email service.
+   - The video shows that user receives second email before he finish manual search.
+   - The second email includes information of available cars on Craglist and completed car prices on kbb.
+   - Actually, second email is the service about sending latest information daily. In this video, in order to minimise the time, we set daily email 2 minutes after subscribe.
+
 
 ### Disscussion
 **1.Advantages of this application**
