@@ -94,9 +94,18 @@ But except for these limitations, web crawling is quite useful for information g
 
 ### Future Work
 1. Achieve full functionality in version 2.
-2. A server is needed to long-time service.
-3. The information sending to users could be beautified into a table, with pictures.
 
+In more detail, we could make out website having more functionalities.Apart from subscription,It will show the car information crawled from craigslist and Kbb right after you click the submit button.
+
+It will show people's browsing history, just like amazon.
+
+2. A server is needed to long-time service.
+
+Our initial attempt to deploy our application to Heroku failed since craigslist blocks Heroku's IPs. For long-time service, we need a online server instead of a VCL machine.
+
+3. The information sended to users could be beautified into a table, with pictures.
+
+It will include one car'picture in the car information that is displayed on our web or sent to perple's emails. The whole thing could be put into a table, making it look like a beautiful post.
 
 ### Reference
 1.Shaw, Zed A. "Learn Python the hard way." (2010).<br/>
