@@ -93,6 +93,7 @@ Web crawler is a powerful tool which makes gathering information from webpage mo
 2. A server is needed to long-time service.
 3. The information sending to users could be beautified into a table, with pictures.
 
+
 ### Reference
 1.Shaw, Zed A. "Learn Python the hard way." (2010).<br/>
 2.https://github.com/scrapy/scrapy<br/>
