@@ -121,8 +121,9 @@ From the above figure, we know that python regular expression and scrape framewo
 
 ### Conclusion
 
-**1. Web crawling is interesting**
-Web crawler is a powerful tool which makes gathering information from webpage more easier. It will save people a lot of time when searching for information from a complicate webpage, which has a lot of information. It is good for personal use,running on local server. But when you deploy it on some online server, problems appear.
+**1. Web crawling**
+
+Web crawler is a powerful tool to gather information from webpage. It will save people a lot of time when searching for information from a complicate webpage, which has a lot of information. It is good for personal use,running on local server. But when you deploy it on some online server, problems appear.
  
 It has been proved true that some websites will block commercial servers from crawling their web,which is quite predictable. These websites are commercial websites,too. Even though they might be free for people to browse, they need users watch their supporters'commercial advertisement to survive. To protect their interests, they have to block others crawl their webpages. 
 
@@ -130,8 +131,8 @@ Thirdly, the legality of scraping, especially for commercial use is not clear no
 
 But except for these limitations, web crawling is quite useful for information gathering. 
 
-**2. Github is wonderful**
-We use github to do version control and discuss. We also find some useful code in the website. 
+**2. Github**
+We use github to do version control and publish issues. This is our first time to collobrate working in gituhub.  We also find some silimar projects in github like scrape-kbb.  
 
 
 ### Future Work
@@ -163,6 +164,7 @@ It will include one car'picture in the car information that is displayed on our 
 4.https://doc.scrapy.org/en/latest/<br/>
 5.http://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern
 6."FAQ about linking – Are website terms of use binding contracts?". www.chillingeffects.org. 2007-08-20. Retrieved 2007-08-20.
+7.https://github.com/storrgie/scrape-kbb
 
 
 
