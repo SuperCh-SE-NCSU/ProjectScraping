@@ -1,6 +1,6 @@
 #add file(pythontemp_model) to PYTHONPATH in order to import being-tested file
 import os, sys
-path = os.path.abspath(os.path.join('pythontemp_model'))
+path = os.path.abspath(os.path.join('bin'))
 sys.path.append(path)
 
 import unittest
