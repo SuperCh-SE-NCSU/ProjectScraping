@@ -46,23 +46,16 @@ User can choose different restrictions (car model, car make, year,  price and em
 
 #### Public-subscribe design pattern
 We also use public-subscribe design pattern. We build  a one-to-many dependence between our system and subscribers. And when we collect latest car information and send email daily, all subscribers are notified by emails.
-   - Public-subscribe design pattern alerts other objects�?changes without rebuilding dependencies on them. The individual views implement the Observer interface and register with the model. The model tracks the list of all observers that subscribe to changes. When a model changes, the model iterates through all registered observers and notifies them of the change. With this approach, the model never requires specific information about any views.
+   - Public-subscribe design pattern alerts other objectsâ€?changes without rebuilding dependencies on them. The individual views implement the Observer interface and register with the model. The model tracks the list of all observers that subscribe to changes. When a model changes, the model iterates through all registered observers and notifies them of the change. With this approach, the model never requires specific information about any views.
 
 ### File system architecture
-- ProjectScraping:
-   - Web.py initial directory.
-- bin:
-   - Executable file of web application.
-- doc:
-   - Related images and documents.
-- pythontemp_model:
-   - All historical versions of python files and test files. These files do not execute when application running.
-- static:
-   - Javascript, css and csv files.
-- templates:
-   - Website html files.
-- tests:
-   - All test files.
+- **ProjectScraping:** Web.py initial directory.
+- **bin:** Executable file of web application.
+- **doc:** Related images and documents.
+- **pythontemp_model:** All historical versions of python files and test files. These files do not execute when application running.
+- **static:** Javascript, css and csv files.
+- **templates:** Website html files.
+- **tests:** All test files.
 
 ### Implementation
 <img align=center src="https://github.com/SuperCh-SE-NCSU/ProjectScraping/blob/master/doc/ProjectScraping--implement.png">
@@ -164,10 +157,10 @@ It will include one car'picture in the car information that is displayed on our 
 4.https://doc.scrapy.org/en/latest/<br/>
 5.http://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern
 <<<<<<< HEAD
-6."FAQ about linking – Are website terms of use binding contracts?". www.chillingeffects.org. 2007-08-20. Retrieved 2007-08-20.
+6."FAQ about linking â€“ Are website terms of use binding contracts?". www.chillingeffects.org. 2007-08-20. Retrieved 2007-08-20.
 7.https://github.com/storrgie/scrape-kbb
 =======
-6."FAQ about linking �?Are website terms of use binding contracts?". www.chillingeffects.org. 2007-08-20. Retrieved 2007-08-20.
+6."FAQ about linking â€?Are website terms of use binding contracts?". www.chillingeffects.org. 2007-08-20. Retrieved 2007-08-20.
 >>>>>>> e96a457898c26e164e3db563c0a0879733254be2
 
 
