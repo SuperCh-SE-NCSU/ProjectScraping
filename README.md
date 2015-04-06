@@ -49,14 +49,15 @@ We also use public-subscribe design pattern. We build  a one-to-many dependence 
    - Public-subscribe design pattern alerts other objectsâ€?changes without rebuilding dependencies on them. The individual views implement the Observer interface and register with the model. The model tracks the list of all observers that subscribe to changes. When a model changes, the model iterates through all registered observers and notifies them of the change. With this approach, the model never requires specific information about any views.
 
 ### File system architecture
-| ProjectScraping  | Web.py initial directory.                                                                                    |
+| File name        | Description                                                                                                  |
 |------------------|--------------------------------------------------------------------------------------------------------------|
+| ProjectScraping  | Web.py initial directory.                                                                                    |
 | bin              | Executable file of web application.                                                                          |
 | doc              | Related images and documents.                                                                                |
 | pythontemp_model | All historical versions of python files and test files. These files do not execute when application running. |
 | static           | Javascript, css and csv files.                                                                               |
 | templates        | Website html files.                                                                                          |
-| tests            | All test files.                                                                                              |
+| tests            |                                                                                                              |
 
 ### Implementation
 <img align=center src="https://github.com/SuperCh-SE-NCSU/ProjectScraping/blob/master/doc/ProjectScraping--implement.png">
