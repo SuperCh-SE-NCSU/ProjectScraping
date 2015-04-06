@@ -86,8 +86,10 @@ We tried deploying the application to Heroku, but the IP of heroku is blocked by
 
 ### Conclusion
 
-Web crawler is a powerful tool which makes gathering information from webpage more easier. It will save people a lot of time when searching for information from a complicate webpage, which has a lot of information. It is good for personal use,running on local server. But when you deploy it on some online server, problems appear. 
+Web crawler is a powerful tool which makes gathering information from webpage more easier. It will save people a lot of time when searching for information from a complicate webpage, which has a lot of information. It is good for personal use,running on local server. But when you deploy it on some online server, problems appear.
+ 
 It has been proved true that some websites will block commercial servers from crawling their web,which is quite predictable. These websites are commercial websites,too. Even though they might be free for people to browse, they need users watch their supporters'commercial advertisement to survive. To protect their interests, they have to block others crawl their webpages. 
+
 But except for these limitations, web crawling is quite useful for information gathering.
 
 ### Future Work
