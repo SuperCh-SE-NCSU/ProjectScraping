@@ -15,7 +15,7 @@ If there is some service that can send emails to him which notify him of a newly
 ### Goals
 Our goal is to offer a mailing service to people who are looking at craigslist for used car, providing a craigslist link to the car that they have expressed their interests in from our subscribing website and the kbb price for the specific car.
 
-To be To be more specific, we develop a website for people to subscribe to our email service and get car information that they specified.(car model, year of make, mileage,etc)Based on these information, we crawl craiglist and find the right car, which agree with the customer¡¯s needs and look up the price for the car from Kbb. Then we will email subscribed customers the information they need: the basic information( such as year, make, mileage,price), a link to the original posts on craiglist, and the price from Kbb.
+To be To be more specific, we develop a website for people to subscribe to our email service and get car information that they specified.(car model, year of make, mileage,etc)Based on these information, we crawl craiglist and find the right car, which agree with the customers needs and look up the price for the car from Kbb. Then we will email subscribed customers the information they need: the basic information( such as year, make, mileage,price), a link to the original posts on craiglist, and the price from Kbb.
 There should be two versions of our application.
 
 Version_1: Minimal functionality. According to customers' need specified on our subscription website, send them emails including information that they need from 2 websites, Craglist and kbb.(work done)
@@ -46,7 +46,7 @@ User can choose different restrictions (car model, car make, year,  price and em
 
 #### Public-subscribe design pattern
 We also use public-subscribe design pattern. We build  a one-to-many dependence between our system and subscribers. And when we collect latest car information and send email daily, all subscribers are notified by emails.
-   - Public-subscribe design pattern alerts other objects’ changes without rebuilding dependencies on them. The individual views implement the Observer interface and register with the model. The model tracks the list of all observers that subscribe to changes. When a model changes, the model iterates through all registered observers and notifies them of the change. With this approach, the model never requires specific information about any views.
+   - Public-subscribe design pattern alerts other objects�?changes without rebuilding dependencies on them. The individual views implement the Observer interface and register with the model. The model tracks the list of all observers that subscribe to changes. When a model changes, the model iterates through all registered observers and notifies them of the change. With this approach, the model never requires specific information about any views.
 
 ### File system architecture
 - ProjectScraping:
@@ -88,7 +88,7 @@ There is also a send email process on our server. This process is a 24/7 service
 - The following website is developed for people to subscribe to our email notification service.
 http://152.46.17.210:8080/<br/>
 
-<img align=center src="https://github.com/SuperCh-SE-NCSU/ProjectScraping/blob/master/doc/subscribe.png">
+<img align=center src="https://github.com/SuperCh-SE-NCSU/ProjectScraping/blob/master/doc/subscribe.png" width=600;height=300/>
 
 - In following video, we display follow issues:
    - https://www.youtube.com/watch?v=Bmi7bwp5V7k&feature=youtu.be
@@ -163,8 +163,12 @@ It will include one car'picture in the car information that is displayed on our 
 3.https://github.com/scrapy/scrapy/wiki<br/>
 4.https://doc.scrapy.org/en/latest/<br/>
 5.http://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern
+<<<<<<< HEAD
 6."FAQ about linking – Are website terms of use binding contracts?". www.chillingeffects.org. 2007-08-20. Retrieved 2007-08-20.
 7.https://github.com/storrgie/scrape-kbb
+=======
+6."FAQ about linking �?Are website terms of use binding contracts?". www.chillingeffects.org. 2007-08-20. Retrieved 2007-08-20.
+>>>>>>> e96a457898c26e164e3db563c0a0879733254be2
 
 
 
