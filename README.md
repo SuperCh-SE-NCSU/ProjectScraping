@@ -40,7 +40,7 @@ Web search engines and some other sites use Web crawling or spidering software t
 Crawlers can validate hyperlinks and HTML code. They can also be used for web scraping (see also data-driven programming).
 
 ### Design and Pattern
-<img align=center src="https://github.com/SuperCh-SE-NCSU/ProjectScraping/blob/master/doc/ProjectScraping--design.png">
+<img align=center src="https://github.com/SuperCh-SE-NCSU/ProjectScraping/blob/master/doc/ProjectScraping--design.png" width="600" height="300" align="center">
 
 User can choose different restrictions (car model, car make, year,  price and email) and subscribe our daily email. We will keep users' personal information in PostgreSQL database and ensure safety. Then we try to use different crawler engine (regular regression, beautifulsoup and scrapy) to obtain latest information users need on Craglist and kbb and send email daily.
 
@@ -60,7 +60,7 @@ We also use public-subscribe design pattern. We build  a one-to-many dependence 
 | tests            | All test files.                                                                                              |
 
 ### Implementation
-<img align=center src="https://github.com/SuperCh-SE-NCSU/ProjectScraping/blob/master/doc/ProjectScraping--implement.png">
+<img align=center src="https://github.com/SuperCh-SE-NCSU/ProjectScraping/blob/master/doc/ProjectScraping--implement.png" width="700" height="525" align="center"><br/>
 When clicking "subscribe" button, the main process will write user's information into database immediately,  and a sub process will generate simultaneously. The sub process will send a welcome email to user. The first email only include available cars in Craglist, so it will be very fast.
 
 There is also a send email process on our server. This process is a 24/7 service, and everyday it will send emails to each subscribers. The content of emails comes from crawler engine.
@@ -73,7 +73,17 @@ There is also a send email process on our server. This process is a 24/7 service
    - If we build this database, we have to update it daily. Because we cannot access their databases, so the only method is still crawling. What is more, it is unrealisitic to store all information locally.
 
 ### Test procedure
-   To be completed
+   We use python [**unittest**](https://docs.python.org/2/library/unittest.html) to test our code. We use default methods in unittest, such as ```assertEqual```, ```assertIsInstance```, ```assertIsNotNone``` and so on.
+
+- In ```modelCragList_development_test.py``` file, we write unit test related to ```modelCragList_v2_debug.py``` file.
+	- ```test_getMilageAndYear``` method tests whether we can get mileage and year from specific web page.
+	- ``` test_craglistsearch``` method tests whether we can obtain correct information from Craglist.
+	
+- In ```modelkbb_development_test.py``` file, we write unit test related to ```modelkbb_v1_debug.py.``` file.
+	- ```test_extractPricekbb``` method tests if we can get a price list form kbb webpage via ```extractPricekbb``` method.
+	- We also test whether each url-related methods can return correct urls or not.
+	
+- In ```postgreSQL_test.py``` file, we try to test the CRUD operations with postgreSQL database.
    
 ### Completeness of the tests
    To be completed
@@ -83,7 +93,7 @@ There is also a send email process on our server. This process is a 24/7 service
 - The following website is developed for people to subscribe to our email notification service.
 http://152.46.17.210:8080/<br/>
 
-<img align=center src="https://github.com/SuperCh-SE-NCSU/ProjectScraping/blob/master/doc/subscribe.png" width=600;height=300/>
+<img src="https://github.com/SuperCh-SE-NCSU/ProjectScraping/blob/master/doc/subscribe.png" width="600" height="300" align="center"/>
 
 - In following video, we display follow issues:
    - https://www.youtube.com/watch?v=Bmi7bwp5V7k&feature=youtu.be
@@ -107,7 +117,8 @@ We tried deploying the application to Heroku and Amazon web services. But the IP
 **3.Comparison between python regular regression, beautiful soup and scrapy**
 In theory, regular expressions are a powerful language for matching text patterns. The Python "re" module provides regular expression support. BeautifulSoup is a parsing library and scrapy is a web scraper framework. You give Scrapy a root URL to start crawling, then you can specify constraints on how many number of URLs you want to crawl and fetch,etc., It is a complete framework for Web-scrapping or crawling.
  In practice, we can use all those three tools. Python regular expressions is flexible and easy to employ.While scrapy and beautiful soup are much more robust. Also, scrapy framework supplies some functions like sending emails. We develop all those three methods and we are interested in the eff compare the time to crawl four specific models of cars from craiglist using those different methods. The result is is shown in the following figure.
-<img align=center src="https://github.com/SuperCh-SE-NCSU/ProjectScraping/blob/master/doc/craigslisttimeComparison.png">
+ 
+<img align=center src="https://github.com/SuperCh-SE-NCSU/ProjectScraping/blob/master/doc/craigslisttimeComparison.png" width="700" height="518" align="center">
 
 From the above figure, we know that python regular expression and scrape framework are faster than beautiful soup. But python regular expression is not robust to the changing of the html structure. Sometime it will miss specific cars. 
 
@@ -135,7 +146,9 @@ We use github to do version control and publish issues. This is our first time t
 **1. Reduce scraping time of KBB**
 
 In practice, we find the time to scrape the prices of kbb is very long. We find a method to reduce scraping time. In the older method, we need to scrape the types of models recursively. That means, we need to firstly scrape the model page and find the types in those models, then we can get the links of each time, scrape the price of each type. However, if we know the types of each model in advance. We can visit the url of each type directly by passing the parameters. We compare those two methods in the following figure
-<img align=center src="https://github.com/SuperCh-SE-NCSU/ProjectScraping/blob/master/doc/kbbtimeComparison.png">
+
+<img align=center src="https://github.com/SuperCh-SE-NCSU/ProjectScraping/blob/master/doc/kbbtimeComparison.png" width="700" height="518" align="center">
+
 The new method reduce the scraping time of KBB by five times. That's wonderful! But now we are struggling in getting the types of each model in different years. We will integrate the new method in our future work. 
 
 **2. Achieve full functionality in version 2.**
