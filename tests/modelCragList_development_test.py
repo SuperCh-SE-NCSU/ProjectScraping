@@ -16,7 +16,7 @@ class Testcraigslist(unittest.TestCase):
 		self.assertEqual(self.milageandy, {'milage': '106000','year': '2006'})
            
 	def test_craglistsearch(self):
-		self.usercarlist=craglistsearch('toyota','camry','2007','2010',5000,10000,'2015-03-06 23:40:13')  
+		self.usercarlist=craglistsearch('toyota','camry','2007','2010',5000,10000,'2015-04-05 18:00:00')  
 		self.assertIsNotNone(self.usercarlist)
 		self.assertIsInstance(self.usercarlist, carlist)
 		self.assertEqual(self.usercarlist.modellist[0],'camry')
