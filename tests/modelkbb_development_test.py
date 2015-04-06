@@ -1,5 +1,5 @@
 import os, sys
-path = os.path.abspath(os.path.join('pythontemp_model'))
+path = os.path.abspath(os.path.join('bin'))
 sys.path.append(path)
 
 import unittest
