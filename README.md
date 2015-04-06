@@ -109,10 +109,10 @@ Right now, people have to go to craiglist to find the car they are interested in
 
 We tried deploying the application to Heroku and Amazon web services. But the IP of those two is blocked by craigslist. Craigslist seems to block all the IPs from commercial servers. We used VCL to solve this problem.
 
-**3.Comparison between python regular regression, beautiful soup and scrapy
+**3.Comparison between python regular regression, beautiful soup and scrapy**
 In theory, regular expressions are a powerful language for matching text patterns. The Python "re" module provides regular expression support. BeautifulSoup is a parsing library and scrapy is a web scraper framework. You give Scrapy a root URL to start crawling, then you can specify constraints on how many number of URLs you want to crawl and fetch,etc., It is a complete framework for Web-scrapping or crawling.
  In practice, we can use all those three tools. Python regular expressions is flexible and easy to employ.While scrapy and beautiful soup are much more robust. Also, scrapy framework supplies some functions like sending emails. We develop all those three methods and we are interested in the eff compare the time to crawl four specific models of cars from craiglist using those different methods. The result is is shown in the following figure.
-
+<img align=center src="https://github.com/SuperCh-SE-NCSU/ProjectScraping/blob/master/doc/craigslisttimeComparison.png">
 
 From the above figure, we know that python regular expression and scrape framework are faster than beautiful soup. But python regular expression is not robust to the changing of the html structure. Sometime it will miss specific cars. 
 
@@ -121,24 +121,36 @@ From the above figure, we know that python regular expression and scrape framewo
 
 ### Conclusion
 
+**1. Web crawling is interesting**
 Web crawler is a powerful tool which makes gathering information from webpage more easier. It will save people a lot of time when searching for information from a complicate webpage, which has a lot of information. It is good for personal use,running on local server. But when you deploy it on some online server, problems appear.
  
 It has been proved true that some websites will block commercial servers from crawling their web,which is quite predictable. These websites are commercial websites,too. Even though they might be free for people to browse, they need users watch their supporters'commercial advertisement to survive. To protect their interests, they have to block others crawl their webpages. 
 
-But except for these limitations, web crawling is quite useful for information gathering.
+Thirdly, the legality of scraping, especially for commercial use is not clear now. Web scraping may be against the terms of use of some websites. The enforceability of these terms is unclear[6].
+
+But except for these limitations, web crawling is quite useful for information gathering. 
+
+**2. Github is wonderful**
+We use github to do version control and discuss. We also find some useful code in the website. 
+
 
 ### Future Work
-**1. Achieve full functionality in version 2.**
+**1. Reduce scraping time of KBB**
+In practice, we find the time to scrape the prices of kbb is very long. We find a method to reduce scraping time. In the older method, we need to scrape the types of models recursively. That means, we need to firstly scrape the model page and find the types in those models, then we can get the links of each time, scrape the price of each type. However, if we know the types of each model in advance. We can visit the url of each type directly by passing the parameters. We compare those two methods in the following figure
+<img align=center src="https://github.com/SuperCh-SE-NCSU/ProjectScraping/blob/master/doc/kbbtimeComparison.png.png">
+The new method reduce the scraping time of KBB by five times. That's wonderful! But now we are struggling in getting the types of each model in different years. We will integrate the new method in our future work. 
+
+**2. Achieve full functionality in version 2.**
 
 In more detail, we could make out website having more functionalities.Apart from subscription,It will show the car information crawled from craigslist and Kbb right after you click the submit button.
 
 It will show people's browsing history, just like amazon.
 
-**2. A server is needed to long-time service.**
+**3. A server is needed to long-time service.**
 
-Our initial attempt to deploy our application to Heroku failed since craigslist blocks Heroku's IPs. For long-time service, we need a online server instead of a VCL machine.
+Our initial attempt to deploy our application to Heroku, AWS failed since craigslist blocks Heroku and AWS's IPs. For long-time service, we need a online server instead of a VCL machine.
 
-**3. The information sended to users could be beautified into a table, with pictures.**
+**4. The information sended to users could be stored and beautified into a table, with pictures.**
 
 It will include one car'picture in the car information that is displayed on our web or sent to perple's emails. The whole thing could be put into a table, making it look like a beautiful post.
 
@@ -148,7 +160,7 @@ It will include one car'picture in the car information that is displayed on our 
 3.https://github.com/scrapy/scrapy/wiki<br/>
 4.https://doc.scrapy.org/en/latest/<br/>
 5.http://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern
-
+6."FAQ about linking – Are website terms of use binding contracts?". www.chillingeffects.org. 2007-08-20. Retrieved 2007-08-20.
 
 
 
