@@ -31,7 +31,8 @@
    - python tests/modelkbb_development_test.py -v
    - coverage run bin/modelCragList_v2_debug.py
    - coverage run bin/modelkbb_v1_debug.py
+   - coverage report -m
    
 
 after_success:
-   coveralls
+  coveralls --verbose
