@@ -48,6 +48,22 @@ User can choose different restrictions (car model, car make, year,  price and em
 We also use public-subscribe design pattern. We build  a one-to-many dependence between our system and subscribers. And when we collect latest car information and send email daily, all subscribers are notified by emails.
    - Public-subscribe design pattern alerts other objects’ changes without rebuilding dependencies on them. The individual views implement the Observer interface and register with the model. The model tracks the list of all observers that subscribe to changes. When a model changes, the model iterates through all registered observers and notifies them of the change. With this approach, the model never requires specific information about any views.
 
+### File system architecture
+- ProjectScraping:
+   - Web.py initial directory.
+- bin:
+   - Executable file of web application.
+- doc:
+   - Related images and documents.
+- pythontemp_model:
+   - All historical versions of python files and test files. These files do not execute when application running.
+- static:
+   - Javascript, css and csv files.
+- templates:
+   - Website html files.
+- tests:
+   - All test files.
+
 ### Implementation
 <img align=center src="https://github.com/SuperCh-SE-NCSU/ProjectScraping/blob/master/doc/ProjectScraping--implement.png">
 When clicking "subscribe" button, the main process will write user's information into database immediately,  and a sub process will generate simultaneously. The sub process will send a welcome email to user. The first email only include available cars in Craglist, so it will be very fast.
@@ -66,14 +82,23 @@ There is also a send email process on our server. This process is a 24/7 service
    
 ### Completeness of the tests
    To be completed
+   - We tested the functionality by subscribe with different car information specified.We received the email. Then we checked craigslist and found that all the cars satisfying the condition are included in the email.
 
 ### Result
-The following website is developed for people to subscribe to our email notification service.
+- The following website is developed for people to subscribe to our email notification service.
 http://152.46.17.210:8080/<br/>
 
-<img align=center src="https://github.com/SuperCh-SE-NCSU/ProjectScraping/blob/master/pythontemp_model/img/subscribe.png">
+<img align=center src="https://github.com/SuperCh-SE-NCSU/ProjectScraping/blob/master/doc/subscribe.png">
 
-We tested the functionality by subscribe with different car information specified.We received the email. Then we checked craigslist and found that all the cars satisfying the condition are included in the email.
+- In following video, we display follow issues:
+   - https://www.youtube.com/watch?v=Bmi7bwp5V7k&feature=youtu.be
+   - User first subscribes our email service. 
+   - Then user receives a welcome email including available cars in Craglist immediately.
+   - User try to compare the time of manual searching on two website and our web email service.
+   - The video shows that user receives second email before he finish manual search.
+   - The second email includes information of available cars on Craglist and completed car prices on kbb.
+   - Actually, second email is the service about sending latest information daily. In this video, in order to minimise the time, we set daily email 2 minutes after subscribe.
+
 
 ### Disscussion
 **1.Advantages of this application**
@@ -96,13 +121,26 @@ From the above figure, we know that python regular expression and scrape framewo
 
 ### Conclusion
 
-Web crawler is a powerful tool which makes gathering information from webpage more easier, but some websites will block commercial servers from crawling websites to protect their copyright.
+Web crawler is a powerful tool which makes gathering information from webpage more easier. It will save people a lot of time when searching for information from a complicate webpage, which has a lot of information. It is good for personal use,running on local server. But when you deploy it on some online server, problems appear.
+ 
+It has been proved true that some websites will block commercial servers from crawling their web,which is quite predictable. These websites are commercial websites,too. Even though they might be free for people to browse, they need users watch their supporters'commercial advertisement to survive. To protect their interests, they have to block others crawl their webpages. 
+
+But except for these limitations, web crawling is quite useful for information gathering.
 
 ### Future Work
-1. Achieve full functionality in version 2.
-2. A server is needed to long-time service.
-3. The information sending to users could be beautified into a table, with pictures.
+**1. Achieve full functionality in version 2.**
 
+In more detail, we could make out website having more functionalities.Apart from subscription,It will show the car information crawled from craigslist and Kbb right after you click the submit button.
+
+It will show people's browsing history, just like amazon.
+
+**2. A server is needed to long-time service.**
+
+Our initial attempt to deploy our application to Heroku failed since craigslist blocks Heroku's IPs. For long-time service, we need a online server instead of a VCL machine.
+
+**3. The information sended to users could be beautified into a table, with pictures.**
+
+It will include one car'picture in the car information that is displayed on our web or sent to perple's emails. The whole thing could be put into a table, making it look like a beautiful post.
 
 ### Reference
 1.Shaw, Zed A. "Learn Python the hard way." (2010).<br/>
