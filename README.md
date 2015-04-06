@@ -135,9 +135,11 @@ We use github to do version control and discuss. We also find some useful code i
 
 
 ### Future Work
+
 **1. Reduce scraping time of KBB**
+
 In practice, we find the time to scrape the prices of kbb is very long. We find a method to reduce scraping time. In the older method, we need to scrape the types of models recursively. That means, we need to firstly scrape the model page and find the types in those models, then we can get the links of each time, scrape the price of each type. However, if we know the types of each model in advance. We can visit the url of each type directly by passing the parameters. We compare those two methods in the following figure
-<img align=center src="https://github.com/SuperCh-SE-NCSU/ProjectScraping/blob/master/doc/kbbtimeComparison.png.png">
+<img align=center src="https://github.com/SuperCh-SE-NCSU/ProjectScraping/blob/master/doc/kbbtimeComparison.png">
 The new method reduce the scraping time of KBB by five times. That's wonderful! But now we are struggling in getting the types of each model in different years. We will integrate the new method in our future work. 
 
 **2. Achieve full functionality in version 2.**
