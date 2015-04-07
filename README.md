@@ -28,13 +28,16 @@ Version_2: Full functionality. Besides the subscription service, Build a databas
 To achieve the above goals, we want to develop our application based on model-view-controller architecture. The model is to scrape the cars' information from craigslist and kbb. We focus on testing different strategies in realizing the model.
 
 1. Methods to develop scraping models
+
 At first, we are planning to use two methods in web crawler. The first method is to use python regular regression(Python "re" module provides regular expression support). The second method is employing scrapy web framework. Then we find another parsing library [beautiful soup](http://www.crummy.com/software/). So we realize craigslist web crawler using those three tools. We also compare the time performance of those three tools.
 
 2. Web
+
 A basic website is developed for users to subscribe to our email notification service 
 We built a basic website for users based on web.py[1][2] framework, postgresql is used to store subscribed user information.
 
-2.Third party platform and Service
+3.Third party platform and Service
+
 We try three different platforms to deploy our application: Virtual Computing Lab for NCSU, Amazon Web Service. At last, VCL is used for the server platform as other platform is blocked. Plus, [Sendgrid](https://sendgrid.com/home-two) is used for email delivery service.
 
 
