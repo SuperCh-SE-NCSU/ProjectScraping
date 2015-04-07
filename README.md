@@ -73,14 +73,17 @@ We also use public-subscribe design pattern. We build  a one-to-many dependence 
 <img align=center src="https://github.com/SuperCh-SE-NCSU/ProjectScraping/blob/master/doc/ProjectScraping--implement.png" width="700" height="525" align="center"><br/>
 When clicking "subscribe" button, the main process will write user's information into database immediately,  and a sub process will generate simultaneously. The sub process will send a welcome email to user. The first email only include available cars in Craigslist, so it will be very fast.
 
-There is also a send email process on our server. This process is a 24/7 service, and everyday it will send emails to each subscribers. The content of emails comes from crawler engine.
+There is also a sending email process on our server. This process is a 24/7 service, and everyday it will send emails to each subscribers. The content of emails comes from crawler engine.
 
 ### Platform and optimization trial
 - At very beginning, we tried to put our system on Heroku and Amazon web services. However, after deploy our system on these two platform, we found that craigslist and kbb block the IP address of these two companies, and we cannot crawl any information. So we change to NCSU VCL now.
 
-- In order to increase the speed of crawling, we decided to build another local database to store crawling results. But after deep consideration, we find this database is useless. There are several reasons:
+- In order to increase the speed of sending email, we tried to build another local database to store crawling results. But after deep consideration, we find this database is useless. There are several reasons:
    - Content send to subscribers must be latest, so store obsolete into database is useless;
    - If we build this database, we have to update it daily. Because we cannot access their databases, so the only method is still crawling. What is more, it is unrealistic to store all information locally.
+
+- Reduce crawling time
+  - we find that we can reduce crawling time by using scrapy and getting the structure of the website. 
 
 ### Test procedure
    We use python [**unittest**](https://docs.python.org/2/library/unittest.html) and [**nosetest**](https://nose.readthedocs.org/en/latest/) to test our code. We use default methods in unittest, such as ```assertEqual```, ```assertIsInstance```, ```assertIsNotNone``` and so on.
