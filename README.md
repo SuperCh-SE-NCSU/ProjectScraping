@@ -1,7 +1,7 @@
 
 # Web Crawler Application  
 [![Build Status](https://travis-ci.org/SuperCh-SE-NCSU/ProjectScraping.svg?branch=master)](https://travis-ci.org/SuperCh-SE-NCSU/ProjectScraping)
-[![Coverage Status](https://coveralls.io/repos/SuperCh-SE-NCSU/ProjectScraping/badge.svg)](https://coveralls.io/r/SuperCh-SE-NCSU/ProjectScraping)
+[![Code Health](https://landscape.io/github/SuperCh-SE-NCSU/ProjectScraping/master/landscape.svg?style=flat)](https://landscape.io/github/SuperCh-SE-NCSU/ProjectScraping/master)
 
 Using Scrapy to crawl craigslist and kbb to get sale information about used cars users specified and their kbb price.
 
@@ -200,7 +200,7 @@ It will include one car'picture in the car information that is displayed on our 
 6.[scrapy wiki](https://github.com/scrapy/scrapy/wiki)<br/>
 7.[scrapy doc](https://doc.scrapy.org/en/latest/)<br/>
 8.[Utilities to scrape the web content of Kelley Blue Book](https://github.com/storrgie/scrape-kbb)<br/>
-9.[craigslist crawler](http://mherman.org/blog/2012/11/05/scraping-web-pages-with-scrapy/#.VSMdnbt3_lc)<br/>
+9.[craigslist crawler](http://mherman.org/blog/2012/11/05/scraping-web-pages-with-scrapy/#.VSMdnbt3_lc)
 10.[Load impact-web testing](https://loadimpact.com/)<br/>
 11.Castillo, Carlos. "Effective web crawling." ACM SIGIR Forum. Vol. 39. No. 1. ACM, 2005.<br/>
 12.[kbb Price analysis](http://www.r-bloggers.com/how-to-buy-a-used-car-with-r-part-1/)
