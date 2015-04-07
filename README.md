@@ -61,7 +61,7 @@ We also use public-subscribe design pattern. We build  a one-to-many dependence 
 | ProjectScraping  | Web.py initial directory.                                                                                    |
 | bin              | Executable file of web application.                                                                          |
 | doc              | Related images and documents.                                                                                |
-| pythontemp_model | All historical versions of python files and test files. These files do not execute when application running. |
+| pythontemp_model | Code of Performance anlysis. All historical versions of python files and test files. These files do not execute when application running. |
 | static           | Javascript, css and csv files.                                                                               |
 | templates        | Website html files.                                                                                          |
 | tests            | All test files.                                                                                              |
