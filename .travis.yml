@@ -12,9 +12,6 @@
    
  #command to install dependencies
  install:
-   - pip install lpthw.web
-   - pip install requests
-   - pip install BeautifulSoup4
    - pip install lxml
    - pip install testing.postgresql
    - pip install sqlalchemy
