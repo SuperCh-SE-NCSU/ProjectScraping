@@ -1,9 +1,7 @@
 # -*- coding: utf-8 -*-
 import sendgrid
 import os
-import psycopg2
-import urlparse
-import datetime,calendar, time
+import datetime,calendar,time
 
 
 def sendgridEmail(html_content,sendtoEmail):
