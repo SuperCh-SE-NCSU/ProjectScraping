@@ -47,7 +47,7 @@ User can choose different restrictions (car model, car make, year,  price and em
 
 #### Public-subscribe design pattern
 We also use public-subscribe design pattern. We build  a one-to-many dependence between our system and subscribers. And when we collect latest car information and send email daily, all subscribers are notified by emails.
-   - Public-subscribe design pattern alerts other objectsâ€?changes without rebuilding dependencies on them. The individual views implement the Observer interface and register with the model. The model tracks the list of all observers that subscribe to changes. When a model changes, the model iterates through all registered observers and notifies them of the change. With this approach, the model never requires specific information about any views.
+   - Public-subscribe design pattern alerts other objects' changes without rebuilding dependencies on them. The individual views implement the Observer interface and register with the model. The model tracks the list of all observers that subscribe to changes. When a model changes, the model iterates through all registered observers and notifies them of the change. With this approach, the model never requires specific information about any views.
 
 ### File system architecture
 | File name        | Description                                                                                                  |
@@ -74,7 +74,7 @@ There is also a send email process on our server. This process is a 24/7 service
    - If we build this database, we have to update it daily. Because we cannot access their databases, so the only method is still crawling. What is more, it is unrealisitic to store all information locally.
 
 ### Test procedure
-   We use python [**unittest**](https://docs.python.org/2/library/unittest.html) to test our code. We use default methods in unittest, such as ```assertEqual```, ```assertIsInstance```, ```assertIsNotNone``` and so on.
+   We use python [**unittest**](https://docs.python.org/2/library/unittest.html) and [**nosetest**](https://nose.readthedocs.org/en/latest/) to test our code. We use default methods in unittest, such as ```assertEqual```, ```assertIsInstance```, ```assertIsNotNone``` and so on.
    
 - Unit test
 	- In ```modelCragList_development_test.py``` file, we write unit test related to ```modelCragList_v2_debug.py``` file.
@@ -86,17 +86,17 @@ There is also a send email process on our server. This process is a 24/7 service
 		- We also test whether each url-related methods can return correct urls or not.
 		
 	- In ```postgreSQL_test.py``` file, we try to test the CRUD operations with postgreSQL database.
+	<img align=center src="https://github.com/SuperCh-SE-NCSU/ProjectScraping/blob/master/doc/unittest.png" width="500" height="113" align="center"><br/>
 - Feature test
-	- In ```post_form_tests.py``` file, we write test to make sure default values work for the form.
-	 ```
-	 resp = app.request("/", method="POST")
-    	 assert_response(resp, contains="Nobody")
-    	```
-    	- We also write test to ensure after post data, webpage will return expected values.
-    	```
-    	resp = app.request("/", method="POST", data=data)
-    	assert_response(resp, contains="alan")
-    	```
+    - In ```post_form_tests.py``` file, we write test to make sure default values work for the form.
+    - We also write test to ensure after post data, webpage will return expected values.
+    	
+- Intergration test
+	- We use Travis CI to do continuous intergration test. And it will ensure our modifications pass the test.
+
+- Stress test
+	- We also use press test to calculate the load of our website. This web application can simulate 25 users operating on our website simultaneously and output general statistic of our website. 
+	<img align=center src="https://github.com/SuperCh-SE-NCSU/ProjectScraping/blob/master/doc/stress_test.png" width="600" height="367" align="center"><br/>
 
 ### Completeness of the tests
    To be completed
@@ -184,5 +184,6 @@ It will include one car'picture in the car information that is displayed on our 
 3.https://github.com/scrapy/scrapy/wiki<br/>
 4.https://doc.scrapy.org/en/latest/<br/>
 5.http://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern<br/>
-6."FAQ about linking â€“ Are website terms of use binding contracts?". www.chillingeffects.org. 2007-08-20. Retrieved 2007-08-20.<br/>
 7.https://github.com/storrgie/scrape-kbb<br/>
+8.Load impact-web testing:https://loadimpact.com/<br/>
+9.Castillo, Carlos. "Effective web crawling." ACM SIGIR Forum. Vol. 39. No. 1. ACM, 2005.<br/>
