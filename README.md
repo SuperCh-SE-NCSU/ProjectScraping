@@ -75,17 +75,29 @@ There is also a send email process on our server. This process is a 24/7 service
 
 ### Test procedure
    We use python [**unittest**](https://docs.python.org/2/library/unittest.html) to test our code. We use default methods in unittest, such as ```assertEqual```, ```assertIsInstance```, ```assertIsNotNone``` and so on.
-
-- In ```modelCragList_development_test.py``` file, we write unit test related to ```modelCragList_v2_debug.py``` file.
-	- ```test_getMilageAndYear``` method tests whether we can get mileage and year from specific web page.
-	- ``` test_craglistsearch``` method tests whether we can obtain correct information from Craglist.
-	
-- In ```modelkbb_development_test.py``` file, we write unit test related to ```modelkbb_v1_debug.py.``` file.
-	- ```test_extractPricekbb``` method tests if we can get a price list form kbb webpage via ```extractPricekbb``` method.
-	- We also test whether each url-related methods can return correct urls or not.
-	
-- In ```postgreSQL_test.py``` file, we try to test the CRUD operations with postgreSQL database.
    
+- Unit test
+	- In ```modelCragList_development_test.py``` file, we write unit test related to ```modelCragList_v2_debug.py``` file.
+		- ```test_getMilageAndYear``` method tests whether we can get mileage and year from specific web page.
+		- ``` test_craglistsearch``` method tests whether we can obtain correct information from Craglist.
+		
+	- In ```modelkbb_development_test.py``` file, we write unit test related to ```modelkbb_v1_debug.py.``` file.
+		- ```test_extractPricekbb``` method tests if we can get a price list form kbb webpage via ```extractPricekbb``` method.
+		- We also test whether each url-related methods can return correct urls or not.
+		
+	- In ```postgreSQL_test.py``` file, we try to test the CRUD operations with postgreSQL database.
+- Feature test
+	- In ```post_form_tests.py``` file, we write test to make sure default values work for the form.
+	 ```
+	 resp = app.request("/", method="POST")
+    	 assert_response(resp, contains="Nobody")
+    	```
+    	- We also write test to ensure after post data, webpage will return expected values.
+    	```
+    	resp = app.request("/", method="POST", data=data)
+    	assert_response(resp, contains="alan")
+    	```
+
 ### Completeness of the tests
    To be completed
    - We tested the functionality by subscribe with different car information specified.We received the email. Then we checked craigslist and found that all the cars satisfying the condition are included in the email.
