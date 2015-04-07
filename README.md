@@ -179,11 +179,15 @@ Our initial attempt to deploy our application to Heroku, AWS failed since craigs
 It will include one car'picture in the car information that is displayed on our web or sent to perple's emails. The whole thing could be put into a table, making it look like a beautiful post.
 
 ### Reference
-1.Shaw, Zed A. "Learn Python the hard way." (2010).<br/>
-2.https://github.com/scrapy/scrapy<br/>
-3.https://github.com/scrapy/scrapy/wiki<br/>
-4.https://doc.scrapy.org/en/latest/<br/>
-5.http://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern<br/>
-7.https://github.com/storrgie/scrape-kbb<br/>
-8.Load impact-web testing:https://loadimpact.com/<br/>
-9.Castillo, Carlos. "Effective web crawling." ACM SIGIR Forum. Vol. 39. No. 1. ACM, 2005.<br/>
+1.Shaw, Zed A. "Learn Python the hard way." (2010)<br/>
+2.Grehan, Rick. "Pillars of Python: Web. py Web framework." InfoWorld IDG Retrieved January (2013).<br/>
+3.Castillo, Carlos. "Effective web crawling." ACM SIGIR Forum. Vol. 39. No. 1. ACM(2005).<br/>
+4.Thelwall, Mike. "A web crawler design for data mining." Journal of Information Science 27.5 (2001): 319-325. <br/>
+5.Langtangen, Hans Petter. Python scripting for computational science. Vol. 3. Berlin, Heidelberg and New York: Springer, 2006.<br/>
+6.[scrapy wiki(https://github.com/scrapy/scrapy/wiki)]<br/>
+7.https://doc.scrapy.org/en/latest/<br/>
+8.[Utilities to scrape the web content of Kelley Blue Book(https://github.com/storrgie/scrape-kbb)]<br/>
+9.[craigslist crawler(http://mherman.org/blog/2012/11/05/scraping-web-pages-with-scrapy/#.VSMdnbt3_lc)]
+10.[Load impact-web testing(https://loadimpact.com/)]<br/>
+11.Castillo, Carlos. "Effective web crawling." ACM SIGIR Forum. Vol. 39. No. 1. ACM, 2005.<br/>
+12.[kbb Price anlysis(http://www.r-bloggers.com/how-to-buy-a-used-car-with-r-part-1/)]
