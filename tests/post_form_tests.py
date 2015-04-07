@@ -10,14 +10,14 @@ def test_index():
     assert_response(resp, status="404")
 
     # test our first GET request to /subscribe
-    resp = app.request("/subscribe")
+    resp = app.request("/")
     assert_response(resp)
 
     # make sure default values work for the form
-    resp = app.request("/subscribe", method="POST")
+    resp = app.request("/", method="POST")
     assert_response(resp, contains="Nobody")
 
     # test that we get expected values
     data = {'username': 'alan','make': 'Toyota', 'model': 'Camry', 'email': 'test@ncsu.edu', 'minYear': '2007', 'maxYear': '2015', 'minPrice': '500', 'maxPrice': '100000', 'currentTime': 'tempcurrentTime'}
-    resp = app.request("/subscribe", method="POST", data=data)
+    resp = app.request("/", method="POST", data=data)
     assert_response(resp, contains="alan")
