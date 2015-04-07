@@ -1,5 +1,6 @@
 #add file(pythontemp_model) to PYTHONPATH in order to import being-tested file
 import os, sys
+from coveralls import Coveralls
 path = os.path.abspath(os.path.join('bin'))
 sys.path.append(path)
 

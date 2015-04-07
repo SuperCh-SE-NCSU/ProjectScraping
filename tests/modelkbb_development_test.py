@@ -1,4 +1,5 @@
 import os, sys
+from coveralls import Coveralls
 path = os.path.abspath(os.path.join('bin'))
 sys.path.append(path)
 

@@ -12,9 +12,6 @@
    
  #command to install dependencies
  install:
-   - pip install lpthw.web
-   - pip install requests
-   - pip install BeautifulSoup4
    - pip install lxml
    - pip install testing.postgresql
    - pip install sqlalchemy
@@ -29,9 +26,5 @@
  # command to run tests
  script: 
    - python tests/modelkbb_development_test.py -v
-   - coverage run --source= bin/modelCragList_v2_debug.py test
-   - coverage run --source= bin/modelkbb_v1_debug.py test
-   
-
-after_success:
-   coveralls
+  
+after_success: coveralls

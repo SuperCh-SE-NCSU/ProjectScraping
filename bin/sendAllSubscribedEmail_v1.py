@@ -22,8 +22,8 @@ def sendAllSubscribedEmail():
         endyear=str(row[5])
         minPrice=row[6]
         maxPrice=row[7]
-        time=row[8]
-        print make,model,startyear,endyear,minPrice,maxPrice,time
+        ctime=row[8]
+        print make,model,startyear,endyear,minPrice,maxPrice,ctime
         #print type(make),type(model),type(startyear),type(endyear),type(minPrice),type(maxPrice),type(time)
         html=htmlgen.generateHTML(make,model,startyear,endyear,minPrice,maxPrice,(datetime.datetime.now()-datetime.timedelta(days=3)).strftime("%Y-%m-%d %H:%M:%S"))
         print email

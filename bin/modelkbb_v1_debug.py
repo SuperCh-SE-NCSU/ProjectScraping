@@ -1,9 +1,9 @@
-import requests,sys,csv,traceback,re,json,os,urllib2
+import requests,sys,csv,re,json,os,urllib2
 from bs4 import BeautifulSoup
-from random import random,shuffle
-from time import sleep
+from random import random
+
 #import modelCragList_v1_debug
-global str
+
 
 
 ### Kelly Blue Book ######################
@@ -136,7 +136,7 @@ def getKbbPrice(make,model,year,mileage):
     #print kbbBodytypeUrl(make,model,year)
     #savehtml("test.html",html)
         
-class carlistwithPrice:
+class carlistwithPrice():
     def __init__(self,standardpricelist,modellist,pricelist,carlinklist,abstractIlist,timepostlist):
         self.modellist=modellist
         self.standardpricelist=standardpricelist

@@ -1,0 +1,14 @@
+doc-warnings: yes
+test-warnings: no
+strictness: high
+max-line-length: 200
+autodetect: yes
+requirements:
+    - deps/core.txt
+    - deps/test.txt
+ignore-paths:
+    - doc
+    - pythontemp_model/
+ignore-patterns:
+    - ^example/doc_.*\.py$
+    - (^|/)docs(/|$)
