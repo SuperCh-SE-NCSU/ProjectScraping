@@ -64,11 +64,8 @@ setup(
             'coveralls = coveralls.cli:main',
         ],
     },
-    install_requires=['docopt>=0.6.1', 'coverage>=3.6', 'requests>=1.0.0'],
-    tests_require=['mock', 'unittest', 'sh>=1.08'],
-    extras_require={
-        'yaml': ['PyYAML>=3.10']
-    },
+    install_requires=['unittest>=2.0', 'coverage>=3.6', 'requests>=1.0.0'],
+    tests_require=['unittest'],
     cmdclass={'test': DiscoverTest},
     classifiers=[
         'Development Status :: 5 - Production/Stable',
