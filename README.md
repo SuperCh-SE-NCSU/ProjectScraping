@@ -47,7 +47,7 @@ User can choose different restrictions (car model, car make, year,  price and em
 
 #### Public-subscribe design pattern
 We also use public-subscribe design pattern. We build  a one-to-many dependence between our system and subscribers. And when we collect latest car information and send email daily, all subscribers are notified by emails.
-   - Public-subscribe design pattern alerts other objectsâ€?changes without rebuilding dependencies on them. The individual views implement the Observer interface and register with the model. The model tracks the list of all observers that subscribe to changes. When a model changes, the model iterates through all registered observers and notifies them of the change. With this approach, the model never requires specific information about any views.
+   - Public-subscribe design pattern alerts other objects' changes without rebuilding dependencies on them. The individual views implement the Observer interface and register with the model. The model tracks the list of all observers that subscribe to changes. When a model changes, the model iterates through all registered observers and notifies them of the change. With this approach, the model never requires specific information about any views.
 
 ### File system architecture
 | File name        | Description                                                                                                  |
@@ -74,7 +74,7 @@ There is also a send email process on our server. This process is a 24/7 service
    - If we build this database, we have to update it daily. Because we cannot access their databases, so the only method is still crawling. What is more, it is unrealisitic to store all information locally.
 
 ### Test procedure
-   We use python [**unittest**](https://docs.python.org/2/library/unittest.html) to test our code. We use default methods in unittest, such as ```assertEqual```, ```assertIsInstance```, ```assertIsNotNone``` and so on.
+   We use python [**unittest**](https://docs.python.org/2/library/unittest.html) and [**nosetest**](https://nose.readthedocs.org/en/latest/) to test our code. We use default methods in unittest, such as ```assertEqual```, ```assertIsInstance```, ```assertIsNotNone``` and so on.
    
 - Unit test
 	- In ```modelCragList_development_test.py``` file, we write unit test related to ```modelCragList_v2_debug.py``` file.
