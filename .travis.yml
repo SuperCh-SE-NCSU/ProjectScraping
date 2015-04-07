@@ -31,7 +31,6 @@
    - python tests/modelkbb_development_test.py -v
    - coverage run --source= bin/modelCragList_v2_debug.py test
    - coverage run --source= bin/modelkbb_v1_debug.py test
-   - coverage report -m
    
 
 after_success:
