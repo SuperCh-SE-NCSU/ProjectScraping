@@ -4,7 +4,6 @@ import time
 import datetime
 import schedule
 import os
-import db_process as db
 import sendEmail_v1 as sendEmail
 import modelgenerateHtml_development as htmlgen
 from multiprocessing import Process
