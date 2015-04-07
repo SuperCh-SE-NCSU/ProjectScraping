@@ -1,11 +1,7 @@
 doc-warnings: yes
 test-warnings: no
 strictness: high
-max-line-length: 220
-uses:
-    - lpthw.web
-    - requests
-    - beautifulsoup4
+max-line-length: 200
 autodetect: yes
 requirements:
     - deps/core.txt
