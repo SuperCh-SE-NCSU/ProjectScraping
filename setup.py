@@ -65,7 +65,6 @@ setup(
         ],
     },
     install_requires=['coverage>=3.6', 'requests>=1.0.0'],
-    tests_require=['unittest'],
     cmdclass={'test': DiscoverTest},
     classifiers=[
         'Development Status :: 5 - Production/Stable',
