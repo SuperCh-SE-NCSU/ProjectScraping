@@ -32,6 +32,4 @@
    - coverage run --source= bin/modelCragList_v2_debug.py test
    - coverage run --source= bin/modelkbb_v1_debug.py test
    
-
-after_success:
-   coveralls
+after_success: coveralls
