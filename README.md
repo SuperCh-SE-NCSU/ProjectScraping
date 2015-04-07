@@ -108,6 +108,7 @@ There is also a send email process on our server. This process is a 24/7 service
 	- We use ```webbrench``` to generate certain number of users to visit our website.
 	- ```webbench -c 500 -t 30 http://152.46.17.210:8080/``` In this case, we generate 500 users and let them visit our websites in 30 seconds. Here is the result:
 	<img align=center src="https://github.com/SuperCh-SE-NCSU/ProjectScraping/blob/master/doc/webbrench.png" width="600" height="120" align="center"><br/>
+	The result shows that our website can handle 500 users simultaneously.
 
 ### Completeness of the tests
 
