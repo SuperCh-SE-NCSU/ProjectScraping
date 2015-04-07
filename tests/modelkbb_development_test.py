@@ -1,5 +1,6 @@
 import os, sys
-path = os.path.abspath(os.path.join('bin'))
+from coveralls import Coveralls
+path = os.path.abspath(os.path.join('coveralls'))
 sys.path.append(path)
 
 import unittest
