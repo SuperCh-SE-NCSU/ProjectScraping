@@ -183,13 +183,6 @@ It will include one car'picture in the car information that is displayed on our 
 2.https://github.com/scrapy/scrapy<br/>
 3.https://github.com/scrapy/scrapy/wiki<br/>
 4.https://doc.scrapy.org/en/latest/<br/>
-<<<<<<< HEAD
-5.http://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern
-
-
-
-=======
 5.http://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern<br/>
 6."FAQ about linking â€“ Are website terms of use binding contracts?". www.chillingeffects.org. 2007-08-20. Retrieved 2007-08-20.<br/>
 7.https://github.com/storrgie/scrape-kbb<br/>
->>>>>>> ff22335b1793fe2436a207db6766b0aef7486467
