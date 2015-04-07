@@ -3,3 +3,5 @@
 *.log
 /bin/*.pyc
 *.pyc
+*.egg
+*.egg-info
