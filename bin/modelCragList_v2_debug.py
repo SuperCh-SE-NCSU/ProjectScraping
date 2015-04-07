@@ -2,10 +2,9 @@ import urllib2
 import re
 import time
 from bs4 import BeautifulSoup
-import xml.etree.ElementTree as ET
 import datetime
 #This file contains the basic crawl function for craigslist.
-class carlist:
+class carlist():
     def __init__(self,modellist,pricelist,carlinklist,abstractIlist,mileagel,timepostlist,caryear):
         self.modellist=modellist
         self.pricelist=pricelist
