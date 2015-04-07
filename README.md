@@ -93,11 +93,17 @@ There is also a send email process on our server. This process is a 24/7 service
 	 resp = app.request("/", method="POST")
     	 assert_response(resp, contains="Nobody")
     	```
-    	- We also write test to ensure after post data, webpage will return expected values.
+    - We also write test to ensure after post data, webpage will return expected values.
     	```
     	resp = app.request("/", method="POST", data=data)
     	assert_response(resp, contains="alan")
     	```
+- Intergration test
+	- We use Travis CI to do continuous intergration test. And it will ensure our modifications pass the test.
+
+- Stress test
+	- We also use press test to calculate the load of our website.
+	<img align=center src="https://github.com/SuperCh-SE-NCSU/ProjectScraping/blob/master/doc/stress_test.png" width="600" height="367" align="center"><br/>
 
 ### Completeness of the tests
    To be completed
@@ -187,4 +193,3 @@ It will include one car'picture in the car information that is displayed on our 
 5.http://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern<br/>
 6."FAQ about linking â€“ Are website terms of use binding contracts?". www.chillingeffects.org. 2007-08-20. Retrieved 2007-08-20.<br/>
 7.https://github.com/storrgie/scrape-kbb<br/>
-8.[Load impact-web testing](https://loadimpact.com/)
