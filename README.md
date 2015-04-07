@@ -88,16 +88,8 @@ There is also a send email process on our server. This process is a 24/7 service
 	- In ```postgreSQL_test.py``` file, we try to test the CRUD operations with postgreSQL database.
 	<img align=center src="https://github.com/SuperCh-SE-NCSU/ProjectScraping/blob/master/doc/unittest.png" width="500" height="113" align="center"><br/>
 - Feature test
-	- In ```post_form_tests.py``` file, we write test to make sure default values work for the form.
-	 ```
-	 resp = app.request("/", method="POST")
-    	 assert_response(resp, contains="Nobody")
-    	```
+    - In ```post_form_tests.py``` file, we write test to make sure default values work for the form.
     - We also write test to ensure after post data, webpage will return expected values.
-    	```
-    	resp = app.request("/", method="POST", data=data)
-    	assert_response(resp, contains="alan")
-    	```
     	
 - Intergration test
 	- We use Travis CI to do continuous intergration test. And it will ensure our modifications pass the test.
