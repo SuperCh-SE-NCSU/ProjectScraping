@@ -86,6 +86,7 @@ There is also a send email process on our server. This process is a 24/7 service
 		- We also test whether each url-related methods can return correct urls or not.
 		
 	- In ```postgreSQL_test.py``` file, we try to test the CRUD operations with postgreSQL database.
+	<img align=center src="https://github.com/SuperCh-SE-NCSU/ProjectScraping/blob/master/doc/unittest.png" width="500" height="113" align="center"><br/>
 - Feature test
 	- In ```post_form_tests.py``` file, we write test to make sure default values work for the form.
 	 ```
