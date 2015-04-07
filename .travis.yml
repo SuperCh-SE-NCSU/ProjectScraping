@@ -26,6 +26,5 @@
  # command to run tests
  script: 
    - python tests/modelkbb_development_test.py -v
-   - coverage run --source=modelCragList_development_test,modelkbb_development_test setup.py test
   
 after_success: coveralls
