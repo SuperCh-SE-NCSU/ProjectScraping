@@ -193,3 +193,5 @@ It will include one car'picture in the car information that is displayed on our 
 5.http://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern<br/>
 7.https://github.com/storrgie/scrape-kbb<br/>
 8.Load impact-web testing:https://loadimpact.com/
+9.Castillo, Carlos. "Effective web crawling." ACM SIGIR Forum. Vol. 39. No. 1. ACM, 2005.
+This thesis
