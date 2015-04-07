@@ -5,9 +5,7 @@ path = os.path.abspath(os.path.join('bin'))
 sys.path.append(path)
 from post_form import app
 def test_index():
-    # check that we get a 404 on the / URL
-    resp = app.request("/")
-    assert_response(resp, status="404")
+
 
     # test our first GET request to /subscribe
     resp = app.request("/")
