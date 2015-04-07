@@ -95,7 +95,7 @@ There is also a send email process on our server. This process is a 24/7 service
 	- We use Travis CI to do continuous intergration test. And it will ensure our modifications pass the test.
 
 - Stress test
-	- We also use press test to calculate the load of our website. This web application can simulate 25 users operating on our website simultaneously and output general statistic of our website. 
+	- We also use press test to calculate the load of our website. This web application can generate 25 virtual users   operating on our website in 5 mins
 	<img align=center src="https://github.com/SuperCh-SE-NCSU/ProjectScraping/blob/master/doc/stress_test.png" width="600" height="367" align="center"><br/>
 
 ### Completeness of the tests
