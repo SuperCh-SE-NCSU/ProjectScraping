@@ -20,12 +20,12 @@ def getMilageAndYear(url):
     html = response.read()
     #print html
     try:
-        terms=re.search('<span>odometer:\s*<b>(\d*)</b></span>',html)
+        terms=re.search(r'<span>odometer:\s*<b>(\d*)</b></span>',html)
         odometer=terms.group(1)
     except:
         odometer='0'
     try:
-        terms=re.search('<p\s*class="attrgroup"><span><b>(\d*)',html)
+        terms=re.search(r'<p\s*class="attrgroup"><span><b>(\d*)',html)
         year=terms.group(1)
     except:
         year='0'

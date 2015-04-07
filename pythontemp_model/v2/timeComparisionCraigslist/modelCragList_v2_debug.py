@@ -20,12 +20,12 @@ def getMilageAndYear(url):
     html = response.read()
     #print html
     try:
-        terms=re.search('<span>odometer:\s*<b>(\d*)</b></span>',html)
+        terms=re.search(r'<span>odometer:\s*<b>(\d*)</b></span>',html)
         odometer=terms.group(1)
     except:
         odometer='0'
     try:
-        terms=re.search('<p\s*class="attrgroup"><span><b>(\d*)',html)
+        terms=re.search(r'<p\s*class="attrgroup"><span><b>(\d*)',html)
         year=terms.group(1)
     except:
         year='0'
@@ -130,5 +130,5 @@ def testcraglistsearch2():
         print usercarlist.abstractIlist[i]
         print usercarlist.timepostlist[i]
         print '--------------------------'       
-#testcraglistsearch2()
+testcraglistsearch2()
 #getMilageAndYear('http://raleigh.craigslist.org/cto/4902572544.html')
