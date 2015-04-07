@@ -14,7 +14,7 @@ Sometimes, a good car is just posted to craigslist, which is exactly the car a p
 If there is some service that can send emails to him which notify him of a newly posted car, he won't miss it.
 
 ### Goals
-Our goal is to offer a mailing service to people who are looking at craigslist for used car, providing a craigslist link to the car that they have expressed their interests in from our subscribing website and the kbb price for the specific car.
+Our goal is to offer a mailing service to people who are looking at craigslist for used car, providing a craigslist link to the car that they have expressed their interests in from our subscribing website and the kbb price for the specific car. To reduce the complexity, we just look at the posted information in our area: Raleigh.
 
 To be To be more specific, we develop a website for people to subscribe to our email service and get car information that they specified.(car model, year of make, mileage,etc)Based on these information, we crawl craiglist and find the right car, which agree with the customers needs and look up the price for the car from Kbb. Then we will email subscribed customers the information they need: the basic information( such as year, make, mileage,price), a link to the original posts on craiglist, and the price from Kbb.
 There should be two versions of our application.
@@ -24,13 +24,19 @@ Version_1: Minimal functionality. According to customers' need specified on our 
 Version_2: Full functionality. Besides the subscription service, Build a database of customers login information and search records and extend the functionality of our website, so that everytime customer login our website, they will get latest car information since last login. (Future work)
 
 ### Methods
-1.A basic website is developed for users to subscribe to our email notification service 
 
-2.postgresql is used to store subscribed user information.
+To achieve the above goals, we want to develop our application based on model-view-controller architecture. The model is to scrape the cars' information from craigslist and kbb. We focus on testing different strategies in realizing the model.
 
-3.A web crawler is used to craw craigslist and kbb for car informations.
+1. Methods to develop scraping models
+At first, we are plannig to use two methods in web crawler. The first method is to use python regular regression(Python "re" module provides regular expression support). The second method is employing scrapy web framework. Then we find another parsing library [beautiful soup](http://www.crummy.com/software/). So we realize craigslist web crawler using those three tools. We also compare the time performance of those three tools.
 
-4.[Sendgrid](https://sendgrid.com/home-two) is used for email delivery service.
+2. Web
+A basic website is developed for users to subscribe to our email notification service 
+We built a basic website for users based on web.py[1][2] framework, postgresql is used to store subscribed user information.
+
+2.Third party platform and Service
+We try three different platforms to deploy our application: Virtural Computing Lab for NCSU, Amazon Web Service. At last, VCL is used for the server platform as other platform is blocked. Plus, [Sendgrid](https://sendgrid.com/home-two) is used for email delivery service.
+
 
 #### Introduction to web crawler
 
@@ -86,7 +92,8 @@ There is also a send email process on our server. This process is a 24/7 service
 		- We also test whether each url-related methods can return correct urls or not.
 		
 	- In ```postgreSQL_test.py``` file, we try to test the CRUD operations with postgreSQL database.
-	<img align=center src="https://github.com/SuperCh-SE-NCSU/ProjectScraping/blob/master/doc/unittest.png" width="500" height="113" align="center"><br/>
+	
+<img align=center src="https://github.com/SuperCh-SE-NCSU/ProjectScraping/blob/master/doc/unittest.png" width="500" height="113" align="center"><br/>
 - Feature test
     - In ```post_form_tests.py``` file, we write test to make sure default values work for the form.
     - We also write test to ensure after post data, webpage will return expected values.
@@ -103,7 +110,7 @@ There is also a send email process on our server. This process is a 24/7 service
 	<img align=center src="https://github.com/SuperCh-SE-NCSU/ProjectScraping/blob/master/doc/webbrench.png" width="600" height="120" align="center"><br/>
 
 ### Completeness of the tests
-   To be completed
+
    - We tested the functionality by subscribe with different car information specified.We received the email. Then we checked craigslist and found that all the cars satisfying the condition are included in the email.
 
 ### Result
@@ -155,6 +162,7 @@ Thirdly, the legality of scraping, especially for commercial use is not clear no
 But except for these limitations, web crawling is quite useful for information gathering. 
 
 **2. Github**
+
 We use github to do version control and publish issues. This is our first time to collobrate working in gituhub.  We also find some silimar projects in github like scrape-kbb.  
 
 
@@ -183,11 +191,15 @@ Our initial attempt to deploy our application to Heroku, AWS failed since craigs
 It will include one car'picture in the car information that is displayed on our web or sent to perple's emails. The whole thing could be put into a table, making it look like a beautiful post.
 
 ### Reference
-1.Shaw, Zed A. "Learn Python the hard way." (2010).<br/>
-2.https://github.com/scrapy/scrapy<br/>
-3.https://github.com/scrapy/scrapy/wiki<br/>
-4.https://doc.scrapy.org/en/latest/<br/>
-5.http://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern<br/>
-7.https://github.com/storrgie/scrape-kbb<br/>
-8.Load impact-web testing:https://loadimpact.com/<br/>
-9.Castillo, Carlos. "Effective web crawling." ACM SIGIR Forum. Vol. 39. No. 1. ACM, 2005.<br/>
+1.Shaw, Zed A. "Learn Python the hard way." (2010)<br/>
+2.Grehan, Rick. "Pillars of Python: Web. py Web framework." InfoWorld IDG Retrieved January (2013).<br/>
+3.Castillo, Carlos. "Effective web crawling." ACM SIGIR Forum. Vol. 39. No. 1. ACM(2005).<br/>
+4.Thelwall, Mike. "A web crawler design for data mining." Journal of Information Science 27.5 (2001): 319-325. <br/>
+5.Langtangen, Hans Petter. Python scripting for computational science. Vol. 3. Berlin, Heidelberg and New York: Springer, 2006.<br/>
+6.[scrapy wiki](https://github.com/scrapy/scrapy/wiki)<br/>
+7.[scrapy doc](https://doc.scrapy.org/en/latest/)<br/>
+8.[Utilities to scrape the web content of Kelley Blue Book](https://github.com/storrgie/scrape-kbb)<br/>
+9.[craigslist crawler](http://mherman.org/blog/2012/11/05/scraping-web-pages-with-scrapy/#.VSMdnbt3_lc)
+10.[Load impact-web testing](https://loadimpact.com/)<br/>
+11.Castillo, Carlos. "Effective web crawling." ACM SIGIR Forum. Vol. 39. No. 1. ACM, 2005.<br/>
+12.[kbb Price analysis](http://www.r-bloggers.com/how-to-buy-a-used-car-with-r-part-1/)
