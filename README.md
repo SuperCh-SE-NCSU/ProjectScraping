@@ -55,7 +55,7 @@ Crawlers can validate hyperlinks and HTML code. They can also be used for web sc
 User can choose different restrictions (car model, car make, year,  price and email) and subscribe our daily email. We will keep users' personal information in PostgreSQL database and ensure safety. Then we try to use different crawler engine (regular regression, beautifulsoup and scrapy) to obtain latest information users need on Craigslist and kbb and send email daily.
 
 #### Publish-subscribe design pattern
-We also use publish-subscribe design pattern. We build  a one-to-many dependence between our system and subscribers. And when we collect latest car information and send email daily, all subscribers are notified by emails.
+We also use publish-subscribe design pattern. We build  a one-to-many dependency between our system and subscribers. And when we collect latest car information and send email daily, all subscribers are notified by email.
    - Publish-subscribe design pattern alerts other objects' changes without rebuilding dependencies on them. The individual views implement the Observer interface and register with the model. The model tracks the list of all observers that subscribe to changes. When a model changes, the model iterates through all registered observers and notifies them of the change. With this approach, the model never requires specific information about any views.
 
 ### File system architecture
