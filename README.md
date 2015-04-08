@@ -10,7 +10,7 @@ A lot of people look at craigslist for an ideal used car that they are planing t
 
 It's usually true that people will look through lots of cars on craigslist and check their kbb price time and time again. It could takes several days, or several weeks before they find their ideal car.
 
-Sometimes, a good car is just posted to craigslist, which is exactly the car a person want. But he is busy with your work or being tangled with some personal thins and forget to check craigslist, he may miss the car.
+Sometimes, a good car is just posted to craigslist, which is exactly the car a person want. But he is busy with your work or being tangled with some personal things and forget to check craigslist, he may miss the car.
 If there is some service that can send emails to him which notify him of a newly posted car, he won't miss it.
 
 ### Goals
