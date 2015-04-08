@@ -121,6 +121,10 @@ There is also a sending email process on our server. This process is a 24/7 serv
    - We tested the functionality by subscribe with different car information specified.We received the email. Then we checked craigslist and found that all the cars satisfying the condition are included in the email.
    - We create a shell file ```coverage.sh``` using ```coverage``` package. You can run ```bash coverage.sh``` in terminal to check our test coverage.
 
+### Handle bad smell
+- We use a tool named ```landscope``` to test health of our code. This tool can check the errors, smells and styles in your code.
+- Now the health of our code is 89% and we set strictness high. It means our code is healthy.
+
 ### Result
 - The following website is developed for people to subscribe to our email notification service.
 http://152.46.17.210:8080/<br/>
