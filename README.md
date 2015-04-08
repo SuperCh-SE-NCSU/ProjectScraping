@@ -143,7 +143,7 @@ http://152.46.17.210:8080/<br/>
    
 - In the following image, we display the print screen of email which subscribers will receive. Each part of email lists information of one available car. These information include car make, model, year, mileage, posted time, web link and Cragslist price. We also offer a table showing the kbb prices of this car in different types. So in this way, subscribers can figure out the price on Cragslist is higher or lower than the normal price instead of opening two websites.
 
-<img align=center src="https://github.com/SuperCh-SE-NCSU/ProjectScraping/blob/master/doc/email.png" width="800" height="317" align="center">
+<img align=center src="https://github.com/SuperCh-SE-NCSU/ProjectScraping/blob/master/doc/email.png" width="800" height="317" align="center" border="2px">
 
 ### Discussion
 **1.Advantages of this application**
