@@ -119,6 +119,7 @@ There is also a sending email process on our server. This process is a 24/7 serv
 ### Completeness of the tests
 
    - We tested the functionality by subscribe with different car information specified.We received the email. Then we checked craigslist and found that all the cars satisfying the condition are included in the email.
+   - We create a shell file ```coverage.sh``` using ```coverage``` package. You can run ```bash coverage.sh``` in terminal to check our test coverage.
 
 ### Result
 - The following website is developed for people to subscribe to our email notification service.
