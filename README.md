@@ -124,6 +124,7 @@ There is also a sending email process on our server. This process is a 24/7 serv
 ### Handle bad smell
 - We use a tool named ```landscope``` to test health of our code. This tool can check the errors, smells and styles in your code.
 - Now the health of our code is 89% and we set strictness high. It means our code is healthy.
+<img align=center src="https://github.com/SuperCh-SE-NCSU/ProjectScraping/blob/master/doc/landscope.png" width="450" height="228" align="center">
 
 ### Result
 - The following website is developed for people to subscribe to our email notification service.
