@@ -140,7 +140,10 @@ http://152.46.17.210:8080/<br/>
    - The video shows that user receives second email before he finish manual search.
    - The second email includes information of available cars on Craigslist and completed car prices on kbb.
    - Actually, second email is the service about sending latest information daily. In this video, in order to minimize the time, we set daily email 2 minutes after subscribe.
+   
+- In the following image, we display the print screen of email which subscribers will receive. Each part of email lists information of one available car. These information include car make, model, year, mileage, posted time, web link and Cragslist price. We also offer a table showing the kbb prices of this car in different types. So in this way, subscribers can figure out the price on Cragslist is higher or lower than the normal price instead of opening two websites.
 
+<img align=center src="https://github.com/SuperCh-SE-NCSU/ProjectScraping/blob/master/doc/email.png" width="800" height="317" align="center">
 
 ### Discussion
 **1.Advantages of this application**
