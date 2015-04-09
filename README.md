@@ -156,7 +156,7 @@ We tried deploying the application to Heroku and Amazon web services. But the IP
 
 **3.Comparison between python regular expression, beautiful soup and scrapy**
 In theory, regular expressions are a powerful language for matching text patterns. The Python "re" module provides regular expression support. BeautifulSoup is a parsing library and scrapy is a web scraper framework. You give Scrapy a root URL to start crawling, then you can specify constraints on how many number of URLs you want to crawl and fetch,etc., It is a complete framework for Web-scrapping or crawling.
- In practice, we can use all those three tools. Python regular expressions is flexible and easy to employ.While scrapy and beautiful soup are much more robust. Also, scrapy framework supplies some functions like sending emails. We develop all those three methods and we are interested in the eff compare the time to crawl four specific models of cars from craigslist using those different methods. The result is is shown in the following figure.
+ In practice, we can use all those three tools. Python regular expressions is flexible and easy to employ.While scrapy and beautiful soup are much more robust. Also, scrapy framework supplies some functions like sending emails. We develop all those three methods and we are interested in the time to crawl four specific models of cars from craigslist using those different methods. The result is is shown in the following figure.
  
 <img align=center src="https://github.com/SuperCh-SE-NCSU/ProjectScraping/blob/master/doc/craigslisttimeComparison.png" width="700" height="518" align="center">
 
