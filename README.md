@@ -29,7 +29,7 @@ To achieve the above goals, we want to develop our application based on model-vi
 
 1.Methods to develop scraping models
 
-At first, we are planning to use two methods in web crawler. The first method is to use python regular regression(Python "re" module provides regular expression support). The second method is employing scrapy web framework. Then we find another parsing library [beautiful soup](http://www.crummy.com/software/). So we realize craigslist web crawler using those three tools. We also compare the time performance of those three tools.
+At first, we are planning to use two methods in web crawler. The first method is to use python regular expression(Python "re" module provides regular expression support). The second method is employing scrapy web framework. Then we find another parsing library [beautiful soup](http://www.crummy.com/software/). So we realize craigslist web crawler using those three tools. We also compare the time performance of those three tools.
 
 2.Web
 
@@ -52,7 +52,7 @@ Crawlers can validate hyperlinks and HTML code. They can also be used for web sc
 ### Design and Pattern
 <img align=center src="https://github.com/SuperCh-SE-NCSU/ProjectScraping/blob/master/doc/ProjectScraping--design.png" width="600" height="300" align="center">
 
-User can choose different restrictions (car model, car make, year,  price and email) and subscribe our daily email. We will keep users' personal information in PostgreSQL database and ensure safety. Then we try to use different crawler engine (regular regression, beautifulsoup and scrapy) to obtain latest information users need on Craigslist and kbb and send email daily.
+User can choose different restrictions (car model, car make, year,  price and email) and subscribe our daily email. We will keep users' personal information in PostgreSQL database and ensure safety. Then we try to use different crawler engine (regular expression, beautifulsoup and scrapy) to obtain latest information users need on Craigslist and kbb and send email daily.
 
 #### Publish-subscribe design pattern
 We also use publish-subscribe design pattern. We build  a one-to-many dependency between our system and subscribers. And when we collect latest car information and send email daily, all subscribers are notified by email.
@@ -154,7 +154,7 @@ Right now, people have to go to craigslist to find the car they are interested i
 
 We tried deploying the application to Heroku and Amazon web services. But the IP of those two is blocked by craigslist. Craigslist seems to block all the IPs from commercial servers. We used VCL to solve this problem.
 
-**3.Comparison between python regular regression, beautiful soup and scrapy**
+**3.Comparison between python regular expression, beautiful soup and scrapy**
 In theory, regular expressions are a powerful language for matching text patterns. The Python "re" module provides regular expression support. BeautifulSoup is a parsing library and scrapy is a web scraper framework. You give Scrapy a root URL to start crawling, then you can specify constraints on how many number of URLs you want to crawl and fetch,etc., It is a complete framework for Web-scrapping or crawling.
  In practice, we can use all those three tools. Python regular expressions is flexible and easy to employ.While scrapy and beautiful soup are much more robust. Also, scrapy framework supplies some functions like sending emails. We develop all those three methods and we are interested in the eff compare the time to crawl four specific models of cars from craigslist using those different methods. The result is is shown in the following figure.
  
