@@ -169,7 +169,7 @@ From the above figure, we know that python regular expression and scrape framewo
 
 **1. Web crawling**
 
-Web crawler is a powerful tool to gather information from webpage. It will save people a lot of time when searching for information from a complicate webpage, which has a lot of information. It is good for personal use,running on local server. But when you deploy it on some online server, problems appear.
+Web crawler is a powerful tool to gather information from webpage. It will save people a lot of time when searching for information from a complicated webpage, which has a lot of information. It is good for personal use,running on local server. But when you deploy it on some online server, problems appear.
  
 It has been proved true that some websites will block commercial servers from crawling their web,which is quite predictable. These websites are commercial websites,too. Even though they might be free for people to browse, they need users watch their supporters' commercial advertisement to survive. To protect their interests, they have to block others crawl their webpages. 
 
