@@ -179,7 +179,7 @@ But except for these limitations, web crawling is quite useful for information g
 
 **2. Github**
 
-We use github to do version control and publish issues. This is our first time to collaborate working in gituhub.  We also find some similmar projects in github like scrape-kbb.  
+We use github to do version control and publish issues. 
 
 
 ### Future Work
