@@ -19,7 +19,7 @@ Our goal is to offer a mailing service to people who are looking at craigslist f
 To be To be more specific, we develop a website for people to subscribe to our email service and get car information that they specified.(car model, year of make, mileage,etc)Based on these information, we crawl craigslist and find the right car, which agree with the customers needs and look up the price for the car from Kbb. Then we will email subscribed customers the information they need: the basic information( such as year, make, mileage,price), a link to the original posts on craigslist, and the price from Kbb.
 There should be two versions of our application.
 
-Version_1: Minimal functionality. According to customers' need specified on our subscription website, send them emails including information that they need from 2 websites, Craglist and kbb.(work done)
+Version_1: Minimal functionality. According to customers' need specified on our subscription website, send them emails including information that they need from 2 websites, Craigslist and kbb.(work done)
 
 Version_2: Full functionality. Besides the subscription service, Build a database of customers' personal information and search records and extend the functionality of our website, so that every time customer log in our website, they will get latest car information since last log in. (Future work)
 
@@ -45,7 +45,7 @@ We try three different platforms to deploy our application: Virtual Computing La
 
 A Web crawler is an Internet bot that systematically browses the World Wide Web, typically for the purpose of Web indexing. A Web crawler may also be called a Web spider, an ant, an automatic indexer, or (in the FOAF software context) a Web scutter.
 
-Web search engines and some other sites use Web crawling or spidering software to update their web content or indexes of others sites' web content. Web crawlers can copy all the pages they visit for later processing by a search engine that indexes the downloaded pages so that users can search them much more quickly.
+Web search engines and some other sites use Web crawling software to update their web content or indexes of others sites' web content. Web crawlers can copy all the pages they visit for later processing by a search engine that indexes the downloaded pages so that users can search them much more quickly.
 
 Crawlers can validate hyperlinks and HTML code. They can also be used for web scraping (see also data-driven programming).
 
