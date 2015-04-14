@@ -17,7 +17,7 @@ class Testkbb(unittest.TestCase):
 		self.response = urllib2.urlopen("http://www.kbb.com/toyota/corolla/2007-toyota-corolla/ce-sedan-4d/?condition=very-good&vehicleid=84286&intent=buy-used&category=sedan&pricetype=private-party&mileage=30000&persistedcondition=very-good#survey")
 		self.html = self.response.read()
 		self.price = extractPricekbb(self.html)
-		self.assertEqual(self.price, ['7632', '8010', '8389', '8854', '10206'])
+		self.assertEqual(self.price, ['7616', '8000', '8384', '8857', '10209'])
 
 	def test_kbbBaseUrl(self):
 		self.baseUrl = kbbBaseUrl(self.make,self.model,self.year)
